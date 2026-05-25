@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "q0001",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 1;"
+  },
+  {
+    "id": "q0002",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 2;"
+  },
+  {
+    "id": "q0003",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 3;"
+  },
+  {
+    "id": "q0004",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 4;"
+  },
+  {
+    "id": "q0005",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 5;"
+  },
+  {
+    "id": "q0006",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 6;"
+  },
+  {
+    "id": "q0007",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 7;"
+  },
+  {
+    "id": "q0008",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 8;"
+  },
+  {
+    "id": "q0009",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 9;"
+  },
+  {
+    "id": "q0010",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 10;"
+  },
+  {
+    "id": "q0011",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 11;"
+  },
+  {
+    "id": "q0012",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 12;"
+  },
+  {
+    "id": "q0013",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 13;"
+  },
+  {
+    "id": "q0014",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 14;"
+  },
+  {
+    "id": "q0015",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 15;"
+  },
+  {
+    "id": "q0016",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 16;"
+  },
+  {
+    "id": "q0017",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 17;"
+  },
+  {
+    "id": "q0018",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 18;"
+  },
+  {
+    "id": "q0019",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 19;"
+  },
+  {
+    "id": "q0020",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 20;"
+  },
+  {
+    "id": "q0021",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 21;"
+  },
+  {
+    "id": "q0022",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 22;"
+  },
+  {
+    "id": "q0023",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 23;"
+  },
+  {
+    "id": "q0024",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 24;"
+  },
+  {
+    "id": "q0025",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 25;"
+  },
+  {
+    "id": "q0026",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 26;"
+  },
+  {
+    "id": "q0027",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 27;"
+  },
+  {
+    "id": "q0028",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 28;"
+  },
+  {
+    "id": "q0029",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 29;"
+  },
+  {
+    "id": "q0030",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 30;"
+  },
+  {
+    "id": "q0031",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 31;"
+  },
+  {
+    "id": "q0032",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 32;"
+  },
+  {
+    "id": "q0033",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 33;"
+  },
+  {
+    "id": "q0034",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 34;"
+  },
+  {
+    "id": "q0035",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 35;"
+  },
+  {
+    "id": "q0036",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 36;"
+  },
+  {
+    "id": "q0037",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 37;"
+  },
+  {
+    "id": "q0038",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 38;"
+  },
+  {
+    "id": "q0039",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 39;"
+  },
+  {
+    "id": "q0040",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 40;"
+  },
+  {
+    "id": "q0041",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 41;"
+  },
+  {
+    "id": "q0042",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 42;"
+  },
+  {
+    "id": "q0043",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 43;"
+  },
+  {
+    "id": "q0044",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 44;"
+  },
+  {
+    "id": "q0045",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 45;"
+  },
+  {
+    "id": "q0046",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 46;"
+  },
+  {
+    "id": "q0047",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 47;"
+  },
+  {
+    "id": "q0048",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 48;"
+  },
+  {
+    "id": "q0049",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 49;"
+  },
+  {
+    "id": "q0050",
+    "query_type": "simple_lookup",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 50;"
+  },
+  {
+    "id": "q0051",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 10;"
+  },
+  {
+    "id": "q0052",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 50;"
+  },
+  {
+    "id": "q0053",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 100;"
+  },
+  {
+    "id": "q0054",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 500;"
+  },
+  {
+    "id": "q0055",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 1000;"
+  },
+  {
+    "id": "q0056",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 10;"
+  },
+  {
+    "id": "q0057",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 50;"
+  },
+  {
+    "id": "q0058",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 100;"
+  },
+  {
+    "id": "q0059",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 500;"
+  },
+  {
+    "id": "q0060",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 1000;"
+  },
+  {
+    "id": "q0061",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 10;"
+  },
+  {
+    "id": "q0062",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 50;"
+  },
+  {
+    "id": "q0063",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 100;"
+  },
+  {
+    "id": "q0064",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 500;"
+  },
+  {
+    "id": "q0065",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 1000;"
+  },
+  {
+    "id": "q0066",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 10;"
+  },
+  {
+    "id": "q0067",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 50;"
+  },
+  {
+    "id": "q0068",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 100;"
+  },
+  {
+    "id": "q0069",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 500;"
+  },
+  {
+    "id": "q0070",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 1000;"
+  },
+  {
+    "id": "q0071",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 10;"
+  },
+  {
+    "id": "q0072",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 50;"
+  },
+  {
+    "id": "q0073",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 100;"
+  },
+  {
+    "id": "q0074",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 500;"
+  },
+  {
+    "id": "q0075",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 1000;"
+  },
+  {
+    "id": "q0076",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 10;"
+  },
+  {
+    "id": "q0077",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 50;"
+  },
+  {
+    "id": "q0078",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 100;"
+  },
+  {
+    "id": "q0079",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 500;"
+  },
+  {
+    "id": "q0080",
+    "query_type": "filter_orders",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 1000;"
+  },
+  {
+    "id": "q0081",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 10;"
+  },
+  {
+    "id": "q0082",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 50;"
+  },
+  {
+    "id": "q0083",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 100;"
+  },
+  {
+    "id": "q0084",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 500;"
+  },
+  {
+    "id": "q0085",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 1000;"
+  },
+  {
+    "id": "q0086",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 10;"
+  },
+  {
+    "id": "q0087",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 50;"
+  },
+  {
+    "id": "q0088",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 100;"
+  },
+  {
+    "id": "q0089",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 500;"
+  },
+  {
+    "id": "q0090",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 1000;"
+  },
+  {
+    "id": "q0091",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 10;"
+  },
+  {
+    "id": "q0092",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 50;"
+  },
+  {
+    "id": "q0093",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 100;"
+  },
+  {
+    "id": "q0094",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 500;"
+  },
+  {
+    "id": "q0095",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 1000;"
+  },
+  {
+    "id": "q0096",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 10;"
+  },
+  {
+    "id": "q0097",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 50;"
+  },
+  {
+    "id": "q0098",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 100;"
+  },
+  {
+    "id": "q0099",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 500;"
+  },
+  {
+    "id": "q0100",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 1000;"
+  },
+  {
+    "id": "q0101",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 10;"
+  },
+  {
+    "id": "q0102",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 50;"
+  },
+  {
+    "id": "q0103",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 100;"
+  },
+  {
+    "id": "q0104",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 500;"
+  },
+  {
+    "id": "q0105",
+    "query_type": "join_customer_orders",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 1000;"
+  },
+  {
+    "id": "q0106",
+    "query_type": "orders_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1992-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;"
+  },
+  {
+    "id": "q0107",
+    "query_type": "orders_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1993-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;"
+  },
+  {
+    "id": "q0108",
+    "query_type": "orders_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1994-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;"
+  },
+  {
+    "id": "q0109",
+    "query_type": "orders_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1995-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;"
+  },
+  {
+    "id": "q0110",
+    "query_type": "orders_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1996-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;"
+  },
+  {
+    "id": "q0111",
+    "query_type": "orders_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1997-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;"
+  },
+  {
+    "id": "q0112",
+    "query_type": "lineitem_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1992-01-01' GROUP BY l_returnflag, l_linestatus;"
+  },
+  {
+    "id": "q0113",
+    "query_type": "lineitem_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1993-01-01' GROUP BY l_returnflag, l_linestatus;"
+  },
+  {
+    "id": "q0114",
+    "query_type": "lineitem_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1994-01-01' GROUP BY l_returnflag, l_linestatus;"
+  },
+  {
+    "id": "q0115",
+    "query_type": "lineitem_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1995-01-01' GROUP BY l_returnflag, l_linestatus;"
+  },
+  {
+    "id": "q0116",
+    "query_type": "lineitem_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1996-01-01' GROUP BY l_returnflag, l_linestatus;"
+  },
+  {
+    "id": "q0117",
+    "query_type": "lineitem_group_by",
+    "expected_complexity": "medium",
+    "sql": "SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1997-01-01' GROUP BY l_returnflag, l_linestatus;"
+  },
+  {
+    "id": "q0118",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0119",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0120",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0121",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0122",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0123",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0124",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0125",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0126",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0127",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0128",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0129",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0130",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0131",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0132",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0133",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0134",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0135",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0136",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0137",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0138",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0139",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0140",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0141",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0142",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0143",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0144",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0145",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0146",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0147",
+    "query_type": "join_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;"
+  },
+  {
+    "id": "q0148",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 1 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0149",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 6 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0150",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 11 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0151",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 16 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0152",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 21 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0153",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 26 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0154",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 31 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0155",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 36 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0156",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 41 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0157",
+    "query_type": "join_supplier_partsupp_part",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 46 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q0158",
+    "query_type": "window_function",
+    "expected_complexity": "heavy",
+    "sql": "SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1992-01-01';"
+  },
+  {
+    "id": "q0159",
+    "query_type": "window_function",
+    "expected_complexity": "heavy",
+    "sql": "SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1993-01-01';"
+  },
+  {
+    "id": "q0160",
+    "query_type": "window_function",
+    "expected_complexity": "heavy",
+    "sql": "SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1994-01-01';"
+  },
+  {
+    "id": "q0161",
+    "query_type": "window_function",
+    "expected_complexity": "heavy",
+    "sql": "SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1995-01-01';"
+  },
+  {
+    "id": "q0162",
+    "query_type": "window_function",
+    "expected_complexity": "heavy",
+    "sql": "SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1996-01-01';"
+  },
+  {
+    "id": "q0163",
+    "query_type": "window_function",
+    "expected_complexity": "heavy",
+    "sql": "SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1997-01-01';"
+  },
+  {
+    "id": "q0164",
+    "query_type": "subquery",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 100000);"
+  },
+  {
+    "id": "q0165",
+    "query_type": "subquery",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 250000);"
+  },
+  {
+    "id": "q0166",
+    "query_type": "subquery",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 500000);"
+  },
+  {
+    "id": "q0167",
+    "query_type": "subquery",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 750000);"
+  },
+  {
+    "id": "q0168",
+    "query_type": "subquery",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 1000000);"
+  }
+]

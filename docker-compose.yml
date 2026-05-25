@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: sql_classifier_postgres
+    environment:
+      POSTGRES_DB: sql_classifier_bench
+      POSTGRES_USER: sql_classifier
+      POSTGRES_PASSWORD: sql_classifier
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build: .
+    container_name: sql_classifier_api
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: sql_classifier_bench
+      DB_USER: sql_classifier
+      DB_PASSWORD: sql_classifier
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:

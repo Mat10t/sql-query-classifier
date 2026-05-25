@@ -1,0 +1,52 @@
+[
+  {
+    "id": "q01_simple_customer",
+    "expected_complexity": "light",
+    "sql": "SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 100;"
+  },
+  {
+    "id": "q02_orders_by_date",
+    "expected_complexity": "light",
+    "sql": "SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 100;"
+  },
+  {
+    "id": "q03_customer_orders_join",
+    "expected_complexity": "medium",
+    "sql": "SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 100;"
+  },
+  {
+    "id": "q04_orders_group_by_priority",
+    "expected_complexity": "medium",
+    "sql": "SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders GROUP BY o_orderpriority ORDER BY total_price DESC;"
+  },
+  {
+    "id": "q05_lineitem_aggregation",
+    "expected_complexity": "medium",
+    "sql": "SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem GROUP BY l_returnflag, l_linestatus;"
+  },
+  {
+    "id": "q06_customer_orders_lineitem",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice) AS total_sum FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey GROUP BY c.c_name ORDER BY total_sum DESC LIMIT 100;"
+  },
+  {
+    "id": "q07_supplier_part_partsupp",
+    "expected_complexity": "heavy",
+    "sql": "SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;"
+  },
+  {
+    "id": "q08_orders_window_function",
+    "expected_complexity": "heavy",
+    "sql": "SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1994-01-01';"
+  },
+  {
+    "id": "q09_nation_revenue",
+    "expected_complexity": "heavy",
+    "sql": "SELECT n.n_name, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey JOIN nation n ON c.c_nationkey = n.n_nationkey GROUP BY n.n_name ORDER BY revenue DESC;"
+  },
+  {
+    "id": "q10_subquery_expensive_orders",
+    "expected_complexity": "heavy",
+    "sql": "SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 1000000);"
+  }
+]

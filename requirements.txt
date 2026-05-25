@@ -1,0 +1,10 @@
+pandas
+scikit-learn
+sqlparse
+psycopg[binary]
+fastapi
+uvicorn
+joblib
+matplotlib
+numpy
+python-dotenv
