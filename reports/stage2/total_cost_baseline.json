@@ -1,0 +1,71 @@
+{
+  "queries": 274,
+  "templates": 31,
+  "overall": {
+    "total_cost": {
+      "n": 274,
+      "spearman": 0.906987193530369,
+      "kendall_tau": 0.7499340928418738,
+      "pairwise_accuracy": 0.8689652397811394
+    },
+    "startup_cost": {
+      "n": 274,
+      "spearman": 0.8738002428619837,
+      "kendall_tau": 0.698284918425155,
+      "pairwise_accuracy": 0.8400386224654007
+    },
+    "plan_rows": {
+      "n": 274,
+      "spearman": 0.346388287267105,
+      "kendall_tau": 0.2502251303699381,
+      "pairwise_accuracy": 0.6163367664413689
+    }
+  },
+  "time_at_least_1_ms": {
+    "total_cost": {
+      "n": 174,
+      "spearman": 0.7019659370939016,
+      "kendall_tau": 0.5278775319086276,
+      "pairwise_accuracy": 0.7632715434190419
+    },
+    "startup_cost": {
+      "n": 174,
+      "spearman": 0.6483341392206976,
+      "kendall_tau": 0.49447164577246205,
+      "pairwise_accuracy": 0.7465284698691117
+    },
+    "plan_rows": {
+      "n": 174,
+      "spearman": 0.01694006533540412,
+      "kendall_tau": 0.020110183659459782,
+      "pairwise_accuracy": 0.5095010298319048
+    }
+  },
+  "by_source": {
+    "generator": {
+      "n": 168,
+      "spearman": 0.9166117756904482,
+      "kendall_tau": 0.7900875814326078,
+      "pairwise_accuracy": 0.8788368916684638
+    },
+    "tpch_qgen": {
+      "n": 106,
+      "spearman": 0.6027275358111022,
+      "kendall_tau": 0.43438950762483836,
+      "pairwise_accuracy": 0.7159029649595687
+    }
+  },
+  "within_template": {
+    "templates_with_constant_cost": 8,
+    "templates_evaluated": 22,
+    "spearman_median": 0.6668859288553503,
+    "pairwise_accuracy_median": 0.75
+  },
+  "ms_per_cost_unit_spread": {
+    "min": 0.0006827476058647091,
+    "median": 0.004230448293164527,
+    "max": 0.032737405307253185,
+    "max_to_min_ratio": 47.949498505807014
+  },
+  "log_log_pearson": 0.9872892473311898
+}

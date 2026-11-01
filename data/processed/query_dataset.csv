@@ -1,0 +1,3193 @@
+query_id,template_id,source,query_type,expected_complexity,sql_text,query_length,token_count,join_count,where_count,group_by_count,order_by_count,subquery_count,aggregate_func_count,window_func_count,total_cost,startup_cost,plan_rows,plan_width,node_count,seq_scan_count,index_scan_count,sort_node_count,aggregate_node_count,hash_join_count,merge_join_count,nested_loop_count,window_agg_count,status,execution_time_ms,exec_time_min_ms,exec_time_max_ms,exec_time_mean_ms,exec_time_std_ms,exec_time_cv,planning_time_ms,measured_runs,is_unstable,label
+q0001,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 1;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.02,0.012,0.041,0.0224,0.011588787684654508,0.5173565930649334,0.036,5,1,0
+q0002,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 2;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.03,0.023,0.04,0.03,0.006442049363362563,0.2147349787787521,0.044,5,1,0
+q0003,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 3;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.018,0.016,0.029,0.02,0.005244044240850758,0.2622022120425379,0.027,5,1,0
+q0004,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 4;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.014,0.026,0.018,0.004743416490252569,0.26352313834736496,0.024,5,1,0
+q0005,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 5;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.013,0.011,0.03,0.0162,0.007854934754662193,0.4848725157198885,0.019,5,1,0
+q0006,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 6;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.016,0.013,0.048,0.027200000000000002,0.017253985046939157,0.6343376855492336,0.024,5,1,0
+q0007,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 7;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.014,0.012,0.025,0.0162,0.005118593556827891,0.3159625652362896,0.024,5,1,0
+q0008,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 8;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.015,0.011,0.064,0.025,0.022438805672316875,0.897552226892675,0.023,5,1,0
+q0009,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 9;",69,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.025,0.019,0.039,0.027200000000000002,0.007496665925596525,0.2756127178528134,0.035,5,1,0
+q0010,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 10;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.041,0.029,0.064,0.0428,0.01300769003320728,0.30391799143007664,0.066,5,1,0
+q0011,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 11;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.022,0.016,0.032,0.0224,0.00589915248150105,0.2633550214955826,0.032,5,1,0
+q0012,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 12;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.035,0.028,0.063,0.0424,0.014570518178843193,0.34364429667083,0.041,5,1,0
+q0013,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 13;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.019,0.013,0.028,0.0186,0.0059413803110051795,0.3194290489787731,0.024,5,1,0
+q0014,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 14;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.014,0.013,0.02,0.0158,0.00303315017762062,0.19197153022915314,0.021,5,0,0
+q0015,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 15;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.011,0.022,0.016,0.004242640687119285,0.2651650429449553,0.023,5,1,0
+q0016,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 16;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.011,0.035,0.0186,0.009528903399657278,0.5123066343901763,0.026,5,1,0
+q0017,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 17;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.015,0.011,0.031,0.0172,0.007949842765740716,0.4622001607988788,0.022,5,1,0
+q0018,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 18;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.014,0.013,0.024,0.016,0.004527692569068709,0.2829807855667943,0.022,5,1,0
+q0019,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 19;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.014,0.011,0.016,0.013600000000000001,0.0020736441353327723,0.1524738334803509,0.023,5,0,0
+q0020,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 20;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.014,0.01,0.021,0.0154,0.005319774431308155,0.3454398981368932,0.019,5,1,0
+q0021,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 21;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.015,0.013,0.023,0.0172,0.0041472882706655445,0.24112141108520607,0.02,5,1,0
+q0022,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 22;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.013,0.02,0.0166,0.0027018512172212595,0.162762121519353,0.021,5,0,0
+q0023,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 23;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.013,0.012,0.019,0.0144,0.003049590136395381,0.2117770928052348,0.021,5,1,0
+q0024,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 24;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.013,0.012,0.031,0.016999999999999998,0.007968688725254613,0.4687463956032126,0.02,5,1,0
+q0025,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 25;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.024,0.017,0.096,0.039,0.03300757488819801,0.8463480740563593,0.026,5,1,0
+q0026,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 26;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.018,0.014,0.024,0.0184,0.004159326868617085,0.2260503732944068,0.023,5,1,0
+q0027,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 27;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.013,0.026,0.0182,0.0053572380943915495,0.29435374145008514,0.022,5,1,0
+q0028,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 28;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.016,0.012,0.041,0.0248,0.014411800720243118,0.5811209967839966,0.022,5,1,0
+q0029,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 29;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.031,0.021,0.07,0.0378,0.018886503117305758,0.49964293961126344,0.048,5,1,0
+q0030,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 30;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.029,0.023,0.032,0.028600000000000004,0.0037815340802378077,0.13222147133698628,0.04,5,0,0
+q0031,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 31;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.036,0.026,0.047,0.036,0.00744983221287567,0.20693978369099086,0.05,5,1,0
+q0032,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 32;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.024,0.02,0.061,0.0334,0.017343586710943038,0.5192690632018874,0.035,5,1,0
+q0033,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 33;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.029,0.022,0.042,0.0306,0.0073348483283569,0.2397009257632974,0.045,5,1,0
+q0034,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 34;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.037,0.021,0.059,0.036199999999999996,0.014463747785411634,0.39955104379590156,0.056,5,1,0
+q0035,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 35;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.028,0.022,0.065,0.033600000000000005,0.017728508115461946,0.527634170103034,0.046,5,1,0
+q0036,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 36;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.04,0.031,0.064,0.045200000000000004,0.013479614237803693,0.29822155393370997,0.071,5,1,0
+q0037,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 37;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.037,0.024,0.039,0.0348,0.0061400325732034996,0.17643771762079022,0.058,5,0,0
+q0038,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 38;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.03,0.021,0.069,0.0354,0.01937266114915553,0.5472503149478963,0.042,5,1,0
+q0039,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 39;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.023,0.018,0.037,0.024399999999999998,0.007602631123499285,0.3115832427663642,0.032,5,1,0
+q0040,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 40;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.029,0.013,0.037,0.0256,0.009262828941527529,0.36182925552841905,0.037,5,1,0
+q0041,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 41;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.019,0.017,0.06,0.028199999999999996,0.018212632978237935,0.6458380488736857,0.027,5,1,0
+q0042,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 42;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.015,0.025,0.0182,0.00396232255123179,0.217710030287461,0.024,5,1,0
+q0043,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 43;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.019,0.011,0.101,0.034,0.03762977544445356,1.1067581013074577,0.026,5,1,0
+q0044,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 44;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.015,0.014,0.027,0.018,0.005385164807134504,0.29917582261858355,0.022,5,1,0
+q0045,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 45;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.014,0.021,0.0172,0.0032710854467592255,0.19017938643948987,0.022,5,0,0
+q0046,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 46;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.015,0.031,0.02,0.006557438524302001,0.32787192621510003,0.024,5,1,0
+q0047,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 47;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.024,0.017,0.033,0.0252,0.006379655163094632,0.2531609191704219,0.031,5,1,0
+q0048,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 48;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.018,0.015,0.033,0.020999999999999998,0.007382411530116701,0.3515434061960334,0.031,5,1,0
+q0049,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 49;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.017,0.014,0.024,0.0186,0.004615192303685731,0.2481286184777275,0.025,5,1,0
+q0050,gen_simple_lookup,generator,simple_lookup,light,"SELECT c_custkey, c_name, c_acctbal FROM customer WHERE c_custkey = 50;",70,12,0,1,0,0,0,0,0,8.44,0.42,1,29,1,0,1,0,0,0,0,0,0,ok,0.01,0.01,0.025,0.013800000000000002,0.006496152707564686,0.47073570344671634,0.018,5,1,0
+q0051,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 10;",104,15,0,1,0,0,0,0,0,0.29,0.0,10,16,2,1,0,0,0,0,0,0,0,ok,0.015,0.01,0.047,0.0198,0.015352524222420234,0.7753800112333451,0.031,5,1,0
+q0052,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 50;",104,15,0,1,0,0,0,0,0,1.47,0.0,50,16,2,1,0,0,0,0,0,0,0,ok,0.013,0.011,0.024,0.015,0.005244044240850758,0.3496029493900506,0.019,5,1,0
+q0053,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 100;",105,15,0,1,0,0,0,0,0,2.93,0.0,100,16,2,1,0,0,0,0,0,0,0,ok,0.028,0.017,0.049,0.0294,0.012218837915284744,0.41560673181240626,0.034,5,1,0
+q0054,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 500;",105,15,0,1,0,0,0,0,0,14.66,0.0,500,16,2,1,0,0,0,0,0,0,0,ok,0.07,0.054,0.088,0.07239999999999999,0.015323185047502361,0.21164620231356854,0.027,5,1,0
+q0055,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1992-01-01' LIMIT 1000;",106,15,0,1,0,0,0,0,0,29.33,0.0,1000,16,2,1,0,0,0,0,0,0,0,ok,0.116,0.105,0.137,0.11879999999999999,0.01227599283153913,0.10333327299275363,0.04,5,0,0
+q0056,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 10;",104,15,0,1,0,0,0,0,0,0.35,0.0,10,16,2,1,0,0,0,0,0,0,0,ok,0.017,0.012,0.027,0.0174,0.005941380311005179,0.34145863856351605,0.032,5,1,0
+q0057,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 50;",104,15,0,1,0,0,0,0,0,1.73,0.0,50,16,2,1,0,0,0,0,0,0,0,ok,0.036,0.022,0.07,0.04,0.020062402647738883,0.501560066193472,0.048,5,1,0
+q0058,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 100;",105,15,0,1,0,0,0,0,0,3.45,0.0,100,16,2,1,0,0,0,0,0,0,0,ok,0.023,0.017,0.025,0.0218,0.0036331804249169902,0.16665965251912798,0.027,5,0,0
+q0059,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 500;",105,15,0,1,0,0,0,0,0,17.26,0.0,500,16,2,1,0,0,0,0,0,0,0,ok,0.063,0.061,0.106,0.078,0.022102036105300343,0.2833594372474403,0.033,5,1,0
+q0060,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1993-01-01' LIMIT 1000;",106,15,0,1,0,0,0,0,0,34.52,0.0,1000,16,2,1,0,0,0,0,0,0,0,ok,0.125,0.108,0.135,0.1222,0.012637246535539302,0.10341445610097628,0.027,5,0,0
+q0061,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 10;",104,15,0,1,0,0,0,0,0,0.42,0.0,10,16,2,1,0,0,0,0,0,0,0,ok,0.016,0.009,0.029,0.016,0.008185352771872451,0.5115845482420281,0.032,5,1,0
+q0062,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 50;",104,15,0,1,0,0,0,0,0,2.1,0.0,50,16,2,1,0,0,0,0,0,0,0,ok,0.017,0.013,0.034,0.020800000000000003,0.008408329203831165,0.4042465963380367,0.025,5,1,0
+q0063,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 100;",105,15,0,1,0,0,0,0,0,4.19,0.0,100,16,2,1,0,0,0,0,0,0,0,ok,0.021,0.019,0.054,0.027000000000000003,0.015149257407543117,0.561083607686782,0.024,5,1,0
+q0064,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 500;",105,15,0,1,0,0,0,0,0,20.96,0.0,500,16,2,1,0,0,0,0,0,0,0,ok,0.068,0.06,0.075,0.0664,0.006107372593840988,0.091978502919292,0.021,5,0,0
+q0065,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1994-01-01' LIMIT 1000;",106,15,0,1,0,0,0,0,0,41.93,0.0,1000,16,2,1,0,0,0,0,0,0,0,ok,0.172,0.161,0.225,0.18380000000000002,0.027344103569142655,0.1487709660997968,0.041,5,0,0
+q0066,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 10;",104,15,0,1,0,0,0,0,0,0.53,0.0,10,16,2,1,0,0,0,0,0,0,0,ok,0.023,0.014,0.031,0.020999999999999998,0.007176350047203662,0.3417309546287458,0.056,5,1,0
+q0067,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 50;",104,15,0,1,0,0,0,0,0,2.65,0.0,50,16,2,1,0,0,0,0,0,0,0,ok,0.022,0.015,0.042,0.0252,0.011691877522451218,0.46396339374806417,0.029,5,1,0
+q0068,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 100;",105,15,0,1,0,0,0,0,0,5.3,0.0,100,16,2,1,0,0,0,0,0,0,0,ok,0.027,0.022,0.045,0.0318,0.009731392500562291,0.3060186320931538,0.025,5,1,0
+q0069,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 500;",105,15,0,1,0,0,0,0,0,26.49,0.0,500,16,2,1,0,0,0,0,0,0,0,ok,0.091,0.072,0.115,0.0934,0.020574255758107028,0.2202811109005035,0.03,5,1,0
+q0070,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1995-01-01' LIMIT 1000;",106,15,0,1,0,0,0,0,0,52.98,0.0,1000,16,2,1,0,0,0,0,0,0,0,ok,0.166,0.134,0.231,0.1776,0.040709949643791016,0.2292226894357602,0.037,5,1,0
+q0071,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 10;",104,15,0,1,0,0,0,0,0,0.73,0.0,10,16,2,1,0,0,0,0,0,0,0,ok,0.011,0.009,0.028,0.0144,0.007829431652425355,0.5437105314184274,0.022,5,1,0
+q0072,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 50;",104,15,0,1,0,0,0,0,0,3.65,0.0,50,16,2,1,0,0,0,0,0,0,0,ok,0.018,0.016,0.038,0.0214,0.009370165420097982,0.4378581972008403,0.019,5,1,0
+q0073,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 100;",105,15,0,1,0,0,0,0,0,7.31,0.0,100,16,2,1,0,0,0,0,0,0,0,ok,0.031,0.027,0.05,0.033800000000000004,0.009257429448826494,0.27388844523155303,0.03,5,1,0
+q0074,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 500;",105,15,0,1,0,0,0,0,0,36.54,0.0,500,16,2,1,0,0,0,0,0,0,0,ok,0.164,0.116,0.23,0.16440000000000002,0.045108757464598824,0.27438416949269356,0.062,5,1,0
+q0075,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1996-01-01' LIMIT 1000;",106,15,0,1,0,0,0,0,0,73.08,0.0,1000,16,2,1,0,0,0,0,0,0,0,ok,0.217,0.187,0.266,0.22480000000000003,0.029727092020579483,0.13223795382820053,0.036,5,0,0
+q0076,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 10;",104,15,0,1,0,0,0,0,0,1.2,0.0,10,16,2,1,0,0,0,0,0,0,0,ok,0.016,0.011,0.028,0.017599999999999998,0.007021395872616784,0.39894294730777186,0.022,5,1,0
+q0077,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 50;",104,15,0,1,0,0,0,0,0,5.99,0.0,50,16,2,1,0,0,0,0,0,0,0,ok,0.028,0.024,0.101,0.0446,0.03250846043724618,0.7288892474718874,0.038,5,1,0
+q0078,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 100;",105,15,0,1,0,0,0,0,0,11.99,0.0,100,16,2,1,0,0,0,0,0,0,0,ok,0.046,0.037,0.072,0.0504,0.013538833036861042,0.26862763962025876,0.048,5,1,0
+q0079,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 500;",105,15,0,1,0,0,0,0,0,59.94,0.0,500,16,2,1,0,0,0,0,0,0,0,ok,0.13,0.118,0.164,0.1366,0.019411336893681488,0.14210349116897136,0.024,5,0,0
+q0080,gen_filter_orders,generator,filter_orders,light,"SELECT o_orderkey, o_orderdate, o_totalprice FROM orders WHERE o_orderdate >= DATE '1997-01-01' LIMIT 1000;",106,15,0,1,0,0,0,0,0,119.88,0.0,1000,16,2,1,0,0,0,0,0,0,0,ok,0.333,0.309,0.691,0.4024,0.1629011970490088,0.40482404833252683,0.032,5,1,0
+q0081,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 10;",149,34,1,1,0,0,0,0,0,5.24,0.43,10,31,4,1,1,0,0,0,0,1,0,ok,0.03,0.02,0.041,0.0288,0.008348652585896722,0.28988377034363616,0.119,5,1,0
+q0082,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 50;",149,34,1,1,0,0,0,0,0,24.47,0.43,50,31,4,1,1,0,0,0,0,1,0,ok,0.127,0.105,0.16,0.133,0.02117781858454737,0.1592317186808073,0.237,5,0,0
+q0083,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 100;",150,34,1,1,0,0,0,0,0,48.5,0.43,100,31,4,1,1,0,0,0,0,1,0,ok,0.288,0.202,0.381,0.2778,0.07035410435788376,0.25325451532715537,0.232,5,1,0
+q0084,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 500;",150,34,1,1,0,0,0,0,0,240.81,0.43,500,31,4,1,1,0,0,0,0,1,0,ok,0.866,0.728,0.954,0.8538,0.08152422952717799,0.09548398867085732,0.16,5,0,0
+q0085,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'AUTOMOBILE' LIMIT 1000;",151,34,1,1,0,0,0,0,0,481.2,0.43,1000,31,4,1,1,0,0,0,0,1,0,ok,1.093,1.016,1.342,1.1218,0.13026204358906707,0.11611877659927534,0.147,5,0,0
+q0086,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 10;",147,34,1,1,0,0,0,0,0,5.11,0.43,10,31,4,1,1,0,0,0,0,1,0,ok,0.044,0.044,0.103,0.05619999999999999,0.026176325181354237,0.4657709107002534,0.159,5,1,0
+q0087,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 50;",147,34,1,1,0,0,0,0,0,23.86,0.43,50,31,4,1,1,0,0,0,0,1,0,ok,0.092,0.05,0.146,0.091,0.03734969879396619,0.41043625048314497,0.148,5,1,0
+q0088,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 100;",148,34,1,1,0,0,0,0,0,47.29,0.43,100,31,4,1,1,0,0,0,0,1,0,ok,0.078,0.065,0.176,0.1014,0.046896694979497215,0.46249206094178713,0.09,5,1,0
+q0089,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 500;",148,34,1,1,0,0,0,0,0,234.72,0.43,500,31,4,1,1,0,0,0,0,1,0,ok,0.491,0.39,0.774,0.5452,0.16514145451702913,0.3029006869351231,0.107,5,1,0
+q0090,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'BUILDING' LIMIT 1000;",149,34,1,1,0,0,0,0,0,469.01,0.43,1000,31,4,1,1,0,0,0,0,1,0,ok,1.107,1.003,1.497,1.168,0.19029976353111958,0.1629278797355476,0.138,5,0,0
+q0091,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 10;",148,34,1,1,0,0,0,0,0,5.23,0.43,10,31,4,1,1,0,0,0,0,1,0,ok,0.04,0.03,0.045,0.0382,0.005585696017507576,0.14622240883527687,0.147,5,0,0
+q0092,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 50;",148,34,1,1,0,0,0,0,0,24.43,0.43,50,31,4,1,1,0,0,0,0,1,0,ok,0.088,0.065,0.161,0.10200000000000001,0.0388780143525875,0.3811570034567402,0.122,5,1,0
+q0093,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 100;",149,34,1,1,0,0,0,0,0,48.44,0.43,100,31,4,1,1,0,0,0,0,1,0,ok,0.145,0.086,0.203,0.1456,0.047167785616880516,0.323954571544509,0.122,5,1,0
+q0094,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 500;",149,34,1,1,0,0,0,0,0,240.48,0.43,500,31,4,1,1,0,0,0,0,1,0,ok,0.59,0.49,0.853,0.6342,0.13828485094181503,0.21804612258248982,0.157,5,1,0
+q0095,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'FURNITURE' LIMIT 1000;",150,34,1,1,0,0,0,0,0,480.54,0.43,1000,31,4,1,1,0,0,0,0,1,0,ok,1.113,0.976,1.239,1.1221999999999999,0.1142659179283132,0.10182313128525504,0.147,5,0,0
+q0096,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 10;",148,34,1,1,0,0,0,0,0,5.18,0.43,10,31,4,1,1,0,0,0,0,1,0,ok,0.034,0.027,0.086,0.0436,0.024027068069158997,0.5510795428706192,0.113,5,1,0
+q0097,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 50;",148,34,1,1,0,0,0,0,0,24.21,0.43,50,31,4,1,1,0,0,0,0,1,0,ok,0.08,0.068,0.104,0.0826,0.015805062480104274,0.19134458208358684,0.117,5,0,0
+q0098,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 100;",149,34,1,1,0,0,0,0,0,47.99,0.43,100,31,4,1,1,0,0,0,0,1,0,ok,0.157,0.074,0.286,0.16599999999999998,0.08150153372789987,0.4909730947463848,0.245,5,1,0
+q0099,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 500;",149,34,1,1,0,0,0,0,0,238.26,0.43,500,31,4,1,1,0,0,0,0,1,0,ok,0.612,0.506,0.819,0.6288,0.125258532643489,0.19920250102336035,0.146,5,0,0
+q0100,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'HOUSEHOLD' LIMIT 1000;",150,34,1,1,0,0,0,0,0,476.09,0.43,1000,31,4,1,1,0,0,0,0,1,0,ok,1.024,0.834,1.922,1.1708,0.43092307898278087,0.36805865987596587,0.131,5,1,0
+q0101,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 10;",148,34,1,1,0,0,0,0,0,5.2,0.43,10,31,4,1,1,0,0,0,0,1,0,ok,0.042,0.029,0.109,0.0526,0.03270015290484129,0.6216759107384275,0.158,5,1,0
+q0102,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 50;",148,34,1,1,0,0,0,0,0,24.27,0.43,50,31,4,1,1,0,0,0,0,1,0,ok,0.072,0.057,0.114,0.08120000000000001,0.024283739415501892,0.29906083024017105,0.097,5,1,0
+q0103,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 100;",149,34,1,1,0,0,0,0,0,48.12,0.43,100,31,4,1,1,0,0,0,0,1,0,ok,0.172,0.108,0.196,0.156,0.042526462349929836,0.27260552788416564,0.137,5,1,0
+q0104,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 500;",149,34,1,1,0,0,0,0,0,238.9,0.43,500,31,4,1,1,0,0,0,0,1,0,ok,0.375,0.304,0.774,0.472,0.19051640349324256,0.40363644807890375,0.1,5,1,0
+q0105,gen_join_customer_orders,generator,join_customer_orders,medium,"SELECT c.c_name, o.o_orderkey, o.o_totalprice FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey WHERE c.c_mktsegment = 'MACHINERY' LIMIT 1000;",150,34,1,1,0,0,0,0,0,477.37,0.43,1000,31,4,1,1,0,0,0,0,1,0,ok,1.239,1.007,1.459,1.2353999999999998,0.16368964536585698,0.13249930821260889,0.149,5,0,0
+q0106,gen_orders_group_by,generator,orders_group_by,medium,"SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1992-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;",184,28,0,1,1,1,0,2,0,55239.02,55239.01,5,49,3,1,0,1,1,0,0,0,0,ok,329.258,326.476,337.044,330.1588,4.070744858130995,0.012329657298642336,0.07,5,0,0
+q0107,gen_orders_group_by,generator,orders_group_by,medium,"SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1993-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;",184,28,0,1,1,1,0,2,0,53547.64,53547.63,5,49,3,1,0,1,1,0,0,0,0,ok,295.316,291.369,327.588,303.3376,14.931323025773711,0.0492234494694153,0.082,5,0,0
+q0108,gen_orders_group_by,generator,orders_group_by,medium,"SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1994-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;",184,28,0,1,1,1,0,2,0,51858.95,51858.93,5,49,3,1,0,1,1,0,0,0,0,ok,257.154,255.45,263.723,258.3048,3.1939254374515493,0.01236494806697959,0.074,5,0,0
+q0109,gen_orders_group_by,generator,orders_group_by,medium,"SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1995-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;",184,28,0,1,1,1,0,2,0,50217.59,50217.57,5,49,3,1,0,1,1,0,0,0,0,ok,231.645,228.028,252.847,238.73319999999998,12.601339043927041,0.052784191909324055,0.087,5,0,0
+q0110,gen_orders_group_by,generator,orders_group_by,medium,"SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1996-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;",184,28,0,1,1,1,0,2,0,48504.68,48504.66,5,49,3,1,0,1,1,0,0,0,0,ok,197.238,188.963,216.78,199.06599999999997,10.95419346643102,0.05502794784860811,0.082,5,0,0
+q0111,gen_orders_group_by,generator,orders_group_by,medium,"SELECT o_orderpriority, COUNT(*) AS orders_count, SUM(o_totalprice) AS total_price FROM orders WHERE o_orderdate >= DATE '1997-01-01' GROUP BY o_orderpriority ORDER BY total_price DESC;",184,28,0,1,1,1,0,2,0,46742.28,46742.27,5,49,3,1,0,1,1,0,0,0,0,ok,170.545,155.104,173.171,167.0884,7.191674582459907,0.04304113620370957,0.083,5,0,0
+q0112,gen_lineitem_group_by,generator,lineitem_group_by,medium,"SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1992-01-01' GROUP BY l_returnflag, l_linestatus;",217,36,0,1,1,0,0,3,0,248655.11,248655.0,6,100,2,1,0,0,1,0,0,0,0,ok,1772.546,1753.743,1808.513,1777.2952,20.56972219549889,0.011573610391508901,0.087,5,0,1
+q0113,gen_lineitem_group_by,generator,lineitem_group_by,medium,"SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1993-01-01' GROUP BY l_returnflag, l_linestatus;",217,36,0,1,1,0,0,3,0,239187.65,239187.55,6,100,2,1,0,0,1,0,0,0,0,ok,1607.691,1591.267,1653.89,1613.2906,25.03960962754813,0.015520830300224976,0.094,5,0,1
+q0114,gen_lineitem_group_by,generator,lineitem_group_by,medium,"SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1994-01-01' GROUP BY l_returnflag, l_linestatus;",217,36,0,1,1,0,0,3,0,227909.87,227909.76,6,100,2,1,0,0,1,0,0,0,0,ok,1406.896,1394.053,1470.536,1417.8894,30.595712653899735,0.021578349237888185,0.093,5,0,1
+q0115,gen_lineitem_group_by,generator,lineitem_group_by,medium,"SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1995-01-01' GROUP BY l_returnflag, l_linestatus;",217,36,0,1,1,0,0,3,0,216323.38,216323.27,6,100,2,1,0,0,1,0,0,0,0,ok,1223.818,1205.177,1269.348,1230.4407999999999,23.787992447871684,0.019332902849021005,0.086,5,0,1
+q0116,gen_lineitem_group_by,generator,lineitem_group_by,medium,"SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1996-01-01' GROUP BY l_returnflag, l_linestatus;",217,36,0,1,1,0,0,3,0,205085.28,205085.18,6,100,2,1,0,0,1,0,0,0,0,ok,1005.998,997.405,1037.488,1011.017,15.518401931255712,0.015349298707396325,0.102,5,0,1
+q0117,gen_lineitem_group_by,generator,lineitem_group_by,medium,"SELECT l_returnflag, l_linestatus, SUM(l_quantity) AS sum_qty, SUM(l_extendedprice) AS sum_price, AVG(l_discount) AS avg_discount FROM lineitem WHERE l_shipdate >= DATE '1997-01-01' GROUP BY l_returnflag, l_linestatus;",217,36,0,1,1,0,0,3,0,193480.97,193480.86,6,100,2,1,0,0,1,0,0,0,0,ok,800.917,797.196,813.054,803.8562,7.1110882570813105,0.008846219332613607,0.106,5,0,0
+q0118,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",327,75,2,1,1,1,0,2,0,328912.19,328911.94,100,59,10,3,0,1,1,2,0,0,0,ok,2620.352,2572.143,3154.039,2715.7316,247.5422163082492,0.0911512081342093,0.308,5,0,1
+q0119,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",327,75,2,1,1,1,0,2,0,323226.59,323226.34,100,59,10,3,0,1,1,2,0,0,0,ok,2960.928,2349.083,3279.165,2859.1564,347.23641462381215,0.12144715644929818,0.325,5,0,1
+q0120,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",327,75,2,1,1,1,0,2,0,319634.3,319634.05,100,59,9,2,1,1,1,1,0,1,0,ok,1403.99,1299.905,1551.395,1422.1002,93.46134874214046,0.06572064946066421,0.317,5,0,1
+q0121,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",327,75,2,1,1,1,0,2,0,281518.96,281518.71,100,59,9,2,1,1,1,1,0,1,0,ok,1071.35,979.632,1116.743,1063.3836,53.892045092944855,0.050679778297262494,0.333,5,0,1
+q0122,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",327,75,2,1,1,1,0,2,0,241742.53,241742.28,100,59,9,2,1,1,1,1,0,1,0,ok,873.035,797.418,993.802,883.3038,76.93855542054321,0.08710316362336855,0.348,5,0,0
+q0123,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'AUTOMOBILE' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",327,75,2,1,1,1,0,2,0,200818.17,200817.92,100,59,9,2,1,1,1,1,0,1,0,ok,656.516,537.654,802.352,667.4997999999999,94.30723216275621,0.14128428527282888,0.445,5,0,0
+q0124,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",325,75,2,1,1,1,0,2,0,438302.83,438302.58,100,59,10,3,0,1,1,2,0,0,0,ok,3245.816,3015.396,3583.693,3275.4568,240.54179819461734,0.07343763416284939,0.335,5,0,1
+q0125,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",325,75,2,1,1,1,0,2,0,416179.18,416178.93,100,59,10,3,0,1,1,2,0,0,0,ok,2979.487,2853.804,3036.706,2967.3082000000004,69.99159923305083,0.02358757315234421,0.309,5,0,1
+q0126,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",325,75,2,1,1,1,0,2,0,394088.12,394087.87,100,59,10,3,0,1,1,2,0,0,0,ok,2694.481,2555.886,2766.942,2658.3338,95.72578605945219,0.03600969376360944,0.439,5,0,1
+q0127,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",325,75,2,1,1,1,0,2,0,348877.83,348877.58,100,59,9,2,1,1,1,1,0,1,0,ok,1043.731,1007.607,1215.463,1075.9062,84.64213022602868,0.07867054788421955,0.324,5,0,1
+q0128,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",325,75,2,1,1,1,0,2,0,291353.59,291353.34,100,59,9,2,1,1,1,1,0,1,0,ok,839.503,749.166,1018.404,862.9826,102.14571081939758,0.11836358093361045,0.304,5,0,0
+q0129,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'BUILDING' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",325,75,2,1,1,1,0,2,0,232165.11,232164.86,100,59,9,2,1,1,1,1,0,1,0,ok,596.522,564.316,630.481,595.693,24.66095138067466,0.04139875973139631,0.359,5,0,0
+q0130,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,328972.62,328972.37,100,59,10,3,0,1,1,2,0,0,0,ok,2938.127,2815.038,3488.316,3045.177,267.8151965787228,0.08794733330073187,0.393,5,0,1
+q0131,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,323277.31,323277.06,100,59,10,3,0,1,1,2,0,0,0,ok,2685.886,2512.564,3149.362,2717.3748,259.9289398685726,0.09565443083838586,0.271,5,0,1
+q0132,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,320085.45,320085.2,100,59,9,2,1,1,1,1,0,1,0,ok,1309.506,1287.545,1379.103,1322.1202,37.342342316732086,0.028244286954190765,0.33,5,0,1
+q0133,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,281906.78,281906.53,100,59,9,2,1,1,1,1,0,1,0,ok,1076.325,1059.279,1160.754,1088.3982,41.14502105601595,0.037803279218962274,0.305,5,0,1
+q0134,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,242064.58,242064.33,100,59,9,2,1,1,1,1,0,1,0,ok,822.96,805.585,837.653,820.7386,14.776773643119816,0.018004238673701732,0.277,5,0,0
+q0135,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'FURNITURE' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,201071.04,201070.79,100,59,9,2,1,1,1,1,0,1,0,ok,664.106,605.86,714.495,655.4236,47.20135541803856,0.07201656366667078,0.323,5,0,0
+q0136,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,329388.0,329387.75,100,59,10,3,0,1,1,2,0,0,0,ok,2842.689,2793.75,2918.588,2848.1156,45.360107950709384,0.01592635774710457,0.286,5,0,1
+q0137,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,323635.62,323635.37,100,59,10,3,0,1,1,2,0,0,0,ok,2595.803,2453.637,2994.506,2685.519,231.5582121810841,0.0862247528991916,0.411,5,0,1
+q0138,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,317889.55,317889.3,100,59,10,3,0,1,1,2,0,0,0,ok,2359.057,2338.062,2673.518,2419.5662,142.59467772395996,0.05893398482916481,0.287,5,0,1
+q0139,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,284580.99,284580.74,100,59,9,2,1,1,1,1,0,1,0,ok,1139.387,1112.228,1166.991,1138.1742,20.23301585775088,0.017776730361442807,0.349,5,0,1
+q0140,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,244283.6,244283.35,100,59,9,2,1,1,1,1,0,1,0,ok,908.201,847.467,973.829,909.003,45.34763745224219,0.04988722529215216,0.37,5,0,1
+q0141,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'HOUSEHOLD' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,202820.36,202820.11,100,59,9,2,1,1,1,1,0,1,0,ok,577.811,558.976,643.841,592.8702000000001,38.324568865154895,0.06464242740679982,0.343,5,0,0
+q0142,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1992-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,329267.18,329266.93,100,59,10,3,0,1,1,2,0,0,0,ok,2841.771,2790.75,2886.727,2833.8792000000003,37.901427112972904,0.013374397579463832,0.317,5,0,1
+q0143,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1993-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,323532.15,323531.9,100,59,10,3,0,1,1,2,0,0,0,ok,2863.054,2597.571,2968.461,2795.1675999999998,162.35183078056124,0.05808303973635114,0.426,5,0,1
+q0144,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1994-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,317803.48,317803.23,100,59,10,3,0,1,1,2,0,0,0,ok,2470.451,2272.673,2834.079,2503.225,207.5054198665665,0.08289523309593286,0.406,5,0,1
+q0145,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1995-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,283805.33,283805.08,100,59,9,2,1,1,1,1,0,1,0,ok,1106.733,988.028,1132.988,1091.34,59.20084851165564,0.05424601729218726,0.388,5,0,1
+q0146,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1996-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,243639.52,243639.27,100,59,9,2,1,1,1,1,0,1,0,ok,763.312,747.14,804.595,766.7054,22.282920540180566,0.029063210641506586,0.344,5,0,0
+q0147,gen_join_customer_orders_lineitem,generator,join_customer_orders_lineitem,heavy,"SELECT c.c_name, COUNT(*) AS items_count, SUM(l.l_extendedprice * (1 - l.l_discount)) AS revenue FROM customer c JOIN orders o ON c.c_custkey = o.o_custkey JOIN lineitem l ON o.o_orderkey = l.l_orderkey WHERE c.c_mktsegment = 'MACHINERY' AND o.o_orderdate >= DATE '1997-01-01' GROUP BY c.c_name ORDER BY revenue DESC LIMIT 100;",326,75,2,1,1,1,0,2,0,202314.61,202314.36,100,59,9,2,1,1,1,1,0,1,0,ok,555.534,530.474,567.829,554.251,14.763751894420295,0.026637303125155023,0.27,5,0,0
+q0148,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 1 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",267,68,2,1,1,1,0,2,0,147600.71,147600.46,100,68,10,3,0,1,1,2,0,0,0,ok,1039.507,960.258,1158.079,1051.8294,93.67772620692709,0.08906171115480047,0.294,5,0,1
+q0149,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 6 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",267,68,2,1,1,1,0,2,0,138256.46,138256.21,100,68,10,3,0,1,1,2,0,0,0,ok,965.725,900.244,1046.31,966.567,58.1724268060049,0.06018457779543984,0.339,5,0,1
+q0150,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 11 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,128730.83,128730.58,100,68,10,3,0,1,1,2,0,0,0,ok,832.813,788.492,893.804,838.4324,42.368909076113816,0.05053348257547515,0.342,5,0,0
+q0151,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 16 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,119544.89,119544.64,100,68,10,3,0,1,1,2,0,0,0,ok,786.585,748.73,813.35,782.0604000000001,28.099194958219005,0.035929699238344,0.342,5,0,0
+q0152,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 21 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,101403.47,101403.22,100,68,10,3,0,1,1,2,0,0,0,ok,650.565,624.126,689.537,650.2124,25.636938229827695,0.03942855939048178,0.296,5,0,0
+q0153,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 26 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,92167.42,92167.17,100,68,10,3,0,1,1,2,0,0,0,ok,577.047,568.019,632.195,587.5762000000001,26.684043334922116,0.04541375796862111,0.314,5,0,0
+q0154,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 31 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,83228.49,83228.24,100,68,10,3,0,1,1,2,0,0,0,ok,491.373,475.206,508.433,494.0762,13.090035473595927,0.026493960797131958,0.275,5,0,0
+q0155,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 36 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,73776.44,73776.19,100,68,10,3,0,1,1,2,0,0,0,ok,433.537,422.31,466.816,440.48999999999995,17.336489047670515,0.03935728177182346,0.327,5,0,0
+q0156,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 41 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,60712.03,60711.78,100,68,10,3,0,1,1,2,0,0,0,ok,331.408,311.711,336.905,328.6328,9.815345113647293,0.02986721080077002,0.393,5,0,0
+q0157,gen_join_supplier_partsupp_part,generator,join_supplier_partsupp_part,heavy,"SELECT s.s_name, p.p_brand, COUNT(*) AS cnt, AVG(ps.ps_supplycost) AS avg_cost FROM supplier s JOIN partsupp ps ON s.s_suppkey = ps.ps_suppkey JOIN part p ON ps.ps_partkey = p.p_partkey WHERE p.p_size >= 46 GROUP BY s.s_name, p.p_brand ORDER BY avg_cost DESC LIMIT 100;",268,68,2,1,1,1,0,2,0,47179.16,47178.91,100,68,10,3,0,1,1,2,0,0,0,ok,241.804,236.975,259.572,245.25860000000003,9.576227665422328,0.0390454306818286,0.352,5,0,0
+q0158,gen_window_function,generator,window_function,heavy,"SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1992-01-01';",172,28,0,1,0,1,0,0,1,213781.57,2.4,1499852,24,3,0,1,0,0,0,0,0,1,ok,2278.403,2222.237,2302.782,2271.3186,30.877390001423365,0.013594477675401137,0.081,5,0,1
+q0159,gen_window_function,generator,window_function,heavy,"SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1993-01-01';",172,28,0,1,0,1,0,0,1,200845.03,2.32,1274334,24,3,0,1,0,0,0,0,0,1,ok,2188.78,2130.705,2391.828,2213.7655999999997,103.06244488803866,0.04655526533072818,0.067,5,0,1
+q0160,gen_window_function,generator,window_function,heavy,"SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1994-01-01';",172,28,0,1,0,1,0,0,1,188217.76,2.26,1049175,24,3,0,1,0,0,0,0,0,1,ok,1946.777,1923.206,2076.291,1970.1634000000001,61.74679002425964,0.03134094868692598,0.075,5,0,1
+q0161,gen_window_function,generator,window_function,heavy,"SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1995-01-01';",172,28,0,1,0,1,0,0,1,156423.97,139817.43,830327,24,3,1,0,1,0,0,0,0,1,ok,760.529,724.343,771.689,755.5268,19.67419076353586,0.026040361193720545,0.082,5,0,0
+q0162,gen_window_function,generator,window_function,heavy,"SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1996-01-01';",172,28,0,1,0,1,0,0,1,124102.69,112063.91,601939,24,3,1,0,1,0,0,0,0,1,ok,544.749,523.463,562.194,539.9666,16.23882025579445,0.030073749479679765,0.079,5,0,0
+q0163,gen_window_function,generator,window_function,heavy,"SELECT o_custkey, o_orderkey, o_totalprice, RANK() OVER (PARTITION BY o_custkey ORDER BY o_totalprice DESC) AS price_rank FROM orders WHERE o_orderdate >= DATE '1997-01-01';",172,28,0,1,0,1,0,0,1,91517.12,84178.06,366953,24,3,1,0,1,0,0,0,0,1,ok,363.334,342.81,398.881,366.14160000000004,24.51102942146657,0.06694412604704456,0.075,5,0,0
+q0164,gen_subquery,generator,subquery,heavy,"SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 100000);",157,38,0,1,1,0,1,1,0,146879.23,141385.47,28271,25,5,1,1,0,1,1,0,0,0,ok,1643.501,1537.631,1687.584,1620.6752000000001,72.09052876557361,0.044481786829078156,0.138,5,0,1
+q0165,gen_subquery,generator,subquery,heavy,"SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 250000);",157,38,0,1,1,0,1,1,0,146879.23,141385.47,28271,25,5,1,1,0,1,1,0,0,0,ok,1958.656,1868.66,2142.705,2001.8881999999999,121.50772718926146,0.06069655997236083,0.131,5,0,1
+q0166,gen_subquery,generator,subquery,heavy,"SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 500000);",157,38,0,1,1,0,1,1,0,146879.23,141385.47,28271,25,5,1,1,0,1,1,0,0,0,ok,1609.447,1586.743,1633.641,1610.049,17.90169321600619,0.011118725713320645,0.154,5,0,1
+q0167,gen_subquery,generator,subquery,heavy,"SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 750000);",157,38,0,1,1,0,1,1,0,146879.23,141385.47,28271,25,5,1,1,0,1,1,0,0,0,ok,1679.652,1619.37,1696.552,1663.3928,37.08902970825744,0.022297216693650136,0.164,5,0,1
+q0168,gen_subquery,generator,subquery,heavy,"SELECT c.c_name, c.c_acctbal FROM customer c WHERE c.c_custkey IN (SELECT o.o_custkey FROM orders o GROUP BY o.o_custkey HAVING SUM(o.o_totalprice) > 1000000);",158,38,0,1,1,0,1,1,0,146879.23,141385.47,28271,25,5,1,1,0,1,1,0,0,0,ok,1611.732,1600.19,1647.958,1618.1142,18.614125421303076,0.01150359191044926,0.141,5,0,1
+tpch_s101_q01,tpch_q01,tpch_qgen,tpch_standard_q01,heavy,"select
+	l_returnflag,
+	l_linestatus,
+	sum(l_quantity) as sum_qty,
+	sum(l_extendedprice) as sum_base_price,
+	sum(l_extendedprice * (1 - l_discount)) as sum_disc_price,
+	sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
+	avg(l_quantity) as avg_qty,
+	avg(l_extendedprice) as avg_price,
+	avg(l_discount) as avg_disc,
+	count(*) as count_order
+from
+	lineitem
+where
+	l_shipdate <= date '1998-12-01' - INTERVAL '77 day'
+group by
+	l_returnflag,
+	l_linestatus
+order by
+	l_returnflag,
+	l_linestatus;",490,96,0,1,1,1,0,8,0,381626.58,381626.57,6,236,3,1,0,1,1,0,0,0,0,ok,4540.558,4506.502,4577.037,4543.7072,30.39972112865508,0.006690510587622169,0.117,5,0,1
+tpch_s101_q02,tpch_q02,tpch_qgen,tpch_standard_q02,heavy,"select
+	s_acctbal,
+	s_name,
+	n_name,
+	p_partkey,
+	p_mfgr,
+	s_address,
+	s_phone,
+	s_comment
+from
+	part,
+	supplier,
+	partsupp,
+	nation,
+	region
+where
+	p_partkey = ps_partkey
+	and s_suppkey = ps_suppkey
+	and p_size = 16
+	and p_type like '%STEEL'
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'MIDDLE EAST'
+	and ps_supplycost = (
+		select
+			min(ps_supplycost)
+		from
+			partsupp,
+			supplier,
+			nation,
+			region
+		where
+			p_partkey = ps_partkey
+			and s_suppkey = ps_suppkey
+			and s_nationkey = n_nationkey
+			and n_regionkey = r_regionkey
+			and r_name = 'MIDDLE EAST'
+	)
+order by
+	s_acctbal desc,
+	n_name,
+	s_name,
+	p_partkey
+LIMIT 100;",604,103,0,2,0,1,1,1,0,52540.73,52540.72,1,156,21,5,4,1,1,2,0,5,0,ok,235.394,226.222,253.115,238.00079999999997,10.444442527009283,0.043884064788896865,0.721,5,0,0
+tpch_s101_q03,tpch_q03,tpch_qgen,tpch_standard_q03,heavy,"select
+	l_orderkey,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	o_orderdate,
+	o_shippriority
+from
+	customer,
+	orders,
+	lineitem
+where
+	c_mktsegment = 'BUILDING'
+	and c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate < date '1995-03-26'
+	and l_shipdate > date '1995-03-26'
+group by
+	l_orderkey,
+	o_orderdate,
+	o_shippriority
+order by
+	revenue desc,
+	o_orderdate
+LIMIT 10;",380,60,0,1,1,1,0,1,0,295513.42,295513.39,10,44,9,2,1,1,1,1,0,1,0,ok,615.0,614.063,1051.998,726.1596000000001,189.45049874650636,0.2608937467004586,0.312,5,1,0
+tpch_s101_q04,tpch_q04,tpch_qgen,tpch_standard_q04,heavy,"select
+	o_orderpriority,
+	count(*) as order_count
+from
+	orders
+where
+	o_orderdate >= date '1996-12-01'
+	and o_orderdate < date '1996-12-01' + INTERVAL '3 month'
+	and exists (
+		select
+			*
+		from
+			lineitem
+		where
+			l_orderkey = o_orderkey
+			and l_commitdate < l_receiptdate
+	)
+group by
+	o_orderpriority
+order by
+	o_orderpriority;",304,44,0,2,1,1,1,1,0,129341.35,129220.45,5,17,5,1,1,1,1,0,0,1,0,ok,231.554,228.135,233.71,230.9038,2.1487565474013155,0.00930585181968125,0.247,5,0,0
+tpch_s101_q05,tpch_q05,tpch_qgen,tpch_standard_q05,heavy,"select
+	n_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue
+from
+	customer,
+	orders,
+	lineitem,
+	supplier,
+	nation,
+	region
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and l_suppkey = s_suppkey
+	and c_nationkey = s_nationkey
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'AFRICA'
+	and o_orderdate >= date '1996-01-01'
+	and o_orderdate < date '1996-01-01' + INTERVAL '1 year'
+group by
+	n_name
+order by
+	revenue desc;",448,73,0,1,1,1,0,1,0,178273.62,178273.56,25,40,17,2,3,2,1,1,0,4,0,ok,634.333,621.564,740.495,654.524,48.6904865553837,0.0743906817097367,0.961,5,0,0
+tpch_s101_q06,tpch_q06,tpch_qgen,tpch_standard_q06,heavy,"select
+	sum(l_extendedprice * l_discount) as revenue
+from
+	lineitem
+where
+	l_shipdate >= date '1996-01-01'
+	and l_shipdate < date '1996-01-01' + INTERVAL '1 year'
+	and l_discount between 0.06 - 0.01 and 0.06 + 0.01
+	and l_quantity < 25;",229,38,0,1,0,0,0,1,0,234266.05,234266.04,1,32,2,1,0,0,1,0,0,0,0,ok,561.5,537.889,618.055,565.5616,31.213863903720714,0.05519091802505813,0.073,5,0,0
+tpch_s101_q07,tpch_q07,tpch_qgen,tpch_standard_q07,heavy,"select
+	supp_nation,
+	cust_nation,
+	l_year,
+	sum(volume) as revenue
+from
+	(
+		select
+			n1.n_name as supp_nation,
+			n2.n_name as cust_nation,
+			extract(year from l_shipdate) as l_year,
+			l_extendedprice * (1 - l_discount) as volume
+		from
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2
+		where
+			s_suppkey = l_suppkey
+			and o_orderkey = l_orderkey
+			and c_custkey = o_custkey
+			and s_nationkey = n1.n_nationkey
+			and c_nationkey = n2.n_nationkey
+			and (
+				(n1.n_name = 'KENYA' and n2.n_name = 'MOROCCO')
+				or (n1.n_name = 'MOROCCO' and n2.n_name = 'KENYA')
+			)
+			and l_shipdate between date '1995-01-01' and date '1996-12-31'
+	) as shipping
+group by
+	supp_nation,
+	cust_nation,
+	l_year
+order by
+	supp_nation,
+	cust_nation,
+	l_year;",691,137,0,1,1,1,1,1,0,74835.53,74638.45,6064,80,16,2,4,1,1,2,0,3,0,ok,702.058,683.332,747.291,709.3212,25.373413028207317,0.03577140092275166,0.677,5,0,0
+tpch_s101_q08,tpch_q08,tpch_qgen,tpch_standard_q08,heavy,"select
+	o_year,
+	sum(case
+		when nation = 'MOROCCO' then volume
+		else 0
+	end) / sum(volume) as mkt_share
+from
+	(
+		select
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) as volume,
+			n2.n_name as nation
+		from
+			part,
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2,
+			region
+		where
+			p_partkey = l_partkey
+			and s_suppkey = l_suppkey
+			and l_orderkey = o_orderkey
+			and o_custkey = c_custkey
+			and c_nationkey = n1.n_nationkey
+			and n1.n_regionkey = r_regionkey
+			and r_name = 'AFRICA'
+			and s_nationkey = n2.n_nationkey
+			and o_orderdate between date '1995-01-01' and date '1996-12-31'
+			and p_type = 'MEDIUM PLATED TIN'
+	) as all_nations
+group by
+	o_year
+order by
+	o_year;",671,125,0,1,1,1,1,2,0,194322.08,194209.93,2406,64,21,3,4,1,1,2,0,5,0,ok,229.896,219.256,247.938,231.0764,10.427341526007476,0.04512508212005845,0.957,5,0,0
+tpch_s101_q09,tpch_q09,tpch_qgen,tpch_standard_q09,heavy,"select
+	nation,
+	o_year,
+	sum(amount) as sum_profit
+from
+	(
+		select
+			n_name as nation,
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount
+		from
+			part,
+			supplier,
+			lineitem,
+			partsupp,
+			orders,
+			nation
+		where
+			s_suppkey = l_suppkey
+			and ps_suppkey = l_suppkey
+			and ps_partkey = l_partkey
+			and p_partkey = l_partkey
+			and o_orderkey = l_orderkey
+			and s_nationkey = n_nationkey
+			and p_name like '%indian%'
+	) as profit
+group by
+	nation,
+	o_year
+order by
+	nation,
+	o_year desc;",508,92,0,1,1,1,1,1,0,85438.17,85434.81,96,72,15,3,3,1,1,2,0,3,0,ok,2757.167,2663.1,2853.557,2746.3156,75.90176583453109,0.027637670570174487,1.565,5,0,1
+tpch_s101_q10,tpch_q10,tpch_qgen,tpch_standard_q10,heavy,"select
+	c_custkey,
+	c_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	c_acctbal,
+	n_name,
+	c_address,
+	c_phone,
+	c_comment
+from
+	customer,
+	orders,
+	lineitem,
+	nation
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate >= date '1994-07-01'
+	and o_orderdate < date '1994-07-01' + INTERVAL '3 month'
+	and l_returnflag = 'R'
+	and c_nationkey = n_nationkey
+group by
+	c_custkey,
+	c_name,
+	c_acctbal,
+	c_phone,
+	n_name,
+	c_address,
+	c_comment
+order by
+	revenue desc
+LIMIT 20;",477,83,0,1,1,1,0,1,0,245485.2,245485.15,20,184,14,2,2,2,1,1,1,1,0,ok,990.284,973.434,1056.457,1003.5360000000001,33.12857195081011,0.033011842077225045,0.478,5,0,1
+tpch_s101_q11,tpch_q11,tpch_qgen,tpch_standard_q11,heavy,"select
+	ps_partkey,
+	sum(ps_supplycost * ps_availqty) as value
+from
+	partsupp,
+	supplier,
+	nation
+where
+	ps_suppkey = s_suppkey
+	and s_nationkey = n_nationkey
+	and n_name = 'IRAQ'
+group by
+	ps_partkey having
+		sum(ps_supplycost * ps_availqty) > (
+			select
+				sum(ps_supplycost * ps_availqty) * 0.0001000000
+			from
+				partsupp,
+				supplier,
+				nation
+			where
+				ps_suppkey = s_suppkey
+				and s_nationkey = n_nationkey
+				and n_name = 'IRAQ'
+		)
+order by
+	value desc;",421,71,0,2,1,1,1,3,0,10238.16,10211.49,10667,36,15,2,2,1,2,0,0,4,0,ok,117.412,105.759,163.214,124.1922,22.467587002168255,0.18090980755770697,0.439,5,0,0
+tpch_s101_q12,tpch_q12,tpch_qgen,tpch_standard_q12,heavy,"select
+	l_shipmode,
+	sum(case
+		when o_orderpriority = '1-URGENT'
+			or o_orderpriority = '2-HIGH'
+			then 1
+		else 0
+	end) as high_line_count,
+	sum(case
+		when o_orderpriority <> '1-URGENT'
+			and o_orderpriority <> '2-HIGH'
+			then 1
+		else 0
+	end) as low_line_count
+from
+	orders,
+	lineitem
+where
+	o_orderkey = l_orderkey
+	and l_shipmode in ('SHIP', 'TRUCK')
+	and l_commitdate < l_receiptdate
+	and l_shipdate < l_commitdate
+	and l_receiptdate >= date '1994-01-01'
+	and l_receiptdate < date '1994-01-01' + INTERVAL '1 year'
+group by
+	l_shipmode
+order by
+	l_shipmode;",531,83,0,1,1,1,0,2,0,307020.38,306430.87,7,21,6,1,1,2,1,0,1,0,0,ok,1108.492,982.228,1149.215,1086.7522,69.17948474222686,0.06365709196836856,0.245,5,0,1
+tpch_s101_q13,tpch_q13,tpch_qgen,tpch_standard_q13,heavy,"select
+	c_count,
+	count(*) as custdist
+from
+	(
+		select
+			c_custkey,
+			count(o_orderkey)
+		from
+			customer left outer join orders on
+				c_custkey = o_custkey
+				and o_comment not like '%pending%requests%'
+		group by
+			c_custkey
+	) as c_orders (c_custkey, c_count)
+group by
+	c_count
+order by
+	custdist desc,
+	c_count desc;",291,48,0,0,2,1,1,2,0,150559.71,150559.21,200,16,7,1,1,1,2,1,0,0,0,ok,1404.729,1387.597,1430.901,1405.1456,16.268535115369197,0.011577828742707658,0.241,5,0,1
+tpch_s101_q14,tpch_q14,tpch_qgen,tpch_standard_q14,heavy,"select
+	100.00 * sum(case
+		when p_type like 'PROMO%'
+			then l_extendedprice * (1 - l_discount)
+		else 0
+	end) / sum(l_extendedprice * (1 - l_discount)) as promo_revenue
+from
+	lineitem,
+	part
+where
+	l_partkey = p_partkey
+	and l_shipdate >= date '1994-12-01'
+	and l_shipdate < date '1994-12-01' + INTERVAL '1 month';",301,56,0,1,0,0,0,2,0,201825.3,201825.28,1,32,5,2,0,0,1,1,0,0,0,ok,617.289,600.563,768.633,654.2354,68.73094856612997,0.10505538001479278,0.207,5,0,0
+tpch_s101_q15,tpch_q15,tpch_qgen,tpch_standard_q15,heavy,"with revenue0 (supplier_no, total_revenue) as (
+select
+		l_suppkey,
+		sum(l_extendedprice * (1 - l_discount))
+	from
+		lineitem
+	where
+		l_shipdate >= date '1995-05-01'
+		and l_shipdate < date '1995-05-01' + INTERVAL '3 month'
+	group by
+		l_suppkey
+)
+select
+	s_suppkey,
+	s_name,
+	s_address,
+	s_phone,
+	total_revenue
+from
+	supplier,
+	revenue0
+where
+	s_suppkey = supplier_no
+	and total_revenue = (
+		select
+			max(total_revenue)
+		from
+			revenue0
+	)
+order by
+	s_suppkey;",427,72,0,2,1,1,2,2,0,191784.83,191784.7,50,96,8,1,1,1,2,0,0,1,0,ok,639.226,626.132,692.119,651.757,26.359543328745296,0.040443820823934835,0.143,5,0,0
+tpch_s101_q16,tpch_q16,tpch_qgen,tpch_standard_q16,heavy,"select
+	p_brand,
+	p_type,
+	p_size,
+	count(distinct ps_suppkey) as supplier_cnt
+from
+	partsupp,
+	part
+where
+	p_partkey = ps_partkey
+	and p_brand <> 'Brand#44'
+	and p_type not like 'ECONOMY BURNISHED%'
+	and p_size in (38, 10, 20, 26, 49, 4, 16, 3)
+	and ps_suppkey not in (
+		select
+			s_suppkey
+		from
+			supplier
+		where
+			s_comment like '%Customer%Complaints%'
+	)
+group by
+	p_brand,
+	p_type,
+	p_size
+order by
+	supplier_cnt desc,
+	p_brand,
+	p_type,
+	p_size;",420,79,0,2,1,1,1,1,0,40177.06,40137.1,15983,42,8,2,1,2,1,1,0,0,0,ok,471.46,452.707,519.575,484.40740000000005,29.96281844720222,0.061854584482405134,0.316,5,0,0
+tpch_s101_q17,tpch_q17,tpch_qgen,tpch_standard_q17,heavy,"select
+	sum(l_extendedprice) / 7.0 as avg_yearly
+from
+	lineitem,
+	part
+where
+	p_partkey = l_partkey
+	and p_brand = 'Brand#44'
+	and p_container = 'JUMBO CAN'
+	and l_quantity < (
+		select
+			0.2 * avg(l_quantity)
+		from
+			lineitem
+		where
+			l_partkey = p_partkey
+	);",240,43,0,2,0,0,1,2,0,182415.92,182415.91,1,32,8,2,0,0,2,1,0,0,0,ok,947.377,897.174,952.125,933.984,24.13912289210193,0.025845328069969004,0.246,5,0,1
+tpch_s101_q18,tpch_q18,tpch_qgen,tpch_standard_q18,heavy,"select
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice,
+	sum(l_quantity)
+from
+	customer,
+	orders,
+	lineitem
+where
+	o_orderkey in (
+		select
+			l_orderkey
+		from
+			lineitem
+		group by
+			l_orderkey having
+				sum(l_quantity) > 314
+	)
+	and c_custkey = o_custkey
+	and o_orderkey = l_orderkey
+group by
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice
+order by
+	o_totalprice desc,
+	o_orderdate
+LIMIT 100;",385,64,0,1,2,1,1,2,0,543531.95,543531.7,100,71,15,1,3,2,2,1,1,1,0,ok,1838.389,1649.653,2049.544,1834.5412000000001,145.6472302352502,0.07939163766681838,0.467,5,0,1
+tpch_s101_q19,tpch_q19,tpch_qgen,tpch_standard_q19,heavy,"select
+	sum(l_extendedprice* (1 - l_discount)) as revenue
+from
+	lineitem,
+	part
+where
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#41'
+		and p_container in ('SM CASE', 'SM BOX', 'SM PACK', 'SM PKG')
+		and l_quantity >= 3 and l_quantity <= 3 + 10
+		and p_size between 1 and 5
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#23'
+		and p_container in ('MED BAG', 'MED BOX', 'MED PKG', 'MED PACK')
+		and l_quantity >= 13 and l_quantity <= 13 + 10
+		and p_size between 1 and 10
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#53'
+		and p_container in ('LG CASE', 'LG BOX', 'LG PACK', 'LG PKG')
+		and l_quantity >= 20 and l_quantity <= 20 + 10
+		and p_size between 1 and 15
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	);",880,167,0,1,0,0,0,1,0,72707.42,72707.41,1,32,4,1,1,0,1,0,0,1,0,ok,48.416,47.41,49.074,48.2202,0.683923387522316,0.014183337844353943,0.303,5,0,0
+tpch_s101_q20,tpch_q20,tpch_qgen,tpch_standard_q20,heavy,"select
+	s_name,
+	s_address
+from
+	supplier,
+	nation
+where
+	s_suppkey in (
+		select
+			ps_suppkey
+		from
+			partsupp
+		where
+			ps_partkey in (
+				select
+					p_partkey
+				from
+					part
+				where
+					p_name like 'chocolate%'
+			)
+			and ps_availqty > (
+				select
+					0.5 * sum(l_quantity)
+				from
+					lineitem
+				where
+					l_partkey = ps_partkey
+					and l_suppkey = ps_suppkey
+					and l_shipdate >= date '1994-01-01'
+					and l_shipdate < date '1994-01-01' + INTERVAL '1 year'
+			)
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'JAPAN'
+order by
+	s_name;",456,75,0,4,0,1,3,1,0,164026.69,164026.42,107,44,15,2,1,1,1,1,0,2,0,ok,400.462,394.365,434.179,406.2712,16.262257460143704,0.0400280833594498,0.441,5,0,0
+tpch_s101_q21,tpch_q21,tpch_qgen,tpch_standard_q21,heavy,"select
+	s_name,
+	count(*) as numwait
+from
+	supplier,
+	lineitem l1,
+	orders,
+	nation
+where
+	s_suppkey = l1.l_suppkey
+	and o_orderkey = l1.l_orderkey
+	and o_orderstatus = 'F'
+	and l1.l_receiptdate > l1.l_commitdate
+	and exists (
+		select
+			*
+		from
+			lineitem l2
+		where
+			l2.l_orderkey = l1.l_orderkey
+			and l2.l_suppkey <> l1.l_suppkey
+	)
+	and not exists (
+		select
+			*
+		from
+			lineitem l3
+		where
+			l3.l_orderkey = l1.l_orderkey
+			and l3.l_suppkey <> l1.l_suppkey
+			and l3.l_receiptdate > l3.l_commitdate
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'INDONESIA'
+group by
+	s_name
+order by
+	numwait desc,
+	s_name
+LIMIT 100;",572,118,0,3,1,1,2,1,0,73778.28,73778.28,1,27,15,2,4,2,1,0,0,5,0,ok,770.739,764.742,794.687,774.894,12.19177333286672,0.015733472362499543,1.049,5,0,0
+tpch_s101_q22,tpch_q22,tpch_qgen,tpch_standard_q22,heavy,"select
+	cntrycode,
+	count(*) as numcust,
+	sum(c_acctbal) as totacctbal
+from
+	(
+		select
+			substring(c_phone from 1 for 2) as cntrycode,
+			c_acctbal
+		from
+			customer
+		where
+			substring(c_phone from 1 for 2) in
+				('32', '44', '20', '27', '30', '25', '26')
+			and c_acctbal > (
+				select
+					avg(c_acctbal)
+				from
+					customer
+				where
+					c_acctbal > 0.00
+					and substring(c_phone from 1 for 2) in
+						('32', '44', '20', '27', '30', '25', '26')
+			)
+			and not exists (
+				select
+					*
+				from
+					orders
+				where
+					o_custkey = c_custkey
+			)
+	) as custsale
+group by
+	cntrycode
+order by
+	cntrycode;",510,119,0,3,1,1,3,3,0,15637.78,15618.75,761,72,7,2,1,1,2,0,0,1,0,ok,93.095,91.963,93.302,92.7928,0.5609074790016645,0.00604473061489323,0.228,5,0,0
+tpch_s202_q01,tpch_q01,tpch_qgen,tpch_standard_q01,heavy,"select
+	l_returnflag,
+	l_linestatus,
+	sum(l_quantity) as sum_qty,
+	sum(l_extendedprice) as sum_base_price,
+	sum(l_extendedprice * (1 - l_discount)) as sum_disc_price,
+	sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
+	avg(l_quantity) as avg_qty,
+	avg(l_extendedprice) as avg_price,
+	avg(l_discount) as avg_disc,
+	count(*) as count_order
+from
+	lineitem
+where
+	l_shipdate <= date '1998-12-01' - INTERVAL '94 day'
+group by
+	l_returnflag,
+	l_linestatus
+order by
+	l_returnflag,
+	l_linestatus;",490,96,0,1,1,1,0,8,0,380495.03,380495.02,6,236,3,1,0,1,1,0,0,0,0,ok,4369.611,4343.752,4801.976,4474.466,193.30904417926206,0.04320270713404953,0.113,5,0,1
+tpch_s202_q02,tpch_q02,tpch_qgen,tpch_standard_q02,heavy,"select
+	s_acctbal,
+	s_name,
+	n_name,
+	p_partkey,
+	p_mfgr,
+	s_address,
+	s_phone,
+	s_comment
+from
+	part,
+	supplier,
+	partsupp,
+	nation,
+	region
+where
+	p_partkey = ps_partkey
+	and s_suppkey = ps_suppkey
+	and p_size = 32
+	and p_type like '%BRASS'
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'EUROPE'
+	and ps_supplycost = (
+		select
+			min(ps_supplycost)
+		from
+			partsupp,
+			supplier,
+			nation,
+			region
+		where
+			p_partkey = ps_partkey
+			and s_suppkey = ps_suppkey
+			and s_nationkey = n_nationkey
+			and n_regionkey = r_regionkey
+			and r_name = 'EUROPE'
+	)
+order by
+	s_acctbal desc,
+	n_name,
+	s_name,
+	p_partkey
+LIMIT 100;",594,103,0,2,0,1,1,1,0,54432.0,54432.0,1,156,21,5,4,1,1,2,0,5,0,ok,201.182,196.856,202.889,200.32739999999998,2.525438041211864,0.012606553278342675,0.721,5,0,0
+tpch_s202_q03,tpch_q03,tpch_qgen,tpch_standard_q03,heavy,"select
+	l_orderkey,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	o_orderdate,
+	o_shippriority
+from
+	customer,
+	orders,
+	lineitem
+where
+	c_mktsegment = 'HOUSEHOLD'
+	and c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate < date '1995-03-20'
+	and l_shipdate > date '1995-03-20'
+group by
+	l_orderkey,
+	o_orderdate,
+	o_shippriority
+order by
+	revenue desc,
+	o_orderdate
+LIMIT 10;",381,60,0,1,1,1,0,1,0,290387.41,290387.38,10,44,9,2,1,1,1,1,0,1,0,ok,579.763,545.852,672.898,595.4226,50.979435513744185,0.08561891254000803,0.329,5,0,0
+tpch_s202_q04,tpch_q04,tpch_qgen,tpch_standard_q04,heavy,"select
+	o_orderpriority,
+	count(*) as order_count
+from
+	orders
+where
+	o_orderdate >= date '1996-01-01'
+	and o_orderdate < date '1996-01-01' + INTERVAL '3 month'
+	and exists (
+		select
+			*
+		from
+			lineitem
+		where
+			l_orderkey = o_orderkey
+			and l_commitdate < l_receiptdate
+	)
+group by
+	o_orderpriority
+order by
+	o_orderpriority;",304,44,0,2,1,1,1,1,0,130402.93,130279.99,5,17,5,1,1,1,1,0,0,1,0,ok,222.035,219.444,250.522,226.82619999999997,13.312200652033455,0.058688990301973304,0.18,5,0,0
+tpch_s202_q05,tpch_q05,tpch_qgen,tpch_standard_q05,heavy,"select
+	n_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue
+from
+	customer,
+	orders,
+	lineitem,
+	supplier,
+	nation,
+	region
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and l_suppkey = s_suppkey
+	and c_nationkey = s_nationkey
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'AMERICA'
+	and o_orderdate >= date '1995-01-01'
+	and o_orderdate < date '1995-01-01' + INTERVAL '1 year'
+group by
+	n_name
+order by
+	revenue desc;",449,73,0,1,1,1,0,1,0,177148.78,177148.72,25,40,17,2,3,2,1,1,0,4,0,ok,549.389,537.223,570.386,553.8896,13.123544235457132,0.023693429584987935,0.952,5,0,0
+tpch_s202_q06,tpch_q06,tpch_qgen,tpch_standard_q06,heavy,"select
+	sum(l_extendedprice * l_discount) as revenue
+from
+	lineitem
+where
+	l_shipdate >= date '1995-01-01'
+	and l_shipdate < date '1995-01-01' + INTERVAL '1 year'
+	and l_discount between 0.03 - 0.01 and 0.03 + 0.01
+	and l_quantity < 24;",229,38,0,1,0,0,0,1,0,234213.26,234213.24,1,32,2,1,0,0,1,0,0,0,0,ok,532.066,529.341,547.5,536.3858,7.7315152589903,0.014414093846239592,0.072,5,0,0
+tpch_s202_q07,tpch_q07,tpch_qgen,tpch_standard_q07,heavy,"select
+	supp_nation,
+	cust_nation,
+	l_year,
+	sum(volume) as revenue
+from
+	(
+		select
+			n1.n_name as supp_nation,
+			n2.n_name as cust_nation,
+			extract(year from l_shipdate) as l_year,
+			l_extendedprice * (1 - l_discount) as volume
+		from
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2
+		where
+			s_suppkey = l_suppkey
+			and o_orderkey = l_orderkey
+			and c_custkey = o_custkey
+			and s_nationkey = n1.n_nationkey
+			and c_nationkey = n2.n_nationkey
+			and (
+				(n1.n_name = 'CANADA' and n2.n_name = 'ETHIOPIA')
+				or (n1.n_name = 'ETHIOPIA' and n2.n_name = 'CANADA')
+			)
+			and l_shipdate between date '1995-01-01' and date '1996-12-31'
+	) as shipping
+group by
+	supp_nation,
+	cust_nation,
+	l_year
+order by
+	supp_nation,
+	cust_nation,
+	l_year;",695,137,0,1,1,1,1,1,0,74835.53,74638.45,6064,80,16,2,4,1,1,2,0,3,0,ok,657.945,621.631,667.636,647.757,20.74744089038453,0.03202966682009539,0.65,5,0,0
+tpch_s202_q08,tpch_q08,tpch_qgen,tpch_standard_q08,heavy,"select
+	o_year,
+	sum(case
+		when nation = 'ETHIOPIA' then volume
+		else 0
+	end) / sum(volume) as mkt_share
+from
+	(
+		select
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) as volume,
+			n2.n_name as nation
+		from
+			part,
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2,
+			region
+		where
+			p_partkey = l_partkey
+			and s_suppkey = l_suppkey
+			and l_orderkey = o_orderkey
+			and o_custkey = c_custkey
+			and c_nationkey = n1.n_nationkey
+			and n1.n_regionkey = r_regionkey
+			and r_name = 'AFRICA'
+			and s_nationkey = n2.n_nationkey
+			and o_orderdate between date '1995-01-01' and date '1996-12-31'
+			and p_type = 'ECONOMY BRUSHED NICKEL'
+	) as all_nations
+group by
+	o_year
+order by
+	o_year;",677,125,0,1,1,1,1,2,0,172172.0,172068.74,2406,64,22,4,3,1,1,3,0,4,0,ok,207.444,197.069,209.113,205.5324,4.86868650664633,0.02368817036460592,0.987,5,0,0
+tpch_s202_q09,tpch_q09,tpch_qgen,tpch_standard_q09,heavy,"select
+	nation,
+	o_year,
+	sum(amount) as sum_profit
+from
+	(
+		select
+			n_name as nation,
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount
+		from
+			part,
+			supplier,
+			lineitem,
+			partsupp,
+			orders,
+			nation
+		where
+			s_suppkey = l_suppkey
+			and ps_suppkey = l_suppkey
+			and ps_partkey = l_partkey
+			and p_partkey = l_partkey
+			and o_orderkey = l_orderkey
+			and s_nationkey = n_nationkey
+			and p_name like '%salmon%'
+	) as profit
+group by
+	nation,
+	o_year
+order by
+	nation,
+	o_year desc;",508,92,0,1,1,1,1,1,0,32243.89,32243.05,24,72,14,2,4,1,1,0,0,5,0,ok,2740.841,2617.402,2867.624,2739.7907999999998,90.79049854307432,0.03313774852557149,1.304,5,0,1
+tpch_s202_q10,tpch_q10,tpch_qgen,tpch_standard_q10,heavy,"select
+	c_custkey,
+	c_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	c_acctbal,
+	n_name,
+	c_address,
+	c_phone,
+	c_comment
+from
+	customer,
+	orders,
+	lineitem,
+	nation
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate >= date '1994-01-01'
+	and o_orderdate < date '1994-01-01' + INTERVAL '3 month'
+	and l_returnflag = 'R'
+	and c_nationkey = n_nationkey
+group by
+	c_custkey,
+	c_name,
+	c_acctbal,
+	c_phone,
+	n_name,
+	c_address,
+	c_comment
+order by
+	revenue desc
+LIMIT 20;",477,83,0,1,1,1,0,1,0,245348.49,245348.44,20,184,14,2,2,2,1,1,1,1,0,ok,953.729,931.59,961.993,949.1236000000001,12.549465737632016,0.013222161726493804,0.45,5,0,1
+tpch_s202_q11,tpch_q11,tpch_qgen,tpch_standard_q11,heavy,"select
+	ps_partkey,
+	sum(ps_supplycost * ps_availqty) as value
+from
+	partsupp,
+	supplier,
+	nation
+where
+	ps_suppkey = s_suppkey
+	and s_nationkey = n_nationkey
+	and n_name = 'UNITED KINGDOM'
+group by
+	ps_partkey having
+		sum(ps_supplycost * ps_availqty) > (
+			select
+				sum(ps_supplycost * ps_availqty) * 0.0001000000
+			from
+				partsupp,
+				supplier,
+				nation
+			where
+				ps_suppkey = s_suppkey
+				and s_nationkey = n_nationkey
+				and n_name = 'UNITED KINGDOM'
+		)
+order by
+	value desc;",441,71,0,2,1,1,1,3,0,10238.16,10211.49,10667,36,15,2,2,1,2,0,0,4,0,ok,76.114,74.204,78.021,76.298,1.6043408303724003,0.0210272986234554,0.364,5,0,0
+tpch_s202_q12,tpch_q12,tpch_qgen,tpch_standard_q12,heavy,"select
+	l_shipmode,
+	sum(case
+		when o_orderpriority = '1-URGENT'
+			or o_orderpriority = '2-HIGH'
+			then 1
+		else 0
+	end) as high_line_count,
+	sum(case
+		when o_orderpriority <> '1-URGENT'
+			and o_orderpriority <> '2-HIGH'
+			then 1
+		else 0
+	end) as low_line_count
+from
+	orders,
+	lineitem
+where
+	o_orderkey = l_orderkey
+	and l_shipmode in ('FOB', 'SHIP')
+	and l_commitdate < l_receiptdate
+	and l_shipdate < l_commitdate
+	and l_receiptdate >= date '1996-01-01'
+	and l_receiptdate < date '1996-01-01' + INTERVAL '1 year'
+group by
+	l_shipmode
+order by
+	l_shipmode;",529,83,0,1,1,1,0,2,0,307053.04,306460.23,7,21,6,1,1,2,1,0,1,0,0,ok,947.259,942.671,1017.381,962.695,31.434013448810482,0.032652100040833784,0.183,5,0,1
+tpch_s202_q13,tpch_q13,tpch_qgen,tpch_standard_q13,heavy,"select
+	c_count,
+	count(*) as custdist
+from
+	(
+		select
+			c_custkey,
+			count(o_orderkey)
+		from
+			customer left outer join orders on
+				c_custkey = o_custkey
+				and o_comment not like '%express%deposits%'
+		group by
+			c_custkey
+	) as c_orders (c_custkey, c_count)
+group by
+	c_count
+order by
+	custdist desc,
+	c_count desc;",291,48,0,0,2,1,1,2,0,153580.98,153580.48,200,16,7,1,1,1,2,1,0,0,0,ok,1481.131,1427.547,1536.296,1484.9808,45.692342166932086,0.03076965181430769,0.234,5,0,1
+tpch_s202_q14,tpch_q14,tpch_qgen,tpch_standard_q14,heavy,"select
+	100.00 * sum(case
+		when p_type like 'PROMO%'
+			then l_extendedprice * (1 - l_discount)
+		else 0
+	end) / sum(l_extendedprice * (1 - l_discount)) as promo_revenue
+from
+	lineitem,
+	part
+where
+	l_partkey = p_partkey
+	and l_shipdate >= date '1996-12-01'
+	and l_shipdate < date '1996-12-01' + INTERVAL '1 month';",301,56,0,1,0,0,0,2,0,202070.6,202070.59,1,32,5,2,0,0,1,1,0,0,0,ok,585.643,578.868,589.582,584.6114,4.048530449434684,0.006925165074500229,0.212,5,0,0
+tpch_s202_q15,tpch_q15,tpch_qgen,tpch_standard_q15,heavy,"with revenue0 (supplier_no, total_revenue) as (
+select
+		l_suppkey,
+		sum(l_extendedprice * (1 - l_discount))
+	from
+		lineitem
+	where
+		l_shipdate >= date '1997-10-01'
+		and l_shipdate < date '1997-10-01' + INTERVAL '3 month'
+	group by
+		l_suppkey
+)
+select
+	s_suppkey,
+	s_name,
+	s_address,
+	s_phone,
+	total_revenue
+from
+	supplier,
+	revenue0
+where
+	s_suppkey = supplier_no
+	and total_revenue = (
+		select
+			max(total_revenue)
+		from
+			revenue0
+	)
+order by
+	s_suppkey;",427,72,0,2,1,1,2,2,0,191784.96,191784.83,50,96,8,1,1,1,2,0,0,1,0,ok,597.782,592.353,619.645,604.0448,13.560138391624182,0.022448895167418347,0.145,5,0,0
+tpch_s202_q16,tpch_q16,tpch_qgen,tpch_standard_q16,heavy,"select
+	p_brand,
+	p_type,
+	p_size,
+	count(distinct ps_suppkey) as supplier_cnt
+from
+	partsupp,
+	part
+where
+	p_partkey = ps_partkey
+	and p_brand <> 'Brand#33'
+	and p_type not like 'MEDIUM POLISHED%'
+	and p_size in (26, 18, 37, 49, 48, 47, 1, 32)
+	and ps_suppkey not in (
+		select
+			s_suppkey
+		from
+			supplier
+		where
+			s_comment like '%Customer%Complaints%'
+	)
+group by
+	p_brand,
+	p_type,
+	p_size
+order by
+	supplier_cnt desc,
+	p_brand,
+	p_type,
+	p_size;",419,79,0,2,1,1,1,1,0,40175.41,40135.46,15981,42,8,2,1,2,1,1,0,0,0,ok,452.837,450.153,454.523,452.2066,1.9607658707760178,0.0043359956948351,0.28,5,0,0
+tpch_s202_q17,tpch_q17,tpch_qgen,tpch_standard_q17,heavy,"select
+	sum(l_extendedprice) / 7.0 as avg_yearly
+from
+	lineitem,
+	part
+where
+	p_partkey = l_partkey
+	and p_brand = 'Brand#33'
+	and p_container = 'MED PACK'
+	and l_quantity < (
+		select
+			0.2 * avg(l_quantity)
+		from
+			lineitem
+		where
+			l_partkey = p_partkey
+	);",239,43,0,2,0,0,1,2,0,182416.26,182416.24,1,32,8,2,0,0,2,1,0,0,0,ok,883.835,873.701,890.2,882.0636000000001,7.124413330232899,0.008076983712096156,0.186,5,0,1
+tpch_s202_q18,tpch_q18,tpch_qgen,tpch_standard_q18,heavy,"select
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice,
+	sum(l_quantity)
+from
+	customer,
+	orders,
+	lineitem
+where
+	o_orderkey in (
+		select
+			l_orderkey
+		from
+			lineitem
+		group by
+			l_orderkey having
+				sum(l_quantity) > 313
+	)
+	and c_custkey = o_custkey
+	and o_orderkey = l_orderkey
+group by
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice
+order by
+	o_totalprice desc,
+	o_orderdate
+LIMIT 100;",385,64,0,1,2,1,1,2,0,543531.95,543531.7,100,71,15,1,3,2,2,1,1,1,0,ok,1790.576,1751.531,1928.322,1823.105,75.80376935218985,0.04157948628970347,0.523,5,0,1
+tpch_s202_q19,tpch_q19,tpch_qgen,tpch_standard_q19,heavy,"select
+	sum(l_extendedprice* (1 - l_discount)) as revenue
+from
+	lineitem,
+	part
+where
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#32'
+		and p_container in ('SM CASE', 'SM BOX', 'SM PACK', 'SM PKG')
+		and l_quantity >= 5 and l_quantity <= 5 + 10
+		and p_size between 1 and 5
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#45'
+		and p_container in ('MED BAG', 'MED BOX', 'MED PKG', 'MED PACK')
+		and l_quantity >= 16 and l_quantity <= 16 + 10
+		and p_size between 1 and 10
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#55'
+		and p_container in ('LG CASE', 'LG BOX', 'LG PACK', 'LG PKG')
+		and l_quantity >= 21 and l_quantity <= 21 + 10
+		and p_size between 1 and 15
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	);",880,167,0,1,0,0,0,1,0,71228.43,71228.42,1,32,4,1,1,0,1,0,0,1,0,ok,49.443,48.048,52.177,49.727999999999994,1.5584089642965988,0.031338661605063524,0.279,5,0,0
+tpch_s202_q20,tpch_q20,tpch_qgen,tpch_standard_q20,heavy,"select
+	s_name,
+	s_address
+from
+	supplier,
+	nation
+where
+	s_suppkey in (
+		select
+			ps_suppkey
+		from
+			partsupp
+		where
+			ps_partkey in (
+				select
+					p_partkey
+				from
+					part
+				where
+					p_name like 'gainsboro%'
+			)
+			and ps_availqty > (
+				select
+					0.5 * sum(l_quantity)
+				from
+					lineitem
+				where
+					l_partkey = ps_partkey
+					and l_suppkey = ps_suppkey
+					and l_shipdate >= date '1996-01-01'
+					and l_shipdate < date '1996-01-01' + INTERVAL '1 year'
+			)
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'UNITED STATES'
+order by
+	s_name;",464,75,0,4,0,1,3,1,0,164026.69,164026.42,107,44,15,2,1,1,1,1,0,2,0,ok,406.695,402.942,411.691,406.5742,3.2910889839079016,0.008094682308685356,0.414,5,0,0
+tpch_s202_q21,tpch_q21,tpch_qgen,tpch_standard_q21,heavy,"select
+	s_name,
+	count(*) as numwait
+from
+	supplier,
+	lineitem l1,
+	orders,
+	nation
+where
+	s_suppkey = l1.l_suppkey
+	and o_orderkey = l1.l_orderkey
+	and o_orderstatus = 'F'
+	and l1.l_receiptdate > l1.l_commitdate
+	and exists (
+		select
+			*
+		from
+			lineitem l2
+		where
+			l2.l_orderkey = l1.l_orderkey
+			and l2.l_suppkey <> l1.l_suppkey
+	)
+	and not exists (
+		select
+			*
+		from
+			lineitem l3
+		where
+			l3.l_orderkey = l1.l_orderkey
+			and l3.l_suppkey <> l1.l_suppkey
+			and l3.l_receiptdate > l3.l_commitdate
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'CHINA'
+group by
+	s_name
+order by
+	numwait desc,
+	s_name
+LIMIT 100;",568,118,0,3,1,1,2,1,0,73778.28,73778.28,1,27,15,2,4,2,1,0,0,5,0,ok,791.941,781.558,827.995,799.5636000000001,18.00254874455281,0.02251546811854968,0.941,5,0,0
+tpch_s202_q22,tpch_q22,tpch_qgen,tpch_standard_q22,heavy,"select
+	cntrycode,
+	count(*) as numcust,
+	sum(c_acctbal) as totacctbal
+from
+	(
+		select
+			substring(c_phone from 1 for 2) as cntrycode,
+			c_acctbal
+		from
+			customer
+		where
+			substring(c_phone from 1 for 2) in
+				('44', '43', '21', '32', '36', '26', '25')
+			and c_acctbal > (
+				select
+					avg(c_acctbal)
+				from
+					customer
+				where
+					c_acctbal > 0.00
+					and substring(c_phone from 1 for 2) in
+						('44', '43', '21', '32', '36', '26', '25')
+			)
+			and not exists (
+				select
+					*
+				from
+					orders
+				where
+					o_custkey = c_custkey
+			)
+	) as custsale
+group by
+	cntrycode
+order by
+	cntrycode;",510,119,0,3,1,1,3,3,0,15637.78,15618.75,761,72,7,2,1,1,2,0,0,1,0,ok,89.019,88.908,89.32,89.07939999999999,0.16450775057728806,0.0018467541381878198,0.234,5,0,0
+tpch_s303_q01,tpch_q01,tpch_qgen,tpch_standard_q01,heavy,"select
+	l_returnflag,
+	l_linestatus,
+	sum(l_quantity) as sum_qty,
+	sum(l_extendedprice) as sum_base_price,
+	sum(l_extendedprice * (1 - l_discount)) as sum_disc_price,
+	sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
+	avg(l_quantity) as avg_qty,
+	avg(l_extendedprice) as avg_price,
+	avg(l_discount) as avg_disc,
+	count(*) as count_order
+from
+	lineitem
+where
+	l_shipdate <= date '1998-12-01' - INTERVAL '112 day'
+group by
+	l_returnflag,
+	l_linestatus
+order by
+	l_returnflag,
+	l_linestatus;",491,96,0,1,1,1,0,8,0,379233.04,379233.02,6,236,3,1,0,1,1,0,0,0,0,ok,4465.996,4374.194,4485.707,4447.6216,43.67037271766739,0.009818814783539001,0.123,5,0,1
+tpch_s303_q02,tpch_q02,tpch_qgen,tpch_standard_q02,heavy,"select
+	s_acctbal,
+	s_name,
+	n_name,
+	p_partkey,
+	p_mfgr,
+	s_address,
+	s_phone,
+	s_comment
+from
+	part,
+	supplier,
+	partsupp,
+	nation,
+	region
+where
+	p_partkey = ps_partkey
+	and s_suppkey = ps_suppkey
+	and p_size = 48
+	and p_type like '%TIN'
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'ASIA'
+	and ps_supplycost = (
+		select
+			min(ps_supplycost)
+		from
+			partsupp,
+			supplier,
+			nation,
+			region
+		where
+			p_partkey = ps_partkey
+			and s_suppkey = ps_suppkey
+			and s_nationkey = n_nationkey
+			and n_regionkey = r_regionkey
+			and r_name = 'ASIA'
+	)
+order by
+	s_acctbal desc,
+	n_name,
+	s_name,
+	p_partkey
+LIMIT 100;",588,103,0,2,0,1,1,1,0,54540.7,54540.69,1,156,21,5,4,1,1,2,0,5,0,ok,220.978,213.371,225.435,219.164,5.052193978857109,0.02305211612699672,0.692,5,0,0
+tpch_s303_q03,tpch_q03,tpch_qgen,tpch_standard_q03,heavy,"select
+	l_orderkey,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	o_orderdate,
+	o_shippriority
+from
+	customer,
+	orders,
+	lineitem
+where
+	c_mktsegment = 'MACHINERY'
+	and c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate < date '1995-03-14'
+	and l_shipdate > date '1995-03-14'
+group by
+	l_orderkey,
+	o_orderdate,
+	o_shippriority
+order by
+	revenue desc,
+	o_orderdate
+LIMIT 10;",381,60,0,1,1,1,0,1,0,290351.43,290351.4,10,44,9,2,1,1,1,1,0,1,0,ok,806.987,719.628,876.321,807.8846,64.94934972191793,0.0803943406297359,0.377,5,0,0
+tpch_s303_q04,tpch_q04,tpch_qgen,tpch_standard_q04,heavy,"select
+	o_orderpriority,
+	count(*) as order_count
+from
+	orders
+where
+	o_orderdate >= date '1995-02-01'
+	and o_orderdate < date '1995-02-01' + INTERVAL '3 month'
+	and exists (
+		select
+			*
+		from
+			lineitem
+		where
+			l_orderkey = o_orderkey
+			and l_commitdate < l_receiptdate
+	)
+group by
+	o_orderpriority
+order by
+	o_orderpriority;",304,44,0,2,1,1,1,1,0,130786.32,130662.64,5,17,5,1,1,1,1,0,0,1,0,ok,253.643,252.683,271.134,258.5428,8.121254379712541,0.03141164395106938,0.235,5,0,0
+tpch_s303_q05,tpch_q05,tpch_qgen,tpch_standard_q05,heavy,"select
+	n_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue
+from
+	customer,
+	orders,
+	lineitem,
+	supplier,
+	nation,
+	region
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and l_suppkey = s_suppkey
+	and c_nationkey = s_nationkey
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'AMERICA'
+	and o_orderdate >= date '1994-01-01'
+	and o_orderdate < date '1994-01-01' + INTERVAL '1 year'
+group by
+	n_name
+order by
+	revenue desc;",449,73,0,1,1,1,0,1,0,175525.75,175525.69,25,40,17,2,3,2,1,1,0,4,0,ok,664.867,622.625,736.069,664.732,45.4731763680524,0.06840828539629866,1.063,5,0,0
+tpch_s303_q06,tpch_q06,tpch_qgen,tpch_standard_q06,heavy,"select
+	sum(l_extendedprice * l_discount) as revenue
+from
+	lineitem
+where
+	l_shipdate >= date '1994-01-01'
+	and l_shipdate < date '1994-01-01' + INTERVAL '1 year'
+	and l_discount between 0.07 - 0.01 and 0.07 + 0.01
+	and l_quantity < 25;",229,38,0,1,0,0,0,1,0,234264.97,234264.96,1,32,2,1,0,0,1,0,0,0,0,ok,660.326,575.879,713.428,659.8064,52.44391863981942,0.0794837980350288,0.1,5,0,0
+tpch_s303_q07,tpch_q07,tpch_qgen,tpch_standard_q07,heavy,"select
+	supp_nation,
+	cust_nation,
+	l_year,
+	sum(volume) as revenue
+from
+	(
+		select
+			n1.n_name as supp_nation,
+			n2.n_name as cust_nation,
+			extract(year from l_shipdate) as l_year,
+			l_extendedprice * (1 - l_discount) as volume
+		from
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2
+		where
+			s_suppkey = l_suppkey
+			and o_orderkey = l_orderkey
+			and c_custkey = o_custkey
+			and s_nationkey = n1.n_nationkey
+			and c_nationkey = n2.n_nationkey
+			and (
+				(n1.n_name = 'PERU' and n2.n_name = 'SAUDI ARABIA')
+				or (n1.n_name = 'SAUDI ARABIA' and n2.n_name = 'PERU')
+			)
+			and l_shipdate between date '1995-01-01' and date '1996-12-31'
+	) as shipping
+group by
+	supp_nation,
+	cust_nation,
+	l_year
+order by
+	supp_nation,
+	cust_nation,
+	l_year;",699,137,0,1,1,1,1,1,0,74835.53,74638.45,6064,80,16,2,4,1,1,2,0,3,0,ok,783.129,744.46,832.027,788.2938,34.367007968398994,0.04359669956607421,0.683,5,0,0
+tpch_s303_q08,tpch_q08,tpch_qgen,tpch_standard_q08,heavy,"select
+	o_year,
+	sum(case
+		when nation = 'SAUDI ARABIA' then volume
+		else 0
+	end) / sum(volume) as mkt_share
+from
+	(
+		select
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) as volume,
+			n2.n_name as nation
+		from
+			part,
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2,
+			region
+		where
+			p_partkey = l_partkey
+			and s_suppkey = l_suppkey
+			and l_orderkey = o_orderkey
+			and o_custkey = c_custkey
+			and c_nationkey = n1.n_nationkey
+			and n1.n_regionkey = r_regionkey
+			and r_name = 'MIDDLE EAST'
+			and s_nationkey = n2.n_nationkey
+			and o_orderdate between date '1995-01-01' and date '1996-12-31'
+			and p_type = 'SMALL BURNISHED NICKEL'
+	) as all_nations
+group by
+	o_year
+order by
+	o_year;",686,125,0,1,1,1,1,2,0,172172.0,172068.74,2406,64,22,4,3,1,1,3,0,4,0,ok,231.922,222.459,239.612,231.49560000000002,6.385149669349963,0.02758216428022806,0.981,5,0,0
+tpch_s303_q09,tpch_q09,tpch_qgen,tpch_standard_q09,heavy,"select
+	nation,
+	o_year,
+	sum(amount) as sum_profit
+from
+	(
+		select
+			n_name as nation,
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount
+		from
+			part,
+			supplier,
+			lineitem,
+			partsupp,
+			orders,
+			nation
+		where
+			s_suppkey = l_suppkey
+			and ps_suppkey = l_suppkey
+			and ps_partkey = l_partkey
+			and p_partkey = l_partkey
+			and o_orderkey = l_orderkey
+			and s_nationkey = n_nationkey
+			and p_name like '%cream%'
+	) as profit
+group by
+	nation,
+	o_year
+order by
+	nation,
+	o_year desc;",507,92,0,1,1,1,1,1,0,98321.91,98317.71,120,72,15,3,3,1,1,2,0,3,0,ok,3151.982,2869.707,3438.693,3146.0784,202.32277137485056,0.06430951351207605,1.335,5,0,1
+tpch_s303_q10,tpch_q10,tpch_qgen,tpch_standard_q10,heavy,"select
+	c_custkey,
+	c_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	c_acctbal,
+	n_name,
+	c_address,
+	c_phone,
+	c_comment
+from
+	customer,
+	orders,
+	lineitem,
+	nation
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate >= date '1993-06-01'
+	and o_orderdate < date '1993-06-01' + INTERVAL '3 month'
+	and l_returnflag = 'R'
+	and c_nationkey = n_nationkey
+group by
+	c_custkey,
+	c_name,
+	c_acctbal,
+	c_phone,
+	n_name,
+	c_address,
+	c_comment
+order by
+	revenue desc
+LIMIT 20;",477,83,0,1,1,1,0,1,0,246419.78,246419.73,20,184,14,2,2,2,1,1,1,1,0,ok,1043.241,1025.754,1066.335,1044.182,14.460912436634189,0.01384903439882529,0.523,5,0,1
+tpch_s303_q11,tpch_q11,tpch_qgen,tpch_standard_q11,heavy,"select
+	ps_partkey,
+	sum(ps_supplycost * ps_availqty) as value
+from
+	partsupp,
+	supplier,
+	nation
+where
+	ps_suppkey = s_suppkey
+	and s_nationkey = n_nationkey
+	and n_name = 'INDONESIA'
+group by
+	ps_partkey having
+		sum(ps_supplycost * ps_availqty) > (
+			select
+				sum(ps_supplycost * ps_availqty) * 0.0001000000
+			from
+				partsupp,
+				supplier,
+				nation
+			where
+				ps_suppkey = s_suppkey
+				and s_nationkey = n_nationkey
+				and n_name = 'INDONESIA'
+		)
+order by
+	value desc;",431,71,0,2,1,1,1,3,0,10238.16,10211.49,10667,36,15,2,2,1,2,0,0,4,0,ok,103.375,94.637,120.83,106.2132,12.137042069631297,0.11427056213004878,0.48,5,0,0
+tpch_s303_q12,tpch_q12,tpch_qgen,tpch_standard_q12,heavy,"select
+	l_shipmode,
+	sum(case
+		when o_orderpriority = '1-URGENT'
+			or o_orderpriority = '2-HIGH'
+			then 1
+		else 0
+	end) as high_line_count,
+	sum(case
+		when o_orderpriority <> '1-URGENT'
+			and o_orderpriority <> '2-HIGH'
+			then 1
+		else 0
+	end) as low_line_count
+from
+	orders,
+	lineitem
+where
+	o_orderkey = l_orderkey
+	and l_shipmode in ('FOB', 'TRUCK')
+	and l_commitdate < l_receiptdate
+	and l_shipdate < l_commitdate
+	and l_receiptdate >= date '1993-01-01'
+	and l_receiptdate < date '1993-01-01' + INTERVAL '1 year'
+group by
+	l_shipmode
+order by
+	l_shipmode;",530,83,0,1,1,1,0,2,0,306921.88,306342.33,7,21,6,1,1,2,1,0,1,0,0,ok,978.032,963.783,985.35,976.1048000000001,8.770314971538943,0.008985013670190887,0.204,5,0,1
+tpch_s303_q13,tpch_q13,tpch_qgen,tpch_standard_q13,heavy,"select
+	c_count,
+	count(*) as custdist
+from
+	(
+		select
+			c_custkey,
+			count(o_orderkey)
+		from
+			customer left outer join orders on
+				c_custkey = o_custkey
+				and o_comment not like '%pending%packages%'
+		group by
+			c_custkey
+	) as c_orders (c_custkey, c_count)
+group by
+	c_count
+order by
+	custdist desc,
+	c_count desc;",291,48,0,0,2,1,1,2,0,150559.71,150559.21,200,16,7,1,1,1,2,1,0,0,0,ok,1534.838,1501.498,1583.717,1536.2988,35.517143011509276,0.023118642682991925,0.312,5,0,1
+tpch_s303_q14,tpch_q14,tpch_qgen,tpch_standard_q14,heavy,"select
+	100.00 * sum(case
+		when p_type like 'PROMO%'
+			then l_extendedprice * (1 - l_discount)
+		else 0
+	end) / sum(l_extendedprice * (1 - l_discount)) as promo_revenue
+from
+	lineitem,
+	part
+where
+	l_partkey = p_partkey
+	and l_shipdate >= date '1993-12-01'
+	and l_shipdate < date '1993-12-01' + INTERVAL '1 month';",301,56,0,1,0,0,0,2,0,202014.73,202014.71,1,32,5,2,0,0,1,1,0,0,0,ok,708.407,673.908,785.183,716.7678,42.69175389580521,0.05956148406193082,0.234,5,0,0
+tpch_s303_q16,tpch_q16,tpch_qgen,tpch_standard_q16,heavy,"select
+	p_brand,
+	p_type,
+	p_size,
+	count(distinct ps_suppkey) as supplier_cnt
+from
+	partsupp,
+	part
+where
+	p_partkey = ps_partkey
+	and p_brand <> 'Brand#22'
+	and p_type not like 'SMALL ANODIZED%'
+	and p_size in (13, 26, 7, 25, 47, 23, 36, 45)
+	and ps_suppkey not in (
+		select
+			s_suppkey
+		from
+			supplier
+		where
+			s_comment like '%Customer%Complaints%'
+	)
+group by
+	p_brand,
+	p_type,
+	p_size
+order by
+	supplier_cnt desc,
+	p_brand,
+	p_type,
+	p_size;",418,79,0,2,1,1,1,1,0,40214.67,40174.62,16021,42,8,2,1,2,1,1,0,0,0,ok,506.737,478.139,528.368,504.92560000000003,21.00860785011708,0.0416073335361033,0.264,5,0,0
+tpch_s303_q17,tpch_q17,tpch_qgen,tpch_standard_q17,heavy,"select
+	sum(l_extendedprice) / 7.0 as avg_yearly
+from
+	lineitem,
+	part
+where
+	p_partkey = l_partkey
+	and p_brand = 'Brand#21'
+	and p_container = 'LG BAG'
+	and l_quantity < (
+		select
+			0.2 * avg(l_quantity)
+		from
+			lineitem
+		where
+			l_partkey = p_partkey
+	);",237,43,0,2,0,0,1,2,0,182415.73,182415.72,1,32,8,2,0,0,2,1,0,0,0,ok,852.287,837.574,855.007,849.5228,6.89562152383671,0.008117052919399822,0.198,5,0,0
+tpch_s303_q18,tpch_q18,tpch_qgen,tpch_standard_q18,heavy,"select
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice,
+	sum(l_quantity)
+from
+	customer,
+	orders,
+	lineitem
+where
+	o_orderkey in (
+		select
+			l_orderkey
+		from
+			lineitem
+		group by
+			l_orderkey having
+				sum(l_quantity) > 312
+	)
+	and c_custkey = o_custkey
+	and o_orderkey = l_orderkey
+group by
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice
+order by
+	o_totalprice desc,
+	o_orderdate
+LIMIT 100;",385,64,0,1,2,1,1,2,0,543531.95,543531.7,100,71,15,1,3,2,2,1,1,1,0,ok,1813.832,1740.441,1824.869,1796.0416,36.72052227025097,0.0204452515299484,0.51,5,0,1
+tpch_s303_q19,tpch_q19,tpch_qgen,tpch_standard_q19,heavy,"select
+	sum(l_extendedprice* (1 - l_discount)) as revenue
+from
+	lineitem,
+	part
+where
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#23'
+		and p_container in ('SM CASE', 'SM BOX', 'SM PACK', 'SM PKG')
+		and l_quantity >= 7 and l_quantity <= 7 + 10
+		and p_size between 1 and 5
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#13'
+		and p_container in ('MED BAG', 'MED BOX', 'MED PKG', 'MED PACK')
+		and l_quantity >= 19 and l_quantity <= 19 + 10
+		and p_size between 1 and 10
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#52'
+		and p_container in ('LG CASE', 'LG BOX', 'LG PACK', 'LG PKG')
+		and l_quantity >= 21 and l_quantity <= 21 + 10
+		and p_size between 1 and 15
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	);",880,167,0,1,0,0,0,1,0,72477.42,72477.41,1,32,4,1,1,0,1,0,0,1,0,ok,50.328,49.738,52.216,50.6334,0.9428890708879814,0.01862187944890095,0.413,5,0,0
+tpch_s303_q20,tpch_q20,tpch_qgen,tpch_standard_q20,heavy,"select
+	s_name,
+	s_address
+from
+	supplier,
+	nation
+where
+	s_suppkey in (
+		select
+			ps_suppkey
+		from
+			partsupp
+		where
+			ps_partkey in (
+				select
+					p_partkey
+				from
+					part
+				where
+					p_name like 'lime%'
+			)
+			and ps_availqty > (
+				select
+					0.5 * sum(l_quantity)
+				from
+					lineitem
+				where
+					l_partkey = ps_partkey
+					and l_suppkey = ps_suppkey
+					and l_shipdate >= date '1993-01-01'
+					and l_shipdate < date '1993-01-01' + INTERVAL '1 year'
+			)
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'IRAQ'
+order by
+	s_name;",450,75,0,4,0,1,3,1,0,164026.69,164026.42,107,44,15,2,1,1,1,1,0,2,0,ok,416.335,391.667,431.076,411.803,15.156870801718949,0.036806120406405365,0.354,5,0,0
+tpch_s303_q21,tpch_q21,tpch_qgen,tpch_standard_q21,heavy,"select
+	s_name,
+	count(*) as numwait
+from
+	supplier,
+	lineitem l1,
+	orders,
+	nation
+where
+	s_suppkey = l1.l_suppkey
+	and o_orderkey = l1.l_orderkey
+	and o_orderstatus = 'F'
+	and l1.l_receiptdate > l1.l_commitdate
+	and exists (
+		select
+			*
+		from
+			lineitem l2
+		where
+			l2.l_orderkey = l1.l_orderkey
+			and l2.l_suppkey <> l1.l_suppkey
+	)
+	and not exists (
+		select
+			*
+		from
+			lineitem l3
+		where
+			l3.l_orderkey = l1.l_orderkey
+			and l3.l_suppkey <> l1.l_suppkey
+			and l3.l_receiptdate > l3.l_commitdate
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'BRAZIL'
+group by
+	s_name
+order by
+	numwait desc,
+	s_name
+LIMIT 100;",569,118,0,3,1,1,2,1,0,73778.28,73778.28,1,27,15,2,4,2,1,0,0,5,0,ok,780.837,753.36,865.657,792.8608,42.731806546178234,0.05389572362031044,0.991,5,0,0
+tpch_s303_q22,tpch_q22,tpch_qgen,tpch_standard_q22,heavy,"select
+	cntrycode,
+	count(*) as numcust,
+	sum(c_acctbal) as totacctbal
+from
+	(
+		select
+			substring(c_phone from 1 for 2) as cntrycode,
+			c_acctbal
+		from
+			customer
+		where
+			substring(c_phone from 1 for 2) in
+				('31', '43', '30', '37', '42', '27', '26')
+			and c_acctbal > (
+				select
+					avg(c_acctbal)
+				from
+					customer
+				where
+					c_acctbal > 0.00
+					and substring(c_phone from 1 for 2) in
+						('31', '43', '30', '37', '42', '27', '26')
+			)
+			and not exists (
+				select
+					*
+				from
+					orders
+				where
+					o_custkey = c_custkey
+			)
+	) as custsale
+group by
+	cntrycode
+order by
+	cntrycode;",510,119,0,3,1,1,3,3,0,15637.78,15618.75,761,72,7,2,1,1,2,0,0,1,0,ok,93.451,90.054,97.624,93.53299999999999,2.7230358058608015,0.029113102390181025,0.237,5,0,0
+tpch_s404_q01,tpch_q01,tpch_qgen,tpch_standard_q01,heavy,"select
+	l_returnflag,
+	l_linestatus,
+	sum(l_quantity) as sum_qty,
+	sum(l_extendedprice) as sum_base_price,
+	sum(l_extendedprice * (1 - l_discount)) as sum_disc_price,
+	sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
+	avg(l_quantity) as avg_qty,
+	avg(l_extendedprice) as avg_price,
+	avg(l_discount) as avg_disc,
+	count(*) as count_order
+from
+	lineitem
+where
+	l_shipdate <= date '1998-12-01' - INTERVAL '68 day'
+group by
+	l_returnflag,
+	l_linestatus
+order by
+	l_returnflag,
+	l_linestatus;",490,96,0,1,1,1,0,8,0,381870.92,381870.9,6,236,3,1,0,1,1,0,0,0,0,ok,4805.38,4468.885,4957.972,4726.5748,233.55231274748698,0.04941259212643519,0.148,5,0,1
+tpch_s404_q02,tpch_q02,tpch_qgen,tpch_standard_q02,heavy,"select
+	s_acctbal,
+	s_name,
+	n_name,
+	p_partkey,
+	p_mfgr,
+	s_address,
+	s_phone,
+	s_comment
+from
+	part,
+	supplier,
+	partsupp,
+	nation,
+	region
+where
+	p_partkey = ps_partkey
+	and s_suppkey = ps_suppkey
+	and p_size = 14
+	and p_type like '%COPPER'
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'AMERICA'
+	and ps_supplycost = (
+		select
+			min(ps_supplycost)
+		from
+			partsupp,
+			supplier,
+			nation,
+			region
+		where
+			p_partkey = ps_partkey
+			and s_suppkey = ps_suppkey
+			and s_nationkey = n_nationkey
+			and n_regionkey = r_regionkey
+			and r_name = 'AMERICA'
+	)
+order by
+	s_acctbal desc,
+	n_name,
+	s_name,
+	p_partkey
+LIMIT 100;",597,103,0,2,0,1,1,1,0,53801.58,53801.57,1,156,21,5,4,1,1,2,0,5,0,ok,232.776,224.031,235.238,230.577,4.649356084448686,0.020164006316539317,0.85,5,0,0
+tpch_s404_q03,tpch_q03,tpch_qgen,tpch_standard_q03,heavy,"select
+	l_orderkey,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	o_orderdate,
+	o_shippriority
+from
+	customer,
+	orders,
+	lineitem
+where
+	c_mktsegment = 'BUILDING'
+	and c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate < date '1995-03-08'
+	and l_shipdate > date '1995-03-08'
+group by
+	l_orderkey,
+	o_orderdate,
+	o_shippriority
+order by
+	revenue desc,
+	o_orderdate
+LIMIT 10;",380,60,0,1,1,1,0,1,0,294967.09,294967.07,10,44,9,2,1,1,1,1,0,1,0,ok,707.31,649.628,800.985,713.2544,61.09606129939964,0.08565816250050423,0.377,5,0,0
+tpch_s404_q04,tpch_q04,tpch_qgen,tpch_standard_q04,heavy,"select
+	o_orderpriority,
+	count(*) as order_count
+from
+	orders
+where
+	o_orderdate >= date '1994-03-01'
+	and o_orderdate < date '1994-03-01' + INTERVAL '3 month'
+	and exists (
+		select
+			*
+		from
+			lineitem
+		where
+			l_orderkey = o_orderkey
+			and l_commitdate < l_receiptdate
+	)
+group by
+	o_orderpriority
+order by
+	o_orderpriority;",304,44,0,2,1,1,1,1,0,128712.1,128592.41,5,17,5,1,1,1,1,0,0,1,0,ok,249.529,239.718,259.698,247.91320000000002,8.33525240769588,0.033621656320421335,0.221,5,0,0
+tpch_s404_q05,tpch_q05,tpch_qgen,tpch_standard_q05,heavy,"select
+	n_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue
+from
+	customer,
+	orders,
+	lineitem,
+	supplier,
+	nation,
+	region
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and l_suppkey = s_suppkey
+	and c_nationkey = s_nationkey
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'ASIA'
+	and o_orderdate >= date '1993-01-01'
+	and o_orderdate < date '1993-01-01' + INTERVAL '1 year'
+group by
+	n_name
+order by
+	revenue desc;",446,73,0,1,1,1,0,1,0,176600.44,176600.38,25,40,17,2,3,2,1,1,0,4,0,ok,662.43,640.706,707.262,668.2228,25.45042317329909,0.038086732708460545,0.977,5,0,0
+tpch_s404_q06,tpch_q06,tpch_qgen,tpch_standard_q06,heavy,"select
+	sum(l_extendedprice * l_discount) as revenue
+from
+	lineitem
+where
+	l_shipdate >= date '1993-01-01'
+	and l_shipdate < date '1993-01-01' + INTERVAL '1 year'
+	and l_discount between 0.04 - 0.01 and 0.04 + 0.01
+	and l_quantity < 24;",229,38,0,1,0,0,0,1,0,234218.37,234218.36,1,32,2,1,0,0,1,0,0,0,0,ok,584.605,577.855,609.519,588.5588,12.549125873940389,0.021321787855249786,0.109,5,0,0
+tpch_s404_q07,tpch_q07,tpch_qgen,tpch_standard_q07,heavy,"select
+	supp_nation,
+	cust_nation,
+	l_year,
+	sum(volume) as revenue
+from
+	(
+		select
+			n1.n_name as supp_nation,
+			n2.n_name as cust_nation,
+			extract(year from l_shipdate) as l_year,
+			l_extendedprice * (1 - l_discount) as volume
+		from
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2
+		where
+			s_suppkey = l_suppkey
+			and o_orderkey = l_orderkey
+			and c_custkey = o_custkey
+			and s_nationkey = n1.n_nationkey
+			and c_nationkey = n2.n_nationkey
+			and (
+				(n1.n_name = 'FRANCE' and n2.n_name = 'IRAN')
+				or (n1.n_name = 'IRAN' and n2.n_name = 'FRANCE')
+			)
+			and l_shipdate between date '1995-01-01' and date '1996-12-31'
+	) as shipping
+group by
+	supp_nation,
+	cust_nation,
+	l_year
+order by
+	supp_nation,
+	cust_nation,
+	l_year;",687,137,0,1,1,1,1,1,0,74835.53,74638.45,6064,80,16,2,4,1,1,2,0,3,0,ok,763.88,717.679,766.571,748.7292,23.400904228255808,0.031254162690937934,0.79,5,0,0
+tpch_s404_q08,tpch_q08,tpch_qgen,tpch_standard_q08,heavy,"select
+	o_year,
+	sum(case
+		when nation = 'IRAN' then volume
+		else 0
+	end) / sum(volume) as mkt_share
+from
+	(
+		select
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) as volume,
+			n2.n_name as nation
+		from
+			part,
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2,
+			region
+		where
+			p_partkey = l_partkey
+			and s_suppkey = l_suppkey
+			and l_orderkey = o_orderkey
+			and o_custkey = c_custkey
+			and c_nationkey = n1.n_nationkey
+			and n1.n_regionkey = r_regionkey
+			and r_name = 'MIDDLE EAST'
+			and s_nationkey = n2.n_nationkey
+			and o_orderdate between date '1995-01-01' and date '1996-12-31'
+			and p_type = 'LARGE POLISHED BRASS'
+	) as all_nations
+group by
+	o_year
+order by
+	o_year;",676,125,0,1,1,1,1,2,0,172172.0,172068.74,2406,64,22,4,3,1,1,3,0,4,0,ok,234.861,228.434,292.44,244.3934,27.033620379076126,0.11061518183009902,1.065,5,0,0
+tpch_s404_q09,tpch_q09,tpch_qgen,tpch_standard_q09,heavy,"select
+	nation,
+	o_year,
+	sum(amount) as sum_profit
+from
+	(
+		select
+			n_name as nation,
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount
+		from
+			part,
+			supplier,
+			lineitem,
+			partsupp,
+			orders,
+			nation
+		where
+			s_suppkey = l_suppkey
+			and ps_suppkey = l_suppkey
+			and ps_partkey = l_partkey
+			and p_partkey = l_partkey
+			and o_orderkey = l_orderkey
+			and s_nationkey = n_nationkey
+			and p_name like '%navy%'
+	) as profit
+group by
+	nation,
+	o_year
+order by
+	nation,
+	o_year desc;",506,92,0,1,1,1,1,1,0,72554.48,72551.96,72,72,15,3,3,1,1,2,0,3,0,ok,2896.023,2888.868,2903.779,2896.2956,6.680664847154067,0.0023066239672338926,1.601,5,0,1
+tpch_s404_q10,tpch_q10,tpch_qgen,tpch_standard_q10,heavy,"select
+	c_custkey,
+	c_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	c_acctbal,
+	n_name,
+	c_address,
+	c_phone,
+	c_comment
+from
+	customer,
+	orders,
+	lineitem,
+	nation
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate >= date '1994-12-01'
+	and o_orderdate < date '1994-12-01' + INTERVAL '3 month'
+	and l_returnflag = 'R'
+	and c_nationkey = n_nationkey
+group by
+	c_custkey,
+	c_name,
+	c_acctbal,
+	c_phone,
+	n_name,
+	c_address,
+	c_comment
+order by
+	revenue desc
+LIMIT 20;",477,83,0,1,1,1,0,1,0,245350.83,245350.78,20,184,14,2,2,2,1,1,1,1,0,ok,1037.944,1032.704,1063.261,1043.6778,12.922643003658356,0.012381831829381018,0.573,5,0,1
+tpch_s404_q11,tpch_q11,tpch_qgen,tpch_standard_q11,heavy,"select
+	ps_partkey,
+	sum(ps_supplycost * ps_availqty) as value
+from
+	partsupp,
+	supplier,
+	nation
+where
+	ps_suppkey = s_suppkey
+	and s_nationkey = n_nationkey
+	and n_name = 'VIETNAM'
+group by
+	ps_partkey having
+		sum(ps_supplycost * ps_availqty) > (
+			select
+				sum(ps_supplycost * ps_availqty) * 0.0001000000
+			from
+				partsupp,
+				supplier,
+				nation
+			where
+				ps_suppkey = s_suppkey
+				and s_nationkey = n_nationkey
+				and n_name = 'VIETNAM'
+		)
+order by
+	value desc;",427,71,0,2,1,1,1,3,0,10238.16,10211.49,10667,36,15,2,2,1,2,0,0,4,0,ok,94.481,90.697,125.005,99.8244,14.255903191309907,0.1428098059323162,0.424,5,0,0
+tpch_s404_q12,tpch_q12,tpch_qgen,tpch_standard_q12,heavy,"select
+	l_shipmode,
+	sum(case
+		when o_orderpriority = '1-URGENT'
+			or o_orderpriority = '2-HIGH'
+			then 1
+		else 0
+	end) as high_line_count,
+	sum(case
+		when o_orderpriority <> '1-URGENT'
+			and o_orderpriority <> '2-HIGH'
+			then 1
+		else 0
+	end) as low_line_count
+from
+	orders,
+	lineitem
+where
+	o_orderkey = l_orderkey
+	and l_shipmode in ('MAIL', 'SHIP')
+	and l_commitdate < l_receiptdate
+	and l_shipdate < l_commitdate
+	and l_receiptdate >= date '1995-01-01'
+	and l_receiptdate < date '1995-01-01' + INTERVAL '1 year'
+group by
+	l_shipmode
+order by
+	l_shipmode;",530,83,0,1,1,1,0,2,0,306688.22,306132.35,7,21,6,1,1,2,1,0,1,0,0,ok,1101.097,1087.406,1250.845,1146.639,76.56832891280837,0.06677631661997226,0.214,5,0,1
+tpch_s404_q13,tpch_q13,tpch_qgen,tpch_standard_q13,heavy,"select
+	c_count,
+	count(*) as custdist
+from
+	(
+		select
+			c_custkey,
+			count(o_orderkey)
+		from
+			customer left outer join orders on
+				c_custkey = o_custkey
+				and o_comment not like '%express%accounts%'
+		group by
+			c_custkey
+	) as c_orders (c_custkey, c_count)
+group by
+	c_count
+order by
+	custdist desc,
+	c_count desc;",291,48,0,0,2,1,1,2,0,152580.54,152580.04,200,16,7,1,1,1,2,1,0,0,0,ok,1623.953,1525.834,1676.418,1607.5549999999998,61.43104016293385,0.038213958566228744,0.24,5,0,1
+tpch_s404_q14,tpch_q14,tpch_qgen,tpch_standard_q14,heavy,"select
+	100.00 * sum(case
+		when p_type like 'PROMO%'
+			then l_extendedprice * (1 - l_discount)
+		else 0
+	end) / sum(l_extendedprice * (1 - l_discount)) as promo_revenue
+from
+	lineitem,
+	part
+where
+	l_partkey = p_partkey
+	and l_shipdate >= date '1995-12-01'
+	and l_shipdate < date '1995-12-01' + INTERVAL '1 month';",301,56,0,1,0,0,0,2,0,201972.17,201972.16,1,32,5,2,0,0,1,1,0,0,0,ok,755.114,632.896,807.481,726.9482,87.20707262716712,0.11996325546602511,0.2,5,0,0
+tpch_s404_q16,tpch_q16,tpch_qgen,tpch_standard_q16,heavy,"select
+	p_brand,
+	p_type,
+	p_size,
+	count(distinct ps_suppkey) as supplier_cnt
+from
+	partsupp,
+	part
+where
+	p_partkey = ps_partkey
+	and p_brand <> 'Brand#11'
+	and p_type not like 'PROMO BURNISHED%'
+	and p_size in (1, 34, 24, 48, 46, 44, 45, 14)
+	and ps_suppkey not in (
+		select
+			s_suppkey
+		from
+			supplier
+		where
+			s_comment like '%Customer%Complaints%'
+	)
+group by
+	p_brand,
+	p_type,
+	p_size
+order by
+	supplier_cnt desc,
+	p_brand,
+	p_type,
+	p_size;",419,79,0,2,1,1,1,1,0,40389.48,40348.99,16195,42,8,2,1,2,1,1,0,0,0,ok,579.641,516.765,593.584,562.4928,36.41140715078174,0.06473221906268266,0.359,5,0,0
+tpch_s404_q17,tpch_q17,tpch_qgen,tpch_standard_q17,heavy,"select
+	sum(l_extendedprice) / 7.0 as avg_yearly
+from
+	lineitem,
+	part
+where
+	p_partkey = l_partkey
+	and p_brand = 'Brand#15'
+	and p_container = 'SM CASE'
+	and l_quantity < (
+		select
+			0.2 * avg(l_quantity)
+		from
+			lineitem
+		where
+			l_partkey = p_partkey
+	);",238,43,0,2,0,0,1,2,0,182415.73,182415.72,1,32,8,2,0,0,2,1,0,0,0,ok,873.282,799.586,935.047,869.1806,49.94580360550825,0.0574630906459581,0.217,5,0,1
+tpch_s404_q18,tpch_q18,tpch_qgen,tpch_standard_q18,heavy,"select
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice,
+	sum(l_quantity)
+from
+	customer,
+	orders,
+	lineitem
+where
+	o_orderkey in (
+		select
+			l_orderkey
+		from
+			lineitem
+		group by
+			l_orderkey having
+				sum(l_quantity) > 315
+	)
+	and c_custkey = o_custkey
+	and o_orderkey = l_orderkey
+group by
+	c_name,
+	c_custkey,
+	o_orderkey,
+	o_orderdate,
+	o_totalprice
+order by
+	o_totalprice desc,
+	o_orderdate
+LIMIT 100;",385,64,0,1,2,1,1,2,0,543531.95,543531.7,100,71,15,1,3,2,2,1,1,1,0,ok,1784.929,1683.397,1807.363,1753.4088,57.3727316693218,0.03272068194782746,0.519,5,0,1
+tpch_s404_q19,tpch_q19,tpch_qgen,tpch_standard_q19,heavy,"select
+	sum(l_extendedprice* (1 - l_discount)) as revenue
+from
+	lineitem,
+	part
+where
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#14'
+		and p_container in ('SM CASE', 'SM BOX', 'SM PACK', 'SM PKG')
+		and l_quantity >= 9 and l_quantity <= 9 + 10
+		and p_size between 1 and 5
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#35'
+		and p_container in ('MED BAG', 'MED BOX', 'MED PKG', 'MED PACK')
+		and l_quantity >= 11 and l_quantity <= 11 + 10
+		and p_size between 1 and 10
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#55'
+		and p_container in ('LG CASE', 'LG BOX', 'LG PACK', 'LG PKG')
+		and l_quantity >= 22 and l_quantity <= 22 + 10
+		and p_size between 1 and 15
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	);",880,167,0,1,0,0,0,1,0,71795.42,71795.41,1,32,4,1,1,0,1,0,0,1,0,ok,47.042,46.637,48.904,47.3214,0.9128643382233761,0.01929072973799119,0.275,5,0,0
+tpch_s404_q20,tpch_q20,tpch_qgen,tpch_standard_q20,heavy,"select
+	s_name,
+	s_address
+from
+	supplier,
+	nation
+where
+	s_suppkey in (
+		select
+			ps_suppkey
+		from
+			partsupp
+		where
+			ps_partkey in (
+				select
+					p_partkey
+				from
+					part
+				where
+					p_name like 'papaya%'
+			)
+			and ps_availqty > (
+				select
+					0.5 * sum(l_quantity)
+				from
+					lineitem
+				where
+					l_partkey = ps_partkey
+					and l_suppkey = ps_suppkey
+					and l_shipdate >= date '1995-01-01'
+					and l_shipdate < date '1995-01-01' + INTERVAL '1 year'
+			)
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'UNITED KINGDOM'
+order by
+	s_name;",462,75,0,4,0,1,3,1,0,164026.69,164026.42,107,44,15,2,1,1,1,1,0,2,0,ok,395.559,392.266,406.514,397.38160000000005,5.509553548156142,0.013864641815716032,0.358,5,0,0
+tpch_s404_q21,tpch_q21,tpch_qgen,tpch_standard_q21,heavy,"select
+	s_name,
+	count(*) as numwait
+from
+	supplier,
+	lineitem l1,
+	orders,
+	nation
+where
+	s_suppkey = l1.l_suppkey
+	and o_orderkey = l1.l_orderkey
+	and o_orderstatus = 'F'
+	and l1.l_receiptdate > l1.l_commitdate
+	and exists (
+		select
+			*
+		from
+			lineitem l2
+		where
+			l2.l_orderkey = l1.l_orderkey
+			and l2.l_suppkey <> l1.l_suppkey
+	)
+	and not exists (
+		select
+			*
+		from
+			lineitem l3
+		where
+			l3.l_orderkey = l1.l_orderkey
+			and l3.l_suppkey <> l1.l_suppkey
+			and l3.l_receiptdate > l3.l_commitdate
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'IRAQ'
+group by
+	s_name
+order by
+	numwait desc,
+	s_name
+LIMIT 100;",567,118,0,3,1,1,2,1,0,73778.28,73778.28,1,27,15,2,4,2,1,0,0,5,0,ok,815.184,798.674,894.552,825.7374,39.738037568556415,0.04812430388711522,0.977,5,0,0
+tpch_s404_q22,tpch_q22,tpch_qgen,tpch_standard_q22,heavy,"select
+	cntrycode,
+	count(*) as numcust,
+	sum(c_acctbal) as totacctbal
+from
+	(
+		select
+			substring(c_phone from 1 for 2) as cntrycode,
+			c_acctbal
+		from
+			customer
+		where
+			substring(c_phone from 1 for 2) in
+				('43', '42', '41', '21', '27', '28', '24')
+			and c_acctbal > (
+				select
+					avg(c_acctbal)
+				from
+					customer
+				where
+					c_acctbal > 0.00
+					and substring(c_phone from 1 for 2) in
+						('43', '42', '41', '21', '27', '28', '24')
+			)
+			and not exists (
+				select
+					*
+				from
+					orders
+				where
+					o_custkey = c_custkey
+			)
+	) as custsale
+group by
+	cntrycode
+order by
+	cntrycode;",510,119,0,3,1,1,3,3,0,15637.78,15618.75,761,72,7,2,1,1,2,0,0,1,0,ok,88.153,85.892,90.875,88.3144,1.838857743274341,0.020821720390721568,0.24,5,0,0
+tpch_s505_q01,tpch_q01,tpch_qgen,tpch_standard_q01,heavy,"select
+	l_returnflag,
+	l_linestatus,
+	sum(l_quantity) as sum_qty,
+	sum(l_extendedprice) as sum_base_price,
+	sum(l_extendedprice * (1 - l_discount)) as sum_disc_price,
+	sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
+	avg(l_quantity) as avg_qty,
+	avg(l_extendedprice) as avg_price,
+	avg(l_discount) as avg_disc,
+	count(*) as count_order
+from
+	lineitem
+where
+	l_shipdate <= date '1998-12-01' - INTERVAL '86 day'
+group by
+	l_returnflag,
+	l_linestatus
+order by
+	l_returnflag,
+	l_linestatus;",490,96,0,1,1,1,0,8,0,381027.52,381027.51,6,236,3,1,0,1,1,0,0,0,0,ok,4386.099,4315.865,4963.235,4521.808,267.9651893231655,0.05926062966918663,0.12,5,0,1
+tpch_s505_q02,tpch_q02,tpch_qgen,tpch_standard_q02,heavy,"select
+	s_acctbal,
+	s_name,
+	n_name,
+	p_partkey,
+	p_mfgr,
+	s_address,
+	s_phone,
+	s_comment
+from
+	part,
+	supplier,
+	partsupp,
+	nation,
+	region
+where
+	p_partkey = ps_partkey
+	and s_suppkey = ps_suppkey
+	and p_size = 30
+	and p_type like '%BRASS'
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'AFRICA'
+	and ps_supplycost = (
+		select
+			min(ps_supplycost)
+		from
+			partsupp,
+			supplier,
+			nation,
+			region
+		where
+			p_partkey = ps_partkey
+			and s_suppkey = ps_suppkey
+			and s_nationkey = n_nationkey
+			and n_regionkey = r_regionkey
+			and r_name = 'AFRICA'
+	)
+order by
+	s_acctbal desc,
+	n_name,
+	s_name,
+	p_partkey
+LIMIT 100;",594,103,0,2,0,1,1,1,0,56912.22,56912.21,1,156,21,5,4,1,1,2,0,5,0,ok,211.964,208.248,230.123,217.51399999999998,10.412564549619846,0.04787077866077515,0.756,5,0,0
+tpch_s505_q03,tpch_q03,tpch_qgen,tpch_standard_q03,heavy,"select
+	l_orderkey,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	o_orderdate,
+	o_shippriority
+from
+	customer,
+	orders,
+	lineitem
+where
+	c_mktsegment = 'HOUSEHOLD'
+	and c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate < date '1995-03-02'
+	and l_shipdate > date '1995-03-02'
+group by
+	l_orderkey,
+	o_orderdate,
+	o_shippriority
+order by
+	revenue desc,
+	o_orderdate
+LIMIT 10;",381,60,0,1,1,1,0,1,0,289792.68,289792.65,10,44,9,2,1,1,1,1,0,1,0,ok,687.458,586.686,710.544,674.1536,50.18724603721546,0.07444482390543558,0.338,5,0,0
+tpch_s505_q04,tpch_q04,tpch_qgen,tpch_standard_q04,heavy,"select
+	o_orderpriority,
+	count(*) as order_count
+from
+	orders
+where
+	o_orderdate >= date '1993-04-01'
+	and o_orderdate < date '1993-04-01' + INTERVAL '3 month'
+	and exists (
+		select
+			*
+		from
+			lineitem
+		where
+			l_orderkey = o_orderkey
+			and l_commitdate < l_receiptdate
+	)
+group by
+	o_orderpriority
+order by
+	o_orderpriority;",304,44,0,2,1,1,1,1,0,127805.87,127687.91,5,17,5,1,1,1,1,0,0,1,0,ok,243.982,236.266,247.918,242.298,5.536223306551143,0.02284881966236264,0.228,5,0,0
+tpch_s505_q05,tpch_q05,tpch_qgen,tpch_standard_q05,heavy,"select
+	n_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue
+from
+	customer,
+	orders,
+	lineitem,
+	supplier,
+	nation,
+	region
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and l_suppkey = s_suppkey
+	and c_nationkey = s_nationkey
+	and s_nationkey = n_nationkey
+	and n_regionkey = r_regionkey
+	and r_name = 'ASIA'
+	and o_orderdate >= date '1996-01-01'
+	and o_orderdate < date '1996-01-01' + INTERVAL '1 year'
+group by
+	n_name
+order by
+	revenue desc;",446,73,0,1,1,1,0,1,0,178273.62,178273.56,25,40,17,2,3,2,1,1,0,4,0,ok,626.263,602.567,651.602,629.6478,20.294947910748615,0.03223222238011253,0.937,5,0,0
+tpch_s505_q06,tpch_q06,tpch_qgen,tpch_standard_q06,heavy,"select
+	sum(l_extendedprice * l_discount) as revenue
+from
+	lineitem
+where
+	l_shipdate >= date '1996-01-01'
+	and l_shipdate < date '1996-01-01' + INTERVAL '1 year'
+	and l_discount between 0.08 - 0.01 and 0.08 + 0.01
+	and l_quantity < 24;",229,38,0,1,0,0,0,1,0,234241.74,234241.73,1,32,2,1,0,0,1,0,0,0,0,ok,543.029,521.646,599.893,551.12,29.783774341073716,0.05404226727586318,0.077,5,0,0
+tpch_s505_q07,tpch_q07,tpch_qgen,tpch_standard_q07,heavy,"select
+	supp_nation,
+	cust_nation,
+	l_year,
+	sum(volume) as revenue
+from
+	(
+		select
+			n1.n_name as supp_nation,
+			n2.n_name as cust_nation,
+			extract(year from l_shipdate) as l_year,
+			l_extendedprice * (1 - l_discount) as volume
+		from
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2
+		where
+			s_suppkey = l_suppkey
+			and o_orderkey = l_orderkey
+			and c_custkey = o_custkey
+			and s_nationkey = n1.n_nationkey
+			and c_nationkey = n2.n_nationkey
+			and (
+				(n1.n_name = 'SAUDI ARABIA' and n2.n_name = 'ARGENTINA')
+				or (n1.n_name = 'ARGENTINA' and n2.n_name = 'SAUDI ARABIA')
+			)
+			and l_shipdate between date '1995-01-01' and date '1996-12-31'
+	) as shipping
+group by
+	supp_nation,
+	cust_nation,
+	l_year
+order by
+	supp_nation,
+	cust_nation,
+	l_year;",709,137,0,1,1,1,1,1,0,74835.53,74638.45,6064,80,16,2,4,1,1,2,0,3,0,ok,747.063,737.786,787.77,755.0118,19.3577148496407,0.025638956701922674,0.716,5,0,0
+tpch_s505_q08,tpch_q08,tpch_qgen,tpch_standard_q08,heavy,"select
+	o_year,
+	sum(case
+		when nation = 'ARGENTINA' then volume
+		else 0
+	end) / sum(volume) as mkt_share
+from
+	(
+		select
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) as volume,
+			n2.n_name as nation
+		from
+			part,
+			supplier,
+			lineitem,
+			orders,
+			customer,
+			nation n1,
+			nation n2,
+			region
+		where
+			p_partkey = l_partkey
+			and s_suppkey = l_suppkey
+			and l_orderkey = o_orderkey
+			and o_custkey = c_custkey
+			and c_nationkey = n1.n_nationkey
+			and n1.n_regionkey = r_regionkey
+			and r_name = 'AMERICA'
+			and s_nationkey = n2.n_nationkey
+			and o_orderdate between date '1995-01-01' and date '1996-12-31'
+			and p_type = 'STANDARD ANODIZED BRASS'
+	) as all_nations
+group by
+	o_year
+order by
+	o_year;",680,125,0,1,1,1,1,2,0,172172.0,172068.74,2406,64,22,4,3,1,1,3,0,4,0,ok,262.728,239.411,275.588,259.0922,17.030767487109916,0.06573245928325869,1.012,5,0,0
+tpch_s505_q09,tpch_q09,tpch_qgen,tpch_standard_q09,heavy,"select
+	nation,
+	o_year,
+	sum(amount) as sum_profit
+from
+	(
+		select
+			n_name as nation,
+			extract(year from o_orderdate) as o_year,
+			l_extendedprice * (1 - l_discount) - ps_supplycost * l_quantity as amount
+		from
+			part,
+			supplier,
+			lineitem,
+			partsupp,
+			orders,
+			nation
+		where
+			s_suppkey = l_suppkey
+			and ps_suppkey = l_suppkey
+			and ps_partkey = l_partkey
+			and p_partkey = l_partkey
+			and o_orderkey = l_orderkey
+			and s_nationkey = n_nationkey
+			and p_name like '%antique%'
+	) as profit
+group by
+	nation,
+	o_year
+order by
+	nation,
+	o_year desc;",509,92,0,1,1,1,1,1,0,85438.17,85434.81,96,72,15,3,3,1,1,2,0,3,0,ok,2797.024,2674.286,2869.738,2772.0512,82.5707881347877,0.029786891430716615,1.253,5,0,1
+tpch_s505_q10,tpch_q10,tpch_qgen,tpch_standard_q10,heavy,"select
+	c_custkey,
+	c_name,
+	sum(l_extendedprice * (1 - l_discount)) as revenue,
+	c_acctbal,
+	n_name,
+	c_address,
+	c_phone,
+	c_comment
+from
+	customer,
+	orders,
+	lineitem,
+	nation
+where
+	c_custkey = o_custkey
+	and l_orderkey = o_orderkey
+	and o_orderdate >= date '1994-06-01'
+	and o_orderdate < date '1994-06-01' + INTERVAL '3 month'
+	and l_returnflag = 'R'
+	and c_nationkey = n_nationkey
+group by
+	c_custkey,
+	c_name,
+	c_acctbal,
+	c_phone,
+	n_name,
+	c_address,
+	c_comment
+order by
+	revenue desc
+LIMIT 20;",477,83,0,1,1,1,0,1,0,246066.61,246066.56,20,184,14,2,2,2,1,1,1,1,0,ok,1266.876,1134.986,1298.315,1238.4850000000001,71.3269548908405,0.05759210235960911,0.595,5,0,1
+tpch_s505_q11,tpch_q11,tpch_qgen,tpch_standard_q11,heavy,"select
+	ps_partkey,
+	sum(ps_supplycost * ps_availqty) as value
+from
+	partsupp,
+	supplier,
+	nation
+where
+	ps_suppkey = s_suppkey
+	and s_nationkey = n_nationkey
+	and n_name = 'GERMANY'
+group by
+	ps_partkey having
+		sum(ps_supplycost * ps_availqty) > (
+			select
+				sum(ps_supplycost * ps_availqty) * 0.0001000000
+			from
+				partsupp,
+				supplier,
+				nation
+			where
+				ps_suppkey = s_suppkey
+				and s_nationkey = n_nationkey
+				and n_name = 'GERMANY'
+		)
+order by
+	value desc;",427,71,0,2,1,1,1,3,0,10238.16,10211.49,10667,36,15,2,2,1,2,0,0,4,0,ok,116.6,100.54,139.599,117.87719999999999,15.779783480770572,0.13386629034936845,0.436,5,0,0
+tpch_s505_q12,tpch_q12,tpch_qgen,tpch_standard_q12,heavy,"select
+	l_shipmode,
+	sum(case
+		when o_orderpriority = '1-URGENT'
+			or o_orderpriority = '2-HIGH'
+			then 1
+		else 0
+	end) as high_line_count,
+	sum(case
+		when o_orderpriority <> '1-URGENT'
+			and o_orderpriority <> '2-HIGH'
+			then 1
+		else 0
+	end) as low_line_count
+from
+	orders,
+	lineitem
+where
+	o_orderkey = l_orderkey
+	and l_shipmode in ('MAIL', 'TRUCK')
+	and l_commitdate < l_receiptdate
+	and l_shipdate < l_commitdate
+	and l_receiptdate >= date '1997-01-01'
+	and l_receiptdate < date '1997-01-01' + INTERVAL '1 year'
+group by
+	l_shipmode
+order by
+	l_shipmode;",531,83,0,1,1,1,0,2,0,306777.93,306212.96,7,21,6,1,1,2,1,0,1,0,0,ok,1130.024,1070.151,1171.051,1124.916,37.89032579696296,0.033682804580042386,0.284,5,0,1
+tpch_s505_q13,tpch_q13,tpch_qgen,tpch_standard_q13,heavy,"select
+	c_count,
+	count(*) as custdist
+from
+	(
+		select
+			c_custkey,
+			count(o_orderkey)
+		from
+			customer left outer join orders on
+				c_custkey = o_custkey
+				and o_comment not like '%pending%deposits%'
+		group by
+			c_custkey
+	) as c_orders (c_custkey, c_count)
+group by
+	c_count
+order by
+	custdist desc,
+	c_count desc;",291,48,0,0,2,1,1,2,0,151570.16,151569.66,200,16,7,1,1,1,2,1,0,0,0,ok,1577.232,1484.644,1673.881,1561.5402,76.75984628827761,0.04915649708427463,0.222,5,0,1
+tpch_s505_q14,tpch_q14,tpch_qgen,tpch_standard_q14,heavy,"select
+	100.00 * sum(case
+		when p_type like 'PROMO%'
+			then l_extendedprice * (1 - l_discount)
+		else 0
+	end) / sum(l_extendedprice * (1 - l_discount)) as promo_revenue
+from
+	lineitem,
+	part
+where
+	l_partkey = p_partkey
+	and l_shipdate >= date '1997-12-01'
+	and l_shipdate < date '1997-12-01' + INTERVAL '1 month';",301,56,0,1,0,0,0,2,0,201940.68,201940.66,1,32,5,2,0,0,1,1,0,0,0,ok,605.431,556.268,647.999,599.025,38.66147691824511,0.06454067345811128,0.184,5,0,0
+tpch_s505_q16,tpch_q16,tpch_qgen,tpch_standard_q16,heavy,"select
+	p_brand,
+	p_type,
+	p_size,
+	count(distinct ps_suppkey) as supplier_cnt
+from
+	partsupp,
+	part
+where
+	p_partkey = ps_partkey
+	and p_brand <> 'Brand#55'
+	and p_type not like 'LARGE POLISHED%'
+	and p_size in (38, 42, 2, 24, 45, 20, 11, 27)
+	and ps_suppkey not in (
+		select
+			s_suppkey
+		from
+			supplier
+		where
+			s_comment like '%Customer%Complaints%'
+	)
+group by
+	p_brand,
+	p_type,
+	p_size
+order by
+	supplier_cnt desc,
+	p_brand,
+	p_type,
+	p_size;",418,79,0,2,1,1,1,1,0,40263.39,40223.22,16070,42,8,2,1,2,1,1,0,0,0,ok,497.998,458.418,511.331,488.67560000000003,22.03378086711402,0.045088768228072,0.265,5,0,0
+tpch_s505_q17,tpch_q17,tpch_qgen,tpch_standard_q17,heavy,"select
+	sum(l_extendedprice) / 7.0 as avg_yearly
+from
+	lineitem,
+	part
+where
+	p_partkey = l_partkey
+	and p_brand = 'Brand#54'
+	and p_container = 'JUMBO CAN'
+	and l_quantity < (
+		select
+			0.2 * avg(l_quantity)
+		from
+			lineitem
+		where
+			l_partkey = p_partkey
+	);",240,43,0,2,0,0,1,2,0,182416.18,182416.17,1,32,8,2,0,0,2,1,0,0,0,ok,1043.938,921.318,1167.143,1039.905,91.29387086491624,0.08779058747185199,0.257,5,0,1
+tpch_s505_q19,tpch_q19,tpch_qgen,tpch_standard_q19,heavy,"select
+	sum(l_extendedprice* (1 - l_discount)) as revenue
+from
+	lineitem,
+	part
+where
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#45'
+		and p_container in ('SM CASE', 'SM BOX', 'SM PACK', 'SM PKG')
+		and l_quantity >= 1 and l_quantity <= 1 + 10
+		and p_size between 1 and 5
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#53'
+		and p_container in ('MED BAG', 'MED BOX', 'MED PKG', 'MED PACK')
+		and l_quantity >= 14 and l_quantity <= 14 + 10
+		and p_size between 1 and 10
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	)
+	or
+	(
+		p_partkey = l_partkey
+		and p_brand = 'Brand#52'
+		and p_container in ('LG CASE', 'LG BOX', 'LG PACK', 'LG PKG')
+		and l_quantity >= 22 and l_quantity <= 22 + 10
+		and p_size between 1 and 15
+		and l_shipmode in ('AIR', 'AIR REG')
+		and l_shipinstruct = 'DELIVER IN PERSON'
+	);",880,167,0,1,0,0,0,1,0,72366.42,72366.41,1,32,4,1,1,0,1,0,0,1,0,ok,49.408,47.788,51.943,49.731,1.6233591715945064,0.03264280170506337,0.364,5,0,0
+tpch_s505_q20,tpch_q20,tpch_qgen,tpch_standard_q20,heavy,"select
+	s_name,
+	s_address
+from
+	supplier,
+	nation
+where
+	s_suppkey in (
+		select
+			ps_suppkey
+		from
+			partsupp
+		where
+			ps_partkey in (
+				select
+					p_partkey
+				from
+					part
+				where
+					p_name like 'seashell%'
+			)
+			and ps_availqty > (
+				select
+					0.5 * sum(l_quantity)
+				from
+					lineitem
+				where
+					l_partkey = ps_partkey
+					and l_suppkey = ps_suppkey
+					and l_shipdate >= date '1997-01-01'
+					and l_shipdate < date '1997-01-01' + INTERVAL '1 year'
+			)
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'IRAN'
+order by
+	s_name;",454,75,0,4,0,1,3,1,0,164026.69,164026.42,107,44,15,2,1,1,1,1,0,2,0,ok,423.765,416.537,428.679,423.718,5.058832869348417,0.011939150258776867,0.387,5,0,0
+tpch_s505_q21,tpch_q21,tpch_qgen,tpch_standard_q21,heavy,"select
+	s_name,
+	count(*) as numwait
+from
+	supplier,
+	lineitem l1,
+	orders,
+	nation
+where
+	s_suppkey = l1.l_suppkey
+	and o_orderkey = l1.l_orderkey
+	and o_orderstatus = 'F'
+	and l1.l_receiptdate > l1.l_commitdate
+	and exists (
+		select
+			*
+		from
+			lineitem l2
+		where
+			l2.l_orderkey = l1.l_orderkey
+			and l2.l_suppkey <> l1.l_suppkey
+	)
+	and not exists (
+		select
+			*
+		from
+			lineitem l3
+		where
+			l3.l_orderkey = l1.l_orderkey
+			and l3.l_suppkey <> l1.l_suppkey
+			and l3.l_receiptdate > l3.l_commitdate
+	)
+	and s_nationkey = n_nationkey
+	and n_name = 'SAUDI ARABIA'
+group by
+	s_name
+order by
+	numwait desc,
+	s_name
+LIMIT 100;",575,118,0,3,1,1,2,1,0,73778.28,73778.28,1,27,15,2,4,2,1,0,0,5,0,ok,834.26,816.633,855.339,833.3567999999999,14.409587023922661,0.01729101751365401,1.206,5,0,0
+tpch_s505_q22,tpch_q22,tpch_qgen,tpch_standard_q22,heavy,"select
+	cntrycode,
+	count(*) as numcust,
+	sum(c_acctbal) as totacctbal
+from
+	(
+		select
+			substring(c_phone from 1 for 2) as cntrycode,
+			c_acctbal
+		from
+			customer
+		where
+			substring(c_phone from 1 for 2) in
+				('30', '41', '29', '25', '33', '22', '27')
+			and c_acctbal > (
+				select
+					avg(c_acctbal)
+				from
+					customer
+				where
+					c_acctbal > 0.00
+					and substring(c_phone from 1 for 2) in
+						('30', '41', '29', '25', '33', '22', '27')
+			)
+			and not exists (
+				select
+					*
+				from
+					orders
+				where
+					o_custkey = c_custkey
+			)
+	) as custsale
+group by
+	cntrycode
+order by
+	cntrycode;",510,119,0,3,1,1,3,3,0,15637.78,15618.75,761,72,7,2,1,1,2,0,0,1,0,ok,94.998,92.908,97.007,94.935,1.6920617601021568,0.017823371360427206,0.215,5,0,0

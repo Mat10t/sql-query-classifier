@@ -39,6 +39,9 @@ def add_query(queries, query_id, query_type, expected_complexity, sql):
     queries.append(
         {
             "id": query_id,
+            # Шаблон = тип запроса: экземпляры отличаются только параметрами
+            "template_id": f"gen_{query_type}",
+            "source": "generator",
             "query_type": query_type,
             "expected_complexity": expected_complexity,
             "sql": sql,

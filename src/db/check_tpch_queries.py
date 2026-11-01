@@ -7,7 +7,7 @@ import psycopg
 from dotenv import load_dotenv
 
 
-DEFAULT_QUERIES_PATH = Path("data/queries/tpch_queries.json")
+DEFAULT_QUERIES_PATH = Path("data/queries/combined_tpch_queries.json")
 
 
 def get_connection():

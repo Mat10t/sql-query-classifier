@@ -1,5 +1,6 @@
 pandas
 scikit-learn
+scipy
 sqlparse
 psycopg[binary]
 fastapi

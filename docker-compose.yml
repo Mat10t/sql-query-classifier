@@ -1,11 +1,22 @@
 services:
   postgres:
-    image: postgres:16
+    # Версия зафиксирована точно: от минорной версии зависят планы и время выполнения
+    image: postgres:16.4
     container_name: sql_classifier_postgres
     environment:
       POSTGRES_DB: sql_classifier_bench
       POSTGRES_USER: sql_classifier
       POSTGRES_PASSWORD: sql_classifier
+    # Конфигурация экспериментального стенда (см. docs/stage3.md).
+    # JIT и параллельные воркеры отключены, чтобы уменьшить разброс времени.
+    command:
+      - postgres
+      - -c
+      - shared_buffers=1GB
+      - -c
+      - jit=off
+      - -c
+      - max_parallel_workers_per_gather=0
     ports:
       - "5433:5432"
     volumes:

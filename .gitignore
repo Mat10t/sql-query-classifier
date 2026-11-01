@@ -1,11 +1,16 @@
 venv/
+.venv/
 __pycache__/
 *.pyc
 .env
 
 data/raw/
-data/processed/
 models/*.joblib
 
 external/
 .ipynb_checkpoints/
+
+.vscode/
+.idea/
+desktop.ini
+Thumbs.db

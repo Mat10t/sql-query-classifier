@@ -13,6 +13,8 @@ from sklearn.metrics import (
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
+from src.features.columns import get_feature_columns
+
 
 DATASET_PATH = Path("data/processed/query_dataset.csv")
 MODEL_PATH = Path("models/query_classifier.joblib")
@@ -22,21 +24,6 @@ FEATURES_PATH = Path("models/feature_columns.json")
 REPORTS_DIR = Path("reports")
 METRICS_PATH = REPORTS_DIR / "metrics.json"
 FEATURE_IMPORTANCE_PATH = REPORTS_DIR / "feature_importance.csv"
-
-
-DROP_COLUMNS = [
-    "query_id",
-    "query_type",
-    "expected_complexity",
-    "sql_text",
-    "label",
-
-    # Это фактические метрики выполнения.
-    # Их нельзя использовать как признаки,
-    # потому что для нового запроса они заранее неизвестны.
-    "planning_time_ms",
-    "execution_time_ms",
-]
 
 
 def save_metrics(y_test, y_pred, y_proba, df: pd.DataFrame):
@@ -78,13 +65,15 @@ def save_feature_importance(coefficients: pd.DataFrame):
 def main():
     df = pd.read_csv(DATASET_PATH)
 
-    feature_columns = [
-        column for column in df.columns
-        if column not in DROP_COLUMNS
-    ]
+    # Запросы, не уложившиеся в таймаут, не имеют метки
+    if "status" in df.columns:
+        df = df[df["status"] == "ok"]
+
+    # Фактические метрики выполнения исключаются списком из src/features/columns.py
+    feature_columns = get_feature_columns(df.columns)
 
     X = df[feature_columns]
-    y = df["label"]
+    y = df["label"].astype(int)
 
     X_train, X_test, y_train, y_test = train_test_split(
         X,

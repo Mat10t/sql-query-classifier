@@ -6,10 +6,10 @@
 
 ## Стек
 
-- Python 3.12
-- PostgreSQL
+- Python 3.12 или новее
+- PostgreSQL 16.4
 - scikit-learn
-- pandas
+- pandas, numpy, scipy, matplotlib
 - psycopg
 - sqlparse
 - FastAPI
@@ -29,25 +29,62 @@
 - CLI-предсказание для одного SQL-запроса;
 - FastAPI endpoint `/predict-complexity`.
 
-## Структура проекта
+## НИР, 7 семестр: этапы 1-3
 
-```text
-sql-query-classifier/
-├── data/
-│   ├── processed/
-│   └── queries/
-├── models/
-├── reports/
-├── src/
-│   ├── api/
-│   ├── db/
-│   ├── features/
-│   └── model/
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
+Документы по этапам:
+
+- [docs/stage1.md](docs/stage1.md) - постановка, целевая величина, протокол повторов;
+- [docs/stage2.md](docs/stage2.md) - признаки EXPLAIN, обзор методов, baseline Total Cost;
+- [docs/stage3.md](docs/stage3.md) - стенд, корпус запросов, исключение фактических метрик.
+
+### Быстрая проверка (без стенда, по опубликованным данным)
+
+```bash
+pip install -r requirements.txt
+python -m src.checks.check_leakage
+python -m src.analysis.repeatability
+python -m src.analysis.total_cost_baseline
 ```
+
+- `check_leakage` пересчитывает признаки из сохранённых EXPLAIN-планов и проверяет, что в них нет фактических метрик (ожидается три строки `OK`);
+- `repeatability` и `total_cost_baseline` пересчитывают таблицы и графики в `reports/stage1` и `reports/stage2` из `data/processed`.
+
+### Полное воспроизведение на стенде
+
+```bash
+# 1. Стенд: PostgreSQL 16.4 с фиксированной конфигурацией
+docker compose up -d postgres
+
+# 2. Генератор TPC-H (коммит 32f1c1b) и данные SF=1
+git clone https://github.com/electrum/tpch-dbgen external/tpch-dbgen
+git -C external/tpch-dbgen checkout 32f1c1b92d1664dba542e927d23d86ffa57aa253
+make -C external/tpch-dbgen
+(cd external/tpch-dbgen && ./dbgen -s 1 -f)
+mkdir -p data/raw/tpch && mv external/tpch-dbgen/*.tbl data/raw/tpch/
+DB_HOST=localhost DB_PORT=5433 python -m src.db.import_tpch_tbl
+
+# 3. Корпус запросов (qgen с seed 101..505 + собственный генератор)
+bash scripts/generate_tpch_queries.sh
+python -m src.db.generate_query_workload
+python -m src.db.build_combined_query_workload
+
+# 4. Снимок окружения, эксперимент с повторами, сбор датасета
+export DB_HOST=localhost DB_PORT=5433
+python -m src.db.snapshot_environment
+python -m src.db.collect_dataset --warmup-runs 0 --runs 15 --limit-per-template 1 \
+  --output data/processed/repeatability/query_dataset.csv \
+  --measurements-output data/processed/repeatability/measurements.csv \
+  --plans-output data/processed/repeatability/plans.jsonl
+python -m src.analysis.repeatability
+python -m src.db.collect_dataset --label-quantile 0.75
+
+# 5. Проверки и baseline
+python -m src.checks.check_leakage
+python -m src.analysis.total_cost_baseline
+python -m src.analysis.export_plan_examples
+```
+
+Время выполнения на другой машине будет отличаться. Воспроизводятся тексты запросов, планы и Total Cost (при совпадении отпечатка статистики в `reports/stage3/environment.json`), а также порядок величин и выводы.
 
 ## Локальный запуск через venv
 
@@ -74,6 +111,8 @@ DB_USER=sql_classifier
 DB_PASSWORD=sql_classifier
 ```
 
+Для PostgreSQL из `docker-compose.yml` укажите `DB_PORT=5433`.
+
 ### 4. Проверить подключение к PostgreSQL
 
 ```bash
@@ -82,13 +121,11 @@ python -m src.db.check_connection
 
 ## Подготовка TPC-H данных
 
-Данные TPC-H генерируются через `dbgen`.
-
-Пример:
+Данные TPC-H генерируются через `dbgen` из electrum/tpch-dbgen, коммит `32f1c1b` (клонирование и сборка - в разделе "Полное воспроизведение на стенде").
 
 ```bash
 cd external/tpch-dbgen
-./dbgen -s 1
+./dbgen -s 1 -f
 mkdir -p ../../data/raw/tpch
 cp *.tbl ../../data/raw/tpch/
 cd ../..
@@ -113,18 +150,10 @@ python -m src.db.generate_query_workload
 ### 2. Сгенерировать стандартные TPC-H-запросы через qgen
 
 ```bash
-mkdir -p data/queries/tpch_standard_raw
-
-cd external/tpch-dbgen
-
-export DSS_QUERY=$PWD/queries
-
-for i in $(seq 1 22); do
-    ./qgen -s 1 $i > ../../data/queries/tpch_standard_raw/q$(printf "%02d" $i).sql
-done
-
-cd ../..
+bash scripts/generate_tpch_queries.sh
 ```
+
+Скрипт запускает `qgen` для 22 запросов TPC-H с seed 101, 202, 303, 404, 505 и сохраняет их в `data/queries/tpch_standard_raw/seed_<N>/q01.sql ... q22.sql`.
 
 ### 3. Объединить запросы
 
@@ -138,7 +167,7 @@ python -m src.db.build_combined_query_workload
 data/queries/combined_tpch_queries.json
 ```
 
-Один из стандартных TPC-H-запросов может быть пропущен, если содержит `CREATE VIEW`, так как API-прототип работает только с `SELECT`.
+При объединении Q15 (`CREATE VIEW ... ; SELECT ...; DROP VIEW`) переписывается в эквивалентный запрос с `WITH`, а повторяющиеся тексты запросов удаляются. Итог: 274 запроса из 31 шаблона, у каждого есть `template_id` и `source`.
 
 ## Проверка SQL-запросов через EXPLAIN
 
@@ -156,17 +185,17 @@ python -m src.db.collect_dataset \
 
 Скрипт:
 
-- выполняет `EXPLAIN`;
-- выполняет `EXPLAIN ANALYZE`;
-- извлекает признаки;
-- сохраняет датасет в `data/processed/query_dataset.csv`;
-- ставит метку `label` по 75% квантилю времени выполнения.
+- выполняет `EXPLAIN` и строит по нему признаки;
+- выполняет запрос по протоколу из `src/measure/protocol.py`: 1 прогревочный и 5 измеренных запусков `EXPLAIN (ANALYZE, TIMING OFF)`;
+- записывает в `execution_time_ms` медиану измеренных запусков - целевую величину t(q);
+- сохраняет датасет в `data/processed/query_dataset.csv`, все запуски - в `data/processed/measurements.csv`, планы - в `data/processed/plans.jsonl`;
+- ставит метку `label` по 75% квантилю t(q) (для бинарного baseline).
 
 Важно:
 
 - `EXPLAIN` используется для признаков до выполнения запроса;
-- `EXPLAIN ANALYZE` используется только при сборе обучающего датасета;
-- `execution_time_ms` не используется как входной признак модели.
+- `EXPLAIN ANALYZE` используется только для целевой величины;
+- список нецелевых колонок задан в `src/features/columns.py`, проверка - `python -m src.checks.check_leakage`.
 
 ## Обучение модели
 
@@ -293,27 +322,27 @@ docker compose down
 docker compose down -v
 ```
 
-## Текущий результат модели
+## Результат прототипа 6 семестра
 
-Пример результата после обучения:
+Бинарный классификатор, обученный на датасете 6 семестра (189 запросов, `reports/metrics.json`). На корпусе 7 семестра модель ещё не переобучалась: регрессионные модели и сравнение с baseline Total Cost запланированы на этапы 5-6.
 
 ```text
 Accuracy: 0.8958
-ROC-AUC: 0.9491
+ROC-AUC: 0.9398
 Recall для heavy: 1.00
 F1-score для heavy: 0.83
 ```
 
-Наиболее значимые признаки:
+Наиболее значимые признаки (`reports/feature_importance.csv`):
 
 ```text
-total_cost
 subquery_count
+total_cost
 startup_cost
 join_count
 group_by_count
 aggregate_func_count
-window_func_count
+query_length
 ```
 
 ## Ограничения

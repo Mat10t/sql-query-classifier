@@ -1,0 +1,10 @@
+{
+  "queries": 31,
+  "runs_per_query": 15,
+  "block_size": 7,
+  "cv_median": 0.025251085487559874,
+  "cv_p90": 0.15382590704707244,
+  "first_run_ratio_median": 1.0965871704850296,
+  "first_run_ratio_p90": 1.971401751011088,
+  "share_first_run_slower_20pct": 0.25806451612903225
+}

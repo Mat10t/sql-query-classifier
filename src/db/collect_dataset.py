@@ -1,34 +1,31 @@
 import argparse
 import json
-import os
+from collections import defaultdict
 from pathlib import Path
 
 import pandas as pd
 import psycopg
-from dotenv import load_dotenv
 
+from src.db.connection import get_connection
 from src.features.extract_features import (
-    extract_execution_metrics,
     extract_plan_features,
     extract_sql_features,
     normalize_sql,
 )
+from src.measure.protocol import (
+    MEASURED_RUNS,
+    WARMUP_RUNS,
+    aggregate_runs,
+    apply_session_settings,
+    measure_query,
+    run_explain,
+)
 
 
-DEFAULT_QUERIES_PATH = Path("data/queries/generated_tpch_queries.json")
+DEFAULT_QUERIES_PATH = Path("data/queries/combined_tpch_queries.json")
 DEFAULT_OUTPUT_PATH = Path("data/processed/query_dataset.csv")
-
-
-def get_connection():
-    load_dotenv()
-
-    return psycopg.connect(
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT"),
-        dbname=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-    )
+DEFAULT_MEASUREMENTS_PATH = Path("data/processed/measurements.csv")
+DEFAULT_PLANS_PATH = Path("data/processed/plans.jsonl")
 
 
 def load_queries(path: Path):
@@ -36,92 +33,139 @@ def load_queries(path: Path):
         return json.load(file)
 
 
-def run_explain(cursor, sql: str):
-    cursor.execute(f"EXPLAIN (FORMAT JSON) {sql}")
-    return cursor.fetchone()[0]
+def limit_per_template(queries: list, limit: int) -> list:
+    # Берём первые limit запросов каждого шаблона (для эксперимента с повторами)
+    counts = defaultdict(int)
+    selected = []
+
+    for query in queries:
+        template_id = query.get("template_id", query["id"])
+
+        if counts[template_id] < limit:
+            selected.append(query)
+            counts[template_id] += 1
+
+    return selected
 
 
-def run_explain_analyze(cursor, sql: str):
-    cursor.execute(f"EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON) {sql}")
-    return cursor.fetchone()[0]
-
-
-def collect_row(cursor, query: dict, threshold_ms: float):
+def collect_row(cursor, query: dict, warmup_runs: int, measured_runs: int):
     sql = normalize_sql(query["sql"])
 
+    # Признаки строятся только по EXPLAIN без выполнения запроса
     explain_json = run_explain(cursor, sql)
-    explain_analyze_json = run_explain_analyze(cursor, sql)
 
-    sql_features = extract_sql_features(sql)
-    plan_features = extract_plan_features(explain_json)
-    execution_metrics = extract_execution_metrics(explain_analyze_json)
-
-    execution_time_ms = execution_metrics["execution_time_ms"]
-    label = 1 if execution_time_ms > threshold_ms else 0
-
-    return {
+    row = {
         "query_id": query["id"],
+        "template_id": query.get("template_id", query["id"]),
+        "source": query.get("source"),
         "query_type": query.get("query_type"),
         "expected_complexity": query.get("expected_complexity"),
         "sql_text": query["sql"],
 
-        **sql_features,
-        **plan_features,
-        **execution_metrics,
-
-        "label": label,
+        **extract_sql_features(sql),
+        **extract_plan_features(explain_json),
     }
+
+    plans = {
+        "query_id": query["id"],
+        "explain": explain_json,
+        "explain_analyze": None,
+    }
+
+    try:
+        measurement = measure_query(cursor, sql, warmup_runs, measured_runs)
+    except psycopg.errors.QueryCanceled:
+        row["status"] = "timeout"
+        return row, [], plans
+
+    runs = [{"query_id": query["id"], **run} for run in measurement["runs"]]
+    plans["explain_analyze"] = measurement["analyze_json"]
+
+    row["status"] = "ok"
+    row.update(aggregate_runs(measurement["runs"]))
+
+    return row, runs, plans
+
+
+def assign_labels(dataframe: pd.DataFrame, threshold_ms: float, label_quantile):
+    ok = dataframe["status"] == "ok"
+
+    if label_quantile is not None:
+        threshold_ms = dataframe.loc[ok, "execution_time_ms"].quantile(label_quantile)
+        print(f"Label threshold by quantile {label_quantile}: {threshold_ms:.4f} ms")
+
+    dataframe["label"] = pd.NA
+    dataframe.loc[ok, "label"] = (
+        dataframe.loc[ok, "execution_time_ms"] > threshold_ms
+    ).astype(int)
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--queries", type=Path, default=DEFAULT_QUERIES_PATH)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)
+    parser.add_argument("--measurements-output", type=Path, default=DEFAULT_MEASUREMENTS_PATH)
+    parser.add_argument("--plans-output", type=Path, default=DEFAULT_PLANS_PATH)
+    parser.add_argument("--warmup-runs", type=int, default=WARMUP_RUNS)
+    parser.add_argument("--runs", type=int, default=MEASURED_RUNS)
+    parser.add_argument("--limit-per-template", type=int, default=None)
     parser.add_argument("--threshold-ms", type=float, default=1000.0)
     parser.add_argument("--label-quantile", type=float, default=None)
     args = parser.parse_args()
 
     queries = load_queries(args.queries)
+
+    if args.limit_per_template is not None:
+        queries = limit_per_template(queries, args.limit_per_template)
+
     rows = []
+    all_runs = []
 
-    args.output.parent.mkdir(parents=True, exist_ok=True)
+    for path in [args.output, args.measurements_output, args.plans_output]:
+        path.parent.mkdir(parents=True, exist_ok=True)
 
-    with get_connection() as connection:
+    with get_connection(autocommit=True) as connection:
         with connection.cursor() as cursor:
-            for index, query in enumerate(queries, start=1):
-                print(f"[{index}/{len(queries)}] {query['id']}")
+            apply_session_settings(cursor)
 
-                try:
-                    row = collect_row(cursor, query, args.threshold_ms)
+            with args.plans_output.open("w", encoding="utf-8") as plans_file:
+                for index, query in enumerate(queries, start=1):
+                    print(f"[{index}/{len(queries)}] {query['id']}", flush=True)
+
+                    try:
+                        row, runs, plans = collect_row(
+                            cursor, query, args.warmup_runs, args.runs
+                        )
+                    except Exception as error:
+                        print(f"  ERROR: {error}")
+                        continue
+
                     rows.append(row)
+                    all_runs.extend(runs)
+                    plans_file.write(json.dumps(plans, ensure_ascii=False) + "\n")
 
-                    print(
-                        f"  execution_time_ms={row['execution_time_ms']:.2f}, "
-                        f"label={row['label']}"
-                    )
-
-                except Exception as error:
-                    print(f"  ERROR: {error}")
-                    connection.rollback()
+                    if row["status"] == "ok":
+                        print(
+                            f"  median={row['execution_time_ms']:.2f} ms, "
+                            f"cv={row['exec_time_cv']:.3f}"
+                        )
+                    else:
+                        print(f"  status={row['status']}")
 
     dataframe = pd.DataFrame(rows)
-    
-    if args.label_quantile is not None:
-        threshold = dataframe["execution_time_ms"].quantile(args.label_quantile)
-        dataframe["label"] = (dataframe["execution_time_ms"] > threshold).astype(int)
-
-        print(f"Label threshold by quantile {args.label_quantile}: {threshold:.4f} ms")
-        print("Updated label distribution:")
-        print(dataframe["label"].value_counts())
+    assign_labels(dataframe, args.threshold_ms, args.label_quantile)
 
     dataframe.to_csv(args.output, index=False)
+    pd.DataFrame(all_runs).to_csv(args.measurements_output, index=False)
 
     print(f"Saved dataset: {args.output}")
+    print(f"Saved measurements: {args.measurements_output}")
+    print(f"Saved plans: {args.plans_output}")
     print(f"Rows: {len(dataframe)}")
-
-    if len(dataframe) > 0:
-        print("Label distribution:")
-        print(dataframe["label"].value_counts())
+    print("Status distribution:")
+    print(dataframe["status"].value_counts())
+    print("Label distribution:")
+    print(dataframe["label"].value_counts())
 
 
 if __name__ == "__main__":
