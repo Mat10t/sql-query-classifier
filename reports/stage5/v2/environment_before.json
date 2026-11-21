@@ -1,0 +1,329 @@
+{
+  "created_at": "2026-11-21T09:53:18.390413+00:00",
+  "git": {
+    "commit": "b098e184e62404ca70b9f17289303afc085036b5",
+    "dirty": true
+  },
+  "client": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.14.3",
+    "cpu_count": 12
+  },
+  "server_version": "PostgreSQL 16.4 (Debian 16.4-1.pgdg120+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit",
+  "settings": {
+    "cpu_index_tuple_cost": {
+      "name": "cpu_index_tuple_cost",
+      "setting": "0.005",
+      "unit": null,
+      "source": "default"
+    },
+    "cpu_operator_cost": {
+      "name": "cpu_operator_cost",
+      "setting": "0.0025",
+      "unit": null,
+      "source": "default"
+    },
+    "cpu_tuple_cost": {
+      "name": "cpu_tuple_cost",
+      "setting": "0.01",
+      "unit": null,
+      "source": "default"
+    },
+    "default_statistics_target": {
+      "name": "default_statistics_target",
+      "setting": "100",
+      "unit": null,
+      "source": "default"
+    },
+    "effective_cache_size": {
+      "name": "effective_cache_size",
+      "setting": "524288",
+      "unit": "8kB",
+      "source": "default"
+    },
+    "enable_bitmapscan": {
+      "name": "enable_bitmapscan",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "enable_hashagg": {
+      "name": "enable_hashagg",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "enable_hashjoin": {
+      "name": "enable_hashjoin",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "enable_indexscan": {
+      "name": "enable_indexscan",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "enable_mergejoin": {
+      "name": "enable_mergejoin",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "enable_nestloop": {
+      "name": "enable_nestloop",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "enable_seqscan": {
+      "name": "enable_seqscan",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "enable_sort": {
+      "name": "enable_sort",
+      "setting": "on",
+      "unit": null,
+      "source": "default"
+    },
+    "jit": {
+      "name": "jit",
+      "setting": "off",
+      "unit": null,
+      "source": "session"
+    },
+    "maintenance_work_mem": {
+      "name": "maintenance_work_mem",
+      "setting": "65536",
+      "unit": "kB",
+      "source": "default"
+    },
+    "max_parallel_workers": {
+      "name": "max_parallel_workers",
+      "setting": "8",
+      "unit": null,
+      "source": "default"
+    },
+    "max_parallel_workers_per_gather": {
+      "name": "max_parallel_workers_per_gather",
+      "setting": "0",
+      "unit": null,
+      "source": "session"
+    },
+    "random_page_cost": {
+      "name": "random_page_cost",
+      "setting": "4",
+      "unit": null,
+      "source": "default"
+    },
+    "seq_page_cost": {
+      "name": "seq_page_cost",
+      "setting": "1",
+      "unit": null,
+      "source": "default"
+    },
+    "shared_buffers": {
+      "name": "shared_buffers",
+      "setting": "131072",
+      "unit": "8kB",
+      "source": "command line"
+    },
+    "statement_timeout": {
+      "name": "statement_timeout",
+      "setting": "120000",
+      "unit": "ms",
+      "source": "session"
+    },
+    "work_mem": {
+      "name": "work_mem",
+      "setting": "4096",
+      "unit": "kB",
+      "source": "default"
+    }
+  },
+  "tables": {
+    "region": {
+      "row_count": 5,
+      "total_bytes": 24576,
+      "heap_bytes": 8192,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    },
+    "nation": {
+      "row_count": 25,
+      "total_bytes": 40960,
+      "heap_bytes": 8192,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    },
+    "supplier": {
+      "row_count": 10000,
+      "total_bytes": 2138112,
+      "heap_bytes": 1769472,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    },
+    "customer": {
+      "row_count": 150000,
+      "total_bytes": 33955840,
+      "heap_bytes": 29491200,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    },
+    "part": {
+      "row_count": 200000,
+      "total_bytes": 35151872,
+      "heap_bytes": 30605312,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    },
+    "partsupp": {
+      "row_count": 800000,
+      "total_bytes": 178683904,
+      "heap_bytes": 143851520,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    },
+    "orders": {
+      "row_count": 1500000,
+      "total_bytes": 258580480,
+      "heap_bytes": 206766080,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    },
+    "lineitem": {
+      "row_count": 6001215,
+      "total_bytes": 1129545728,
+      "heap_bytes": 807993344,
+      "last_analyze": "None",
+      "last_autoanalyze": "None"
+    }
+  },
+  "indexes": [
+    {
+      "tablename": "customer",
+      "indexname": "customer_pkey",
+      "indexdef": "CREATE UNIQUE INDEX customer_pkey ON public.customer USING btree (c_custkey)"
+    },
+    {
+      "tablename": "customer",
+      "indexname": "idx_customer_nationkey",
+      "indexdef": "CREATE INDEX idx_customer_nationkey ON public.customer USING btree (c_nationkey)"
+    },
+    {
+      "tablename": "lineitem",
+      "indexname": "idx_lineitem_orderkey",
+      "indexdef": "CREATE INDEX idx_lineitem_orderkey ON public.lineitem USING btree (l_orderkey)"
+    },
+    {
+      "tablename": "lineitem",
+      "indexname": "idx_lineitem_partkey",
+      "indexdef": "CREATE INDEX idx_lineitem_partkey ON public.lineitem USING btree (l_partkey)"
+    },
+    {
+      "tablename": "lineitem",
+      "indexname": "idx_lineitem_suppkey",
+      "indexdef": "CREATE INDEX idx_lineitem_suppkey ON public.lineitem USING btree (l_suppkey)"
+    },
+    {
+      "tablename": "lineitem",
+      "indexname": "lineitem_pkey",
+      "indexdef": "CREATE UNIQUE INDEX lineitem_pkey ON public.lineitem USING btree (l_orderkey, l_linenumber)"
+    },
+    {
+      "tablename": "nation",
+      "indexname": "idx_nation_regionkey",
+      "indexdef": "CREATE INDEX idx_nation_regionkey ON public.nation USING btree (n_regionkey)"
+    },
+    {
+      "tablename": "nation",
+      "indexname": "nation_pkey",
+      "indexdef": "CREATE UNIQUE INDEX nation_pkey ON public.nation USING btree (n_nationkey)"
+    },
+    {
+      "tablename": "orders",
+      "indexname": "idx_orders_custkey",
+      "indexdef": "CREATE INDEX idx_orders_custkey ON public.orders USING btree (o_custkey)"
+    },
+    {
+      "tablename": "orders",
+      "indexname": "orders_pkey",
+      "indexdef": "CREATE UNIQUE INDEX orders_pkey ON public.orders USING btree (o_orderkey)"
+    },
+    {
+      "tablename": "part",
+      "indexname": "part_pkey",
+      "indexdef": "CREATE UNIQUE INDEX part_pkey ON public.part USING btree (p_partkey)"
+    },
+    {
+      "tablename": "partsupp",
+      "indexname": "idx_partsupp_partkey",
+      "indexdef": "CREATE INDEX idx_partsupp_partkey ON public.partsupp USING btree (ps_partkey)"
+    },
+    {
+      "tablename": "partsupp",
+      "indexname": "idx_partsupp_suppkey",
+      "indexdef": "CREATE INDEX idx_partsupp_suppkey ON public.partsupp USING btree (ps_suppkey)"
+    },
+    {
+      "tablename": "partsupp",
+      "indexname": "partsupp_pkey",
+      "indexdef": "CREATE UNIQUE INDEX partsupp_pkey ON public.partsupp USING btree (ps_partkey, ps_suppkey)"
+    },
+    {
+      "tablename": "region",
+      "indexname": "region_pkey",
+      "indexdef": "CREATE UNIQUE INDEX region_pkey ON public.region USING btree (r_regionkey)"
+    },
+    {
+      "tablename": "supplier",
+      "indexname": "idx_supplier_nationkey",
+      "indexdef": "CREATE INDEX idx_supplier_nationkey ON public.supplier USING btree (s_nationkey)"
+    },
+    {
+      "tablename": "supplier",
+      "indexname": "supplier_pkey",
+      "indexdef": "CREATE UNIQUE INDEX supplier_pkey ON public.supplier USING btree (s_suppkey)"
+    }
+  ],
+  "statistics": {
+    "fingerprint_version": 2,
+    "schema": "public",
+    "fields": [
+      "tablename",
+      "attname",
+      "inherited",
+      "null_frac",
+      "avg_width",
+      "n_distinct",
+      "most_common_vals",
+      "most_common_freqs",
+      "histogram_bounds",
+      "correlation"
+    ],
+    "columns_with_stats": 61,
+    "sha256": "cb69e3b899f20529b25c84a708ebb87ec405290bbab00e77f9ab00471e6671a2"
+  },
+  "protocol": {
+    "warmup_runs": 1,
+    "measured_runs": 5,
+    "statement_timeout_ms": 120000,
+    "unstable_cv": 0.2,
+    "session_settings": {
+      "jit": "off",
+      "max_parallel_workers_per_gather": "0",
+      "statement_timeout": "120000"
+    },
+    "explain_sql": "EXPLAIN (FORMAT JSON) {sql}",
+    "explain_analyze_sql": "EXPLAIN (ANALYZE, TIMING OFF, BUFFERS, FORMAT JSON) {sql}"
+  },
+  "corpus": {
+    "path": "data/queries/v2/queries.json",
+    "sha256": "965aa21e729b97b234a263b36e3d9dcfc75c6e940c6c9795071d28355fbb9596",
+    "queries": 370,
+    "templates": 39
+  }
+}

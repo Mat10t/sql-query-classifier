@@ -1,0 +1,58 @@
+{
+  "dataset_rows": 274,
+  "split": "random",
+  "groups": [
+    "optimizer",
+    "cardinality",
+    "structure",
+    "operators",
+    "sql"
+  ],
+  "train_queries": 205,
+  "test_queries": 69,
+  "threshold_ms": 832.813,
+  "threshold_quantile_train": 0.75,
+  "label_distribution": {
+    "0": 201,
+    "1": 73
+  },
+  "accuracy": 0.927536231884058,
+  "roc_auc": 0.9912959381044487,
+  "confusion_matrix": [
+    [
+      44,
+      3
+    ],
+    [
+      2,
+      20
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.9565217391304348,
+      "recall": 0.9361702127659575,
+      "f1-score": 0.946236559139785,
+      "support": 47.0
+    },
+    "1": {
+      "precision": 0.8695652173913043,
+      "recall": 0.9090909090909091,
+      "f1-score": 0.8888888888888888,
+      "support": 22.0
+    },
+    "accuracy": 0.927536231884058,
+    "macro avg": {
+      "precision": 0.9130434782608696,
+      "recall": 0.9226305609284333,
+      "f1-score": 0.9175627240143369,
+      "support": 69.0
+    },
+    "weighted avg": {
+      "precision": 0.9287964713295526,
+      "recall": 0.927536231884058,
+      "f1-score": 0.927951794711963,
+      "support": 69.0
+    }
+  }
+}

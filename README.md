@@ -29,25 +29,32 @@
 - CLI-предсказание для одного SQL-запроса;
 - FastAPI endpoint `/predict-complexity`.
 
-## НИР, 7 семестр: этапы 1-3
+## НИР, 7 семестр: этапы 1-5
 
 Документы по этапам:
 
 - [docs/stage1.md](docs/stage1.md) - постановка, целевая величина, протокол повторов;
 - [docs/stage2.md](docs/stage2.md) - признаки EXPLAIN, обзор методов, baseline Total Cost;
-- [docs/stage3.md](docs/stage3.md) - стенд, корпус запросов, исключение фактических метрик.
+- [docs/stage3.md](docs/stage3.md) - стенд, корпус запросов, исключение фактических метрик;
+- [docs/stage4.md](docs/stage4.md) - группы признаков, расширение корпуса и разбиение по шаблонам.
+- [docs/stage5.md](docs/stage5.md) - сравнение Total Cost, регрессии по Total Cost и бинарного классификатора на фиксированных выборках.
 
 ### Быстрая проверка (без стенда, по опубликованным данным)
 
 ```bash
 pip install -r requirements.txt
+python -m src.checks.check_collection
 python -m src.checks.check_leakage
 python -m src.analysis.repeatability
 python -m src.analysis.total_cost_baseline
+python -m src.db.build_extended_workload --check
+python -m src.evaluation.baselines --dataset data/processed/v2/query_dataset.csv --splits reports/stage5/v2/splits.csv --output-dir reports/stage5/v2
 ```
 
+- `check_collection` сверяет идентификаторы исходных запросов, результатов и планов, число повторов и медианы. На опубликованной серии ожидаются 274 запроса и 1644 завершённых запуска.
 - `check_leakage` пересчитывает признаки из сохранённых EXPLAIN-планов и проверяет, что в них нет фактических метрик (ожидается три строки `OK`);
 - `repeatability` и `total_cost_baseline` пересчитывают таблицы и графики в `reports/stage1` и `reports/stage2` из `data/processed`.
+- Для этапов 4 и 5 используется расширенный корпус из 370 запросов. `build_extended_workload --check` сверяет SQL и состав выборок. Команда `baselines` выше пересчитывает ошибки и прогнозы. На тесте по шаблонам ожидаются MAE 766.18 мс и RMSE 1421.44 мс. [Состав корпуса](docs/stage4.md) и [результаты базовых моделей](docs/stage5.md).
 
 ### Полное воспроизведение на стенде
 
@@ -70,13 +77,14 @@ python -m src.db.build_combined_query_workload
 
 # 4. Снимок окружения, эксперимент с повторами, сбор датасета
 export DB_HOST=localhost DB_PORT=5433
-python -m src.db.snapshot_environment
+python -m src.db.snapshot_environment --output reports/stage3/new_run/environment.json
 python -m src.db.collect_dataset --warmup-runs 0 --runs 15 --limit-per-template 1 \
   --output data/processed/repeatability/query_dataset.csv \
   --measurements-output data/processed/repeatability/measurements.csv \
   --plans-output data/processed/repeatability/plans.jsonl
 python -m src.analysis.repeatability
 python -m src.db.collect_dataset --label-quantile 0.75
+python -m src.db.snapshot_environment --output reports/stage3/new_run/environment_after_collection.json
 
 # 5. Проверки и baseline
 python -m src.checks.check_leakage
@@ -84,7 +92,9 @@ python -m src.analysis.total_cost_baseline
 python -m src.analysis.export_plan_examples
 ```
 
-Время выполнения на другой машине будет отличаться. Воспроизводятся тексты запросов, планы и Total Cost (при совпадении отпечатка статистики в `reports/stage3/environment.json`), а также порядок величин и выводы.
+Для новой серии надо использовать отдельную папку снимков. До и после сбора надо сравнить значения `statistics.sha256`. Для такого сравнения должны совпадать версия расчёта, схема и перечень полей. В опубликованных снимках использован исходный формат, поэтому их хеши сравнивают только друг с другом. Содержимое таблиц предполагается неизменным в течение серии. После нового импорта или `ANALYZE` надо отдельно сравнить планы, Total Cost и результаты измерений.
+
+Проверка расчёта отпечатка на тестовых данных: `python -m unittest discover -s tests -p test_statistics_fingerprint.py`.
 
 ## Локальный запуск через venv
 
@@ -111,7 +121,7 @@ DB_USER=sql_classifier
 DB_PASSWORD=sql_classifier
 ```
 
-Для PostgreSQL из `docker-compose.yml` укажите `DB_PORT=5433`.
+Для подключения к PostgreSQL из `docker-compose.yml` надо указать `DB_PORT=5433`.
 
 ### 4. Проверить подключение к PostgreSQL
 
@@ -167,7 +177,7 @@ python -m src.db.build_combined_query_workload
 data/queries/combined_tpch_queries.json
 ```
 
-При объединении Q15 (`CREATE VIEW ... ; SELECT ...; DROP VIEW`) переписывается в эквивалентный запрос с `WITH`, а повторяющиеся тексты запросов удаляются. Итог: 274 запроса из 31 шаблона, у каждого есть `template_id` и `source`.
+При объединении Q15 (`CREATE VIEW ... ; SELECT ...; DROP VIEW`) переписывается в эквивалентный запрос с `WITH`, а повторяющиеся тексты запросов удаляются. Корпус этапа 3 содержит 274 запроса из 31 шаблона. У каждого есть `template_id` и `source`. Расширение до 370 запросов описано в [этапе 4](docs/stage4.md).
 
 ## Проверка SQL-запросов через EXPLAIN
 
@@ -189,19 +199,21 @@ python -m src.db.collect_dataset \
 - выполняет запрос по протоколу из `src/measure/protocol.py`: 1 прогревочный и 5 измеренных запусков `EXPLAIN (ANALYZE, TIMING OFF)`;
 - записывает в `execution_time_ms` медиану измеренных запусков - целевую величину t(q);
 - сохраняет датасет в `data/processed/query_dataset.csv`, все запуски - в `data/processed/measurements.csv`, планы - в `data/processed/plans.jsonl`;
-- ставит метку `label` по 75% квантилю t(q) (для бинарного baseline).
+- при указанном `--label-quantile` сохраняет описательную метку корпуса в CSV. При обучении бинарная метка вычисляется заново по порогу из train.
 
 Важно:
 
 - `EXPLAIN` используется для признаков до выполнения запроса;
 - `EXPLAIN ANALYZE` используется только для целевой величины;
-- список нецелевых колонок задан в `src/features/columns.py`, проверка - `python -m src.checks.check_leakage`.
+- разрешённые признаки заданы по группам в `src/features/columns.py`, проверка - `python -m src.checks.check_leakage`.
 
 ## Обучение модели
 
 ```bash
-python -m src.model.train_model
+python -m src.model.train_model --dataset data/processed/v2/query_dataset.csv --splits reports/stage5/v2/splits.csv --reports-dir reports/stage5/v2/binary/template
 ```
+
+Команда обучает классификатор на пяти группах признаков расширенного корпуса. Программа проверяет состав выборок и колонки данных, затем определяет порог по обучающим запросам. Команды для обоих разбиений приведены в [этапе 5](docs/stage5.md#как-проверить).
 
 После обучения сохраняются:
 
@@ -209,8 +221,8 @@ python -m src.model.train_model
 models/query_classifier.joblib
 models/scaler.joblib
 models/feature_columns.json
-reports/metrics.json
-reports/feature_importance.csv
+reports/stage5/v2/binary/template/metrics.json
+reports/stage5/v2/binary/template/feature_importance.csv
 ```
 
 ## CLI-предсказание
@@ -324,7 +336,7 @@ docker compose down -v
 
 ## Результат прототипа 6 семестра
 
-Бинарный классификатор, обученный на датасете 6 семестра (189 запросов, `reports/metrics.json`). На корпусе 7 семестра модель ещё не переобучалась: регрессионные модели и сравнение с baseline Total Cost запланированы на этапы 5-6.
+Бинарный классификатор, обученный на датасете 6 семестра (189 запросов, `reports/metrics.json`). Результаты классификации на корпусе 7 семестра приведены в [этапе 5](docs/stage5.md#бинарная-классификация).
 
 ```text
 Accuracy: 0.8958

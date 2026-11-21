@@ -1,0 +1,90 @@
+{
+  "template": {
+    "train_queries": 308,
+    "test_queries": 62,
+    "train_templates": 29,
+    "test_templates": 10,
+    "total_cost": {
+      "n": 62,
+      "spearman": 0.8951261571125829,
+      "kendall_tau": 0.7264138762410136,
+      "pairwise_accuracy": 0.8611845584346907,
+      "distinct_time_pairs": 1891,
+      "separated_runs": {
+        "pairs": 1816,
+        "correct": 1584,
+        "tied_prediction": 5,
+        "accuracy": 0.8736233480176211
+      }
+    },
+    "regression": {
+      "intercept": 1.357664069514068,
+      "coefficient": 2.0145010418069803e-05,
+      "errors_ms": {
+        "mae": 766.1806209605357,
+        "rmse": 1421.4410041201004
+      },
+      "errors_log1p_ms": {
+        "mae": 1.9700736734323936,
+        "rmse": 2.495388252278956
+      },
+      "ranking": {
+        "n": 62,
+        "spearman": 0.8951261571125829,
+        "kendall_tau": 0.7264138762410136,
+        "pairwise_accuracy": 0.8611845584346907,
+        "distinct_time_pairs": 1891,
+        "separated_runs": {
+          "pairs": 1816,
+          "correct": 1584,
+          "tied_prediction": 5,
+          "accuracy": 0.8736233480176211
+        }
+      }
+    }
+  },
+  "random": {
+    "train_queries": 277,
+    "test_queries": 93,
+    "train_templates": 39,
+    "test_templates": 34,
+    "total_cost": {
+      "n": 93,
+      "spearman": 0.9507700043208384,
+      "kendall_tau": 0.8203520874531471,
+      "pairwise_accuracy": 0.9075958353052532,
+      "distinct_time_pairs": 4226,
+      "separated_runs": {
+        "pairs": 4025,
+        "correct": 3738,
+        "tied_prediction": 0,
+        "accuracy": 0.928695652173913
+      }
+    },
+    "regression": {
+      "intercept": 1.6785543150565654,
+      "coefficient": 1.9985308507127074e-05,
+      "errors_ms": {
+        "mae": 3640.0375102781063,
+        "rmse": 28935.890822693655
+      },
+      "errors_log1p_ms": {
+        "mae": 1.3059161420384118,
+        "rmse": 1.5997208394868234
+      },
+      "ranking": {
+        "n": 93,
+        "spearman": 0.9507700043208384,
+        "kendall_tau": 0.8203520874531471,
+        "pairwise_accuracy": 0.9075958353052532,
+        "distinct_time_pairs": 4226,
+        "separated_runs": {
+          "pairs": 4025,
+          "correct": 3738,
+          "tied_prediction": 0,
+          "accuracy": 0.928695652173913
+        }
+      }
+    }
+  }
+}

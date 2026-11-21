@@ -1,7 +1,7 @@
 """
 Снимок состояния экспериментального стенда (этап 3).
 
-Сохраняет в JSON всё, от чего зависят планы и время выполнения:
+Сохраняет в JSON наблюдаемые параметры стенда:
 версию PostgreSQL, параметры планировщика, объёмы таблиц, индексы,
 отпечаток статистики, параметры протокола измерений и версию корпуса.
 Снимок делается перед сбором датасета и публикуется вместе с ним.
@@ -16,7 +16,6 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-from src.db.connection import get_connection
 from src.measure import protocol
 
 
@@ -121,22 +120,23 @@ def get_indexes(cursor):
 
 
 def get_statistics_fingerprint(cursor):
-    # ANALYZE строит статистику по случайной выборке строк,
-    # поэтому после повторного импорта она может немного отличаться.
-    # Отпечаток позволяет проверить, что датасет собран на той же статистике.
-    rows = fetch_all(
-        cursor,
-        """
-        SELECT tablename, attname, null_frac, avg_width, n_distinct,
-               most_common_vals::text AS mcv, histogram_bounds::text AS histogram
+    # inherited различает две записи статистики для одного столбца при наследовании.
+    cursor.execute("""
+        SELECT tablename, attname, inherited, null_frac, avg_width, n_distinct,
+               CAST(most_common_vals AS text) AS most_common_vals,
+               CAST(most_common_freqs AS text) AS most_common_freqs,
+               CAST(histogram_bounds AS text) AS histogram_bounds, correlation
         FROM pg_stats
         WHERE schemaname = 'public'
-        ORDER BY tablename, attname
-        """,
-    )
-    payload = json.dumps(rows, sort_keys=True, default=str).encode("utf-8")
-
+        ORDER BY tablename, attname, inherited
+    """)
+    fields = [column[0] for column in cursor.description]
+    rows = cursor.fetchall()
+    payload = json.dumps([fields, rows], separators=(",", ":")).encode("utf-8")
     return {
+        "fingerprint_version": 2,
+        "schema": "public",
+        "fields": fields,
         "columns_with_stats": len(rows),
         "sha256": hashlib.sha256(payload).hexdigest(),
     }
@@ -165,6 +165,8 @@ def get_corpus_info(path: Path):
 
 
 def main():
+    from src.db.connection import get_connection
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--queries", type=Path, default=DEFAULT_QUERIES_PATH)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)

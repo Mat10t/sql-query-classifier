@@ -121,7 +121,17 @@ def main():
     args = parser.parse_args()
 
     dataset = pd.read_csv(args.dataset)
+    try:
+        get_feature_columns(dataset.columns)
+    except ValueError as error:
+        sys.exit(f"FAIL  {error}")
     plans = load_plans(args.plans)
+    features = get_feature_columns(dataset.columns)
+    # Проверяем и частичные серии, если сборщик успел сохранить признаки.
+    if "status" in dataset:
+        dataset = dataset.loc[dataset["status"].eq("ok") | dataset[features].notna().all(axis=1)]
+    if dataset.empty:
+        sys.exit("Нет запросов с полным набором признаков для проверки")
 
     checks = [
         ("Набор признаков совпадает с выходом экстракторов", check_feature_set(dataset, plans)),
