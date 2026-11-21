@@ -3,11 +3,12 @@
 
 Целевая величина t(q) — медиана Execution Time по MEASURED_RUNS запускам
 EXPLAIN (ANALYZE, TIMING OFF) после WARMUP_RUNS прогревочных запусков
-в «тёплом» режиме (данные уже в кэше). Подробное обоснование —
+в выбранной конфигурации стенда. Полнота прогрева кэша отдельно не проверялась. Подробное обоснование —
 в docs/stage1.md.
 """
 
 import json
+import math
 import statistics
 
 
@@ -57,35 +58,35 @@ def as_json(value):
     return value
 
 
-def measure_query(cursor, sql: str, warmup_runs: int, measured_runs: int) -> dict:
-    """
-    Выполняет запрос warmup_runs + measured_runs раз.
-    Возвращает все запуски (включая прогревочные) и первый измеренный план.
-    """
-    runs = []
-    first_analyze_json = None
+def extract_execution_metrics(analyze_json: list) -> dict:
+    root = analyze_json[0]
+    elapsed = root.get("Execution Time")
+    if type(elapsed) not in (int, float) or not math.isfinite(elapsed) or elapsed < 0:
+        raise ValueError("Отсутствует или некорректно обязательное поле Execution Time")
+    return {"execution_time_ms": elapsed, "planning_time_ms": root.get("Planning Time")}
 
+
+def iter_query_runs(cursor, sql: str, warmup_runs: int, measured_runs: int):
+    if warmup_runs < 0 or measured_runs < 1:
+        raise ValueError("Требуется хотя бы один измеренный запуск и неотрицательное число прогревов")
     for run_index in range(warmup_runs + measured_runs):
-        is_warmup = run_index < warmup_runs
-        analyze_json = run_explain_analyze(cursor, sql)
-        root = analyze_json[0]
+        plan = run_explain_analyze(cursor, sql)
+        yield {
+            "run_index": run_index,
+            "is_warmup": run_index < warmup_runs,
+            **extract_execution_metrics(plan),
+        }, plan
 
-        runs.append(
-            {
-                "run_index": run_index,
-                "is_warmup": is_warmup,
-                "execution_time_ms": root.get("Execution Time", 0),
-                "planning_time_ms": root.get("Planning Time", 0),
-            }
-        )
 
-        if not is_warmup and first_analyze_json is None:
-            first_analyze_json = analyze_json
-
-    return {
-        "runs": runs,
-        "analyze_json": first_analyze_json,
-    }
+def measure_query(cursor, sql: str, warmup_runs: int, measured_runs: int) -> dict:
+    """Возвращает полную серию и первый измеренный план."""
+    runs = []
+    first_plan = None
+    for run, plan in iter_query_runs(cursor, sql, warmup_runs, measured_runs):
+        runs.append(run)
+        if first_plan is None and not run["is_warmup"]:
+            first_plan = plan
+    return {"runs": runs, "analyze_json": first_plan}
 
 
 def aggregate_runs(runs: list) -> dict:
@@ -109,7 +110,7 @@ def aggregate_runs(runs: list) -> dict:
         "exec_time_mean_ms": mean,
         "exec_time_std_ms": std,
         "exec_time_cv": cv,
-        "planning_time_ms": statistics.median(planning_times),
+        "planning_time_ms": statistics.median(planning_times) if None not in planning_times else None,
         "measured_runs": len(times),
         "is_unstable": int(cv > UNSTABLE_CV),
     }

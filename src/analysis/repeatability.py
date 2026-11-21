@@ -105,7 +105,13 @@ def main():
     args = parser.parse_args()
 
     measurements = pd.read_csv(args.measurements)
+    dataset = pd.read_csv(args.dataset) if args.dataset.exists() else None
+    if dataset is not None and "status" in dataset:
+        dataset = dataset.loc[dataset["status"].eq("ok")]
+        measurements = measurements[measurements["query_id"].isin(dataset["query_id"])]
     runs_per_query = measurements.groupby("query_id").size()
+    if runs_per_query.nunique() != 1:
+        raise ValueError("Для анализа нужны полные серии одинаковой длины")
     total_runs = int(runs_per_query.min())
 
     if total_runs < 5 or total_runs % 2 == 0:
@@ -121,9 +127,8 @@ def main():
 
     per_query = pd.DataFrame(rows)
 
-    if args.dataset.exists():
-        dataset = pd.read_csv(args.dataset)[["query_id", "template_id"]]
-        per_query = dataset.merge(per_query, on="query_id")
+    if dataset is not None:
+        per_query = dataset[["query_id", "template_id"]].merge(per_query, on="query_id")
 
     per_query["time_bin"] = pd.cut(
         per_query["reference_median_ms"], TIME_BINS, labels=TIME_BIN_LABELS, right=False

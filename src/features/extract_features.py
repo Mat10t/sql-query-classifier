@@ -3,6 +3,8 @@ from collections import Counter
 
 import sqlparse
 
+from src.measure.protocol import extract_execution_metrics
+
 
 AGGREGATE_FUNCTIONS = [
     "count",
@@ -93,13 +95,4 @@ def extract_plan_features(explain_json: list) -> dict:
         "merge_join_count": node_types.get("Merge Join", 0),
         "nested_loop_count": node_types.get("Nested Loop", 0),
         "window_agg_count": node_types.get("WindowAgg", 0),
-    }
-
-
-def extract_execution_metrics(explain_analyze_json: list) -> dict:
-    root = explain_analyze_json[0]
-
-    return {
-        "planning_time_ms": root.get("Planning Time", 0),
-        "execution_time_ms": root.get("Execution Time", 0),
     }

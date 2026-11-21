@@ -1,0 +1,207 @@
+{
+  "original_series": {
+    "queries": 274,
+    "templates": 31,
+    "min_ms": 0.01,
+    "max_ms": 4805.38,
+    "under_1_ms": 100,
+    "1_to_10_ms": 5,
+    "10_to_100_ms": 12,
+    "at_least_100_ms": 157,
+    "1_to_100_ms": 17,
+    "templates_in_1_to_100_ms": 4
+  },
+  "expanded_series": {
+    "queries": 370,
+    "templates": 39,
+    "min_ms": 0.008,
+    "max_ms": 4444.941,
+    "under_1_ms": 123,
+    "1_to_10_ms": 51,
+    "10_to_100_ms": 42,
+    "at_least_100_ms": 154,
+    "1_to_100_ms": 93,
+    "templates_in_1_to_100_ms": 12
+  },
+  "retained_queries_remeasured": {
+    "queries": 274,
+    "templates": 31,
+    "min_ms": 0.008,
+    "max_ms": 4444.941,
+    "under_1_ms": 104,
+    "1_to_10_ms": 1,
+    "10_to_100_ms": 15,
+    "at_least_100_ms": 154,
+    "1_to_100_ms": 16,
+    "templates_in_1_to_100_ms": 4
+  },
+  "added_queries": {
+    "queries": 96,
+    "templates": 8,
+    "min_ms": 0.273,
+    "max_ms": 96.269,
+    "under_1_ms": 19,
+    "1_to_10_ms": 50,
+    "10_to_100_ms": 27,
+    "at_least_100_ms": 0,
+    "1_to_100_ms": 77,
+    "templates_in_1_to_100_ms": 8
+  },
+  "template_train": {
+    "queries": 308,
+    "templates": 29,
+    "min_ms": 0.008,
+    "max_ms": 2333.074,
+    "under_1_ms": 117,
+    "1_to_10_ms": 39,
+    "10_to_100_ms": 31,
+    "at_least_100_ms": 121,
+    "1_to_100_ms": 70,
+    "templates_in_1_to_100_ms": 9
+  },
+  "template_test": {
+    "queries": 62,
+    "templates": 10,
+    "min_ms": 0.452,
+    "max_ms": 4444.941,
+    "under_1_ms": 6,
+    "1_to_10_ms": 12,
+    "10_to_100_ms": 11,
+    "at_least_100_ms": 33,
+    "1_to_100_ms": 23,
+    "templates_in_1_to_100_ms": 3
+  },
+  "original_template_test": {
+    "queries": 38,
+    "templates": 8,
+    "min_ms": 47.042,
+    "max_ms": 4805.38,
+    "under_1_ms": 0,
+    "1_to_10_ms": 0,
+    "10_to_100_ms": 5,
+    "at_least_100_ms": 33,
+    "1_to_100_ms": 5,
+    "templates_in_1_to_100_ms": 1
+  },
+  "added_templates": {
+    "v2_customer_urgent_orders": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 0.273,
+      "max_ms": 14.547,
+      "under_1_ms": 4,
+      "1_to_10_ms": 6,
+      "10_to_100_ms": 2,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 8,
+      "templates_in_1_to_100_ms": 1
+    },
+    "v2_inventory_by_brand": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 0.67,
+      "max_ms": 96.269,
+      "under_1_ms": 2,
+      "1_to_10_ms": 6,
+      "10_to_100_ms": 4,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 10,
+      "templates_in_1_to_100_ms": 1
+    },
+    "v2_nation_balance": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 0.461,
+      "max_ms": 13.593,
+      "under_1_ms": 4,
+      "1_to_10_ms": 6,
+      "10_to_100_ms": 2,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 8,
+      "templates_in_1_to_100_ms": 1
+    },
+    "v2_order_price_changes": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 0.558,
+      "max_ms": 21.727,
+      "under_1_ms": 2,
+      "1_to_10_ms": 7,
+      "10_to_100_ms": 3,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 10,
+      "templates_in_1_to_100_ms": 1
+    },
+    "v2_order_status_totals": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 0.476,
+      "max_ms": 16.395,
+      "under_1_ms": 2,
+      "1_to_10_ms": 8,
+      "10_to_100_ms": 2,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 10,
+      "templates_in_1_to_100_ms": 1
+    },
+    "v2_part_stock_extremes": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 0.452,
+      "max_ms": 16.92,
+      "under_1_ms": 4,
+      "1_to_10_ms": 6,
+      "10_to_100_ms": 2,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 8,
+      "templates_in_1_to_100_ms": 1
+    },
+    "v2_supplier_ship_modes": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 2.708,
+      "max_ms": 86.714,
+      "under_1_ms": 0,
+      "1_to_10_ms": 4,
+      "10_to_100_ms": 8,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 12,
+      "templates_in_1_to_100_ms": 1
+    },
+    "v2_top_parts_by_quantity": {
+      "queries": 12,
+      "templates": 1,
+      "min_ms": 0.989,
+      "max_ms": 46.863,
+      "under_1_ms": 1,
+      "1_to_10_ms": 7,
+      "10_to_100_ms": 4,
+      "at_least_100_ms": 0,
+      "1_to_100_ms": 11,
+      "templates_in_1_to_100_ms": 1
+    }
+  },
+  "same_test_remeasured": {
+    "queries": 38,
+    "original_train": {
+      "mae": 1254.9094268026724,
+      "rmse": 1837.7097298496242
+    },
+    "expanded_train": {
+      "mae": 1243.5605137981702,
+      "rmse": 1815.5384304929532
+    }
+  },
+  "constant_by_split": {
+    "template": {
+      "train_median_ms": 9.073,
+      "mae": 800.5014677419355,
+      "rmse": 1474.2547524154147
+    },
+    "random": {
+      "train_median_ms": 15.326,
+      "mae": 413.56178494623657,
+      "rmse": 735.3296549949918
+    }
+  }
+}
